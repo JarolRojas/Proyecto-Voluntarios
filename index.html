@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" css/bulma_base.css">
+    <link rel="stylesheet" href=" css/bulma_editable.css">
+    <title>Voluntariado</title>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!--! HEADER - DANIEL -->
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#carousel">
+                    <img src=" img/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Sobre nosotros
+                    </a>
+
+                    <a class="navbar-item">
+                        Tipos de voluntariado
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Más relevantes
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                Actividades
+                            </a>
+                            <a class="navbar-item is-selected">
+                                Eventos
+                            </a>
+                            <a class="navbar-item">
+                                Reuniones
+                            </a>
+                        </div>
+                    </div>
+                    <a class="navbar-item">
+                        Noticias
+                    </a>
+                    <a class="navbar-item">
+                        Empresas
+                    </a>
+                    <a class="navbar-item" href="#faq">
+                        FAQ
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Registrarse</strong>
+                            </a>
+                            <a class="button is-light">
+                                Iniciar Sesión
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="carousel" id="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src=" img/portada.jpg" alt="Imagen 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src=" img/portada2.jpg" alt="Imagen 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src=" img/portada3.jpg" alt="Imagen 3">
+                </div>
+            </div>
+        </section>
+    </header>
+    <!--! SOBRE NOSOTROS - DANIEL -->
+
+    <!--! TIPPOS DE VOLUNTARIADO - OSCAR -->
+
+    <!--! ACTIVIDADES/EVENTOS/REUNIONES RELEVANTES - JAROL -->
+    <img src=" img/" alt="">
+
+    <section class="section" id="masRelevantes">
+        <div class="container">
+            <h1 class="title is-1 has-text-success">Más relevantes</h1>
+        
+            <!--* ACTIVIDADES -->
+            <div class="container" id="actividades">
+                <h2 class="title is-2 has-text-success">Actividades</h2>
+                <div class="card-carousel">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src=" img irina/AMAVIR 23-24 Competencias Digitales/IMG_20240429_170907_resized_20240430_082312460.jpg"
+                                    alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                        <img class="image is-48x48" src=" img/logo.png"alt="Logo Cuatrovientos"/>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                            </div>
+                            <div class="card-footer">
+                                <time datetime="2016-1-">11:09 PM - 1 Jan 2016</time>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src=" img irina/AMAVIR 23-24 Competencias Digitales/IMG_20240429_170907_resized_20240430_082312460.jpg"
+                                    alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                        <img class="image is-48x48" src=" img/logo.png"alt="Logo Cuatrovientos"/>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                            </div>
+                            <div class="card-footer">
+                                <img class="image is-48x48" src=" img/logo.png"alt="Logo Cuatrovientos"/>
+                                <time datetime="2016-1-">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+    
+            <!--* EVENTOS -->
+            <div class="container" id="eventos">
+                <h2 class="title is-2 has-text-success">Eventos</h2>
+                
+            </div>
+    
+            <!--* REUNIONES -->
+            <div class="container" id="reuniones">
+                <h2 class="title is-2 has-text-success">Reuniones</h2>
+    
+            </div>
+        </div>
+        
+
+
+    </section>
+
+    <!--! NOTICIAS - MAITE -->
+
+    <!--! EMPRESAS COLABORADORAS - OSCAR -->
+
+    <!--! FAQ - JAROL -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="title is-1 has-text-success">Preguntas Frecuentes</h2>
+            <div class="box">
+                <details>
+                    <summary class="has-text-success">¿Cómo puedo registrarme como voluntario?</summary>
+                    <p>Para registrarte, completa el formulario en nuestra sección de registro y te contactaremos
+                        próximamente.</p>
+                </details>
+                <details>
+                    <summary class="has-text-success">¿Qué tipo de actividades puedo realizar?</summary>
+                    <p>Ofrecemos una variedad de actividades que incluyen ayuda comunitaria, eventos educativos y apoyo
+                        en eventos especiales.</p>
+                </details>
+                <details>
+                    <summary class="has-text-success">¿Hay algún requisito previo?</summary>
+                    <p>Solo necesitas tener disponibilidad y ganas de ayudar. Algunos roles pueden requerir habilidades
+                        específicas.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+    <!--! FOOTER - MAITE -->
+
+    <footer class="grid column columns is-vcentered">
+        <!--  contenedor de contacto-->
+        <div class="column is-4">
+            
+            <p>Voluntariado Cuatrovientos<br>
+            voluntariado@cuatrovientos.org<br>Av. de San Jorge, 6, 31012 Pamplona, Navarra<br>31013 Pamplona<br>Secretaría Cuatrovientos: (34) 948124129  -<br>- info@cuatrovientos.org</p>
+            
+        </div>
+    
+        <!-- Contenedor de redes sociales -->
+        <div class="column is-1">
+            <figure>
+                <img class="is-rounded" src=" img/instagramLogo.jpg" />
+              </figure>
+        </div>
+        <div class="column is-1">
+              <figure>
+                <img class="is-rounded" src=" img/facebookLogo.png" />
+              </figure>
+        </div>
+    
+        <div class="column is-1">
+              <figure>
+                <img class="is-rounded" src=" img/youtubeLogo.png" />
+              </figure>
+    
+        </div>
+        
+        <div class="column is-4">
+              
+        <form class="box">
+        
+            <div class="field">
+                <label class="label">Nombre</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Introduce tu nombre">
+                </div>
+              </div> 
+              <!-- Contenedor del nombre -->
+              
+                       
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input is-bulma" type="email" placeholder="Introduce tu email" value="someone@example.es">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                
+              </div>
+        
+              <!-- Email -->
+                   
+              <div class="field">
+                <label class="label">Mensaje</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="Introduce el mensaje que quieres enviar."></textarea>
+                </div>
+              </div>
+        
+              <!-- Mensaje -->
+                          
+                   
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-primary">Enviar</button>
+                </div>
+                <div class="control">
+                  <button class="button is-primary">Cancelar</button>
+                  
+                </div>
+              </div>
+        
+              <!-- Enviar y borrar -->
+        
+        </form>
+      </div>
+        
+          </footer>
+</body>
+
+</html>

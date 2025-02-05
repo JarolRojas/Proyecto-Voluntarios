@@ -21557,17 +21557,17 @@ has-background-danger.is-hoverable:active {
   cursor: pointer !important;
   pointer-events: all !important;
 }
-
+/*Header*/
 .carousel {
   position: relative;
   width: 100%;
-  height: 100vh; /* Ajusta la altura del carrusel para que ocupe toda la pantalla */
+  height: 95vh; /* Ajusta la altura del carrusel para que ocupe toda la pantalla */
   overflow: hidden;
 }
 
 .carousel-container {
   display: flex;
-  width: 300%; /* 100% * number of slides */
+  width: 100%; /* 100% * number of slides */
   animation: slide 12s infinite;
 }
 
@@ -21575,17 +21575,42 @@ has-background-danger.is-hoverable:active {
   width: 100%;
   flex: 0 0 100%; /* Asegura que cada slide ocupe el 100% del contenedor */
   box-sizing: border-box;
+  position:relative;
 }
-
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Filtro oscuro */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.carousel-overlay div {
+  margin: 0;
+  font-size: 1.5em;
+  font-family: inherit
+}
+.texto1{
+  font-size: 40px; /* Ajusta el tamaño según tus necesidades */
+  font-weight: bold; /* Opcional: para hacer el texto más grueso */
+}
+.texto2{
+  font-size: 30px; /* Ajusta el tamaño según tus necesidades */
+}
 .carousel-slide img {
   width: 100vw; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
   height: 100vh; /* Ajusta la altura de las imágenes para que ocupen toda la pantalla */
   object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
-  display: block;
 }
 
-@keyframes slide {
-  0% {
+@keyframes slide {  0% {
     transform: translateX(0%);
   }
   33% {
@@ -21607,20 +21632,33 @@ has-background-danger.is-hoverable:active {
     transform: translateX(0%);
   }
 }
+/*Header*/
+/*Sobre nosotros*/
+.custom-margin-top {
+  margin-top: 1rem; /* Ajusta el valor según sea necesario */
+}
+#sobre_nosotros p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem; /* Ajusta el tamaño según sea necesario */
+}
+/*Sobre nosotros*/
+
 /*# sourceMappingURL=bulma.css.map */
 
-/* !cambios */
+/* !cambios  JAROL*/
 .card-carousel {
   overflow-x: auto; /* Permite el desplazamiento horizontal */
   white-space: nowrap;
   display: flex;
   scroll-snap-type: x mandatory; /* Opcional: para un desplazamiento más suave */
+  margin: 20px;
   
 }
 .card {
   margin-right: 20px;
+
   flex: 0 0 auto; /* Evita que las tarjetas se expandan */
-  width: 350px; /* Ancho fijo para las tarjetas */
+  width: 340px; /* Ancho fijo para las tarjetas */
   min-height: 43.75rem;
   max-height: 43.75rem !important;
   scroll-snap-align: start; /* Opcional: para un desplazamiento más suave */
@@ -21632,24 +21670,49 @@ has-background-danger.is-hoverable:active {
 }
 
 .card-carousel::-webkit-scrollbar-thumb {
-  background: transparent; /* Color del scrollbar */
+  background: rgb(37, 48, 56); /* Color del scrollbar */
+  height: 10px;
   border-radius: 10px;
 }
 
 .card-carousel::-webkit-scrollbar-track {
-  background: transparent;
+  background: #f1f1f1; /* Color del fondo del scrollbar */  
 }
 .card .card-content {
   white-space: normal; /* Permite que el texto se ajuste dentro de la tarjeta */
 }
-
-
+.card-footer{
+  border: none;
+  display: block;
+}
+.card-footer-item:not(:last-child) {
+  border-inline-end: none;
+}
+.card-footer-item img{
+  margin:  0 10px !important;
+}
+#masRelevantes h1{
+  margin-top: 100px;
+}
+#actividades h1{
+  margin-top: 0;
+}
+/* !cambios MAITE */
 footer{
-  height: 70vh;
-  border:solid white;
+  max-width: 100% !important;
+}
+footer img{
+  width: 48px;
+}
+footer .is-rounded{
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
 }
 
-footer img{
 
-  width: 48px;
+
+/* !CAMBIOS GENERALES */
+html{
+  scroll-behavior: smooth;
 }

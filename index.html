@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=" css/bulma_base.css">
-    <link rel="stylesheet" href=" css/bulma_editable.css">
+    <link rel="stylesheet" href=" ./css/bulma_base.css">
+    <link rel="stylesheet" href=" ./css/bulma_editable.css">
     <title>Voluntariado</title>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Get all "navbar-burger" elements
@@ -41,7 +41,14 @@
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#carousel">
-                    <img src=" img/logo.png" alt="Logo">
+                    <img src=" ./img/logo.png" alt="Logo">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
             </div>
 
@@ -61,7 +68,7 @@
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="#actividades">
                                 Actividades
                             </a>
                             <a class="navbar-item is-selected">
@@ -100,28 +107,55 @@
         <section class="carousel" id="carousel">
             <div class="carousel-container">
                 <div class="carousel-slide">
-                    <img src=" img/portada.jpg" alt="Imagen 1">
+                    <img src="./img/portada.jpg" alt="Imagen 1">
+                    <div class="carousel-overlay">
+                        <div>
+                            <p class="texto1">¡Haz la diferencia!</p>
+                            <p class="texto2">Únete a nuestro equipo de voluntarios y transforma vidas</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-slide">
-                    <img src=" img/portada2.jpg" alt="Imagen 2">
+                    <img src="./img/portada2.jpg" alt="Imagen 2">
+                    <div class="carousel-overlay">
+                        <div>
+                            <p class="texto1">Ayudar es vivir</p>
+                            <p class="texto2">Conviértete en voluntario y experimenta la satisfacción de hacer el bien
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-slide">
-                    <img src=" img/portada3.jpg" alt="Imagen 3">
+                    <img src="./img/portada3.jpg" alt="Imagen 3">
+                    <div class="carousel-overlay">
+                        <div>
+                            <p class="texto1">Acciones que inspiran</p>
+                            <p class="texto2">Cada esfuerzo cuenta, súmate a nuestra causa y genera impacto</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </header>
     <!--! SOBRE NOSOTROS - DANIEL -->
-
+    <section class="section" id="sobre_nosotros">
+        <div class="container">
+            <h2 class="title is-1 has-text-success has-text-centered">¿Quienes somos?</h2>
+            <div class="columns is-vcentered is-centered">
+                <div class="column is-8 has-text-centered">
+                    <p class="has-text-white custom-margin-top">Somos una organización sin fines de lucro que promueve la participación ciudadana a través del voluntariado. Nuestro objetivo es fomentar la solidaridad y el compromiso social, brindando oportunidades para que las personas puedan contribuir al bienestar de la comunidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--! TIPPOS DE VOLUNTARIADO - OSCAR -->
 
     <!--! ACTIVIDADES/EVENTOS/REUNIONES RELEVANTES - JAROL -->
-    <img src=" img/" alt="">
 
     <section class="section" id="masRelevantes">
         <div class="container">
             <h1 class="title is-1 has-text-success">Más relevantes</h1>
-        
+
             <!--* ACTIVIDADES -->
             <div class="container" id="actividades">
                 <h2 class="title is-2 has-text-success">Actividades</h2>
@@ -129,14 +163,14 @@
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src=" img irina/AMAVIR 23-24 Competencias Digitales/IMG_20240429_170907_resized_20240430_082312460.jpg"
+                                <img src=" ./img irina/AMAVIR 23-24 Competencias Digitales/IMG_20240429_170907_resized_20240430_082312460.jpg"
                                     alt="Actividad 1" />
                             </figure>
                         </div>
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
-                                        <img class="image is-48x48" src=" img/logo.png"alt="Logo Cuatrovientos"/>
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-4">CIP Cuatrovientos</p>
@@ -145,26 +179,34 @@
                             </div>
                             <div class="content">
                                 <a href=""></a>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem at, doloremque officia mollitia odio quo suscipit?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
                                 <br />
+                                <a href="">Más información</a>
                             </div>
                             <div class="card-footer">
-                                <time datetime="2016-1-">11:09 PM - 1 Jan 2016</time>
-
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods4.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods5.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src=" img irina/AMAVIR 23-24 Competencias Digitales/IMG_20240429_170907_resized_20240430_082312460.jpg"
-                                    alt="Actividad 1" />
+                                <img src="./img irina/AMAVIR 23-24 Competencias Digitales/IMG_20240429_175212_resized_20240430_082309997.jpg" alt="Actividad 1" />
                             </figure>
                         </div>
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
-                                        <img class="image is-48x48" src=" img/logo.png"alt="Logo Cuatrovientos"/>
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
                                 </div>
                                 <div class="media-content">
                                     <p class="title is-4">CIP Cuatrovientos</p>
@@ -173,33 +215,443 @@
                             </div>
                             <div class="content">
                                 <a href=""></a>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem at, doloremque officia mollitia odio quo suscipit?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
                                 <br />
+                                <a href="">Más información</a>
                             </div>
                             <div class="card-footer">
-                                <img class="image is-48x48" src=" img/logo.png"alt="Logo Cuatrovientos"/>
-                                <time datetime="2016-1-">11:09 PM - 1 Jan 2016</time>
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods11.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods12.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods17.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>  
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="./img irina/AMAVIR 23-24 Competencias Digitales/IMG_20240429_175407_resized_20240430_082309738.jpg" alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods2.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods3.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src=" ./img irina/AMAVIR 23-24 Competencias Digitales/IMG_20240429_170907_resized_20240430_082312460.jpg"
+                                    alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods2.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods3.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-    
+
             <!--* EVENTOS -->
             <div class="container" id="eventos">
                 <h2 class="title is-2 has-text-success">Eventos</h2>
-                
+                <div class="card-carousel">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png"
+                                    alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods4.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods5.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods11.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods12.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods17.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods2.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods3.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src=" https://bulma.io/assets/images/placeholders/1280x960.png"
+                                    alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods2.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods3.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src=" https://bulma.io/assets/images/placeholders/1280x960.png"
+                                    alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods2.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods3.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-    
+
             <!--* REUNIONES -->
             <div class="container" id="reuniones">
                 <h2 class="title is-2 has-text-success">Reuniones</h2>
-    
+                <div class="card-carousel">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png"
+                                    alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods4.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods5.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods11.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods12.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods17.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods2.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods3.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src=" https://bulma.io/assets/images/placeholders/1280x960.png"
+                                    alt="Actividad 1" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="image is-48x48" src="./img/logo_solo.png" alt="Logo Cuatrovientos" />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">CIP Cuatrovientos</p>
+                                    <a href="#" class="subtitle is-6">@Cuatrovientos</a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <a href=""></a>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure esse mollitia totam sed
+                                iusto maxime nihil doloremque error debitis, tenetur vero. Perferendis exercitationem
+                                at, doloremque officia mollitia odio quo suscipit?
+                                <br />
+                                <a href="">Más información</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <img class="image is-48x48" src="./img/ODS/ods1.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods2.png" alt="ODS1" />
+                                    <img class="image is-48x48" src="./img/ODS/ods3.png" alt="ODS1" />
+                                </div>
+                                <div class="card-footer-item">
+                                    <p datetime="2016-1-">11:09 PM - 1 Jan 2016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
-        
-
-
     </section>
 
     <!--! NOTICIAS - MAITE -->
@@ -234,86 +686,89 @@
     <footer class="grid column columns is-vcentered">
         <!--  contenedor de contacto-->
         <div class="column is-4">
-            
+
             <p>Voluntariado Cuatrovientos<br>
-            voluntariado@cuatrovientos.org<br>Av. de San Jorge, 6, 31012 Pamplona, Navarra<br>31013 Pamplona<br>Secretaría Cuatrovientos: (34) 948124129  -<br>- info@cuatrovientos.org</p>
-            
+                voluntariado@cuatrovientos.org<br>Av. de San Jorge, 6, 31012 Pamplona, Navarra<br>31013
+                Pamplona<br>Secretaría Cuatrovientos: (34) 948124129 -<br>- info@cuatrovientos.org</p>
+
         </div>
-    
+
         <!-- Contenedor de redes sociales -->
         <div class="column is-1">
-            <figure>
-                <img class="is-rounded" src=" img/instagramLogo.jpg" />
-              </figure>
+
+            <img class="is-rounded" src=" ./img/instagramLogo.jpg" />
+
         </div>
         <div class="column is-1">
-              <figure>
-                <img class="is-rounded" src=" img/facebookLogo.png" />
-              </figure>
+
+            <img class="is-rounded is-48x48" src=" ./img/facebookLogo.png" />
+            </figure>
         </div>
-    
+
         <div class="column is-1">
-              <figure>
-                <img class="is-rounded" src=" img/youtubeLogo.png" />
-              </figure>
-    
+
+            <img class="is-rounded is-48x48" src=" ./img/youtubeLogo.png" />
+
+
         </div>
-        
+
         <div class="column is-4">
-              
-        <form class="box">
-        
-            <div class="field">
-                <label class="label">Nombre</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Introduce tu nombre">
+
+            <form class="box">
+
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Introduce tu nombre">
+                    </div>
                 </div>
-              </div> 
-              <!-- Contenedor del nombre -->
-              
-                       
-              <div class="field">
-                <label class="label">Email</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input class="input is-bulma" type="email" placeholder="Introduce tu email" value="someone@example.es">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                  </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </span>
+                <!-- Contenedor del nombre -->
+
+
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-bulma" type="email" placeholder="Introduce tu email"
+                            value="someone@example.es">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+
                 </div>
-                
-              </div>
-        
-              <!-- Email -->
-                   
-              <div class="field">
-                <label class="label">Mensaje</label>
-                <div class="control">
-                  <textarea class="textarea" placeholder="Introduce el mensaje que quieres enviar."></textarea>
+
+                <!-- Email -->
+
+                <div class="field">
+                    <label class="label">Mensaje</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Introduce el mensaje que quieres enviar."></textarea>
+                    </div>
                 </div>
-              </div>
-        
-              <!-- Mensaje -->
-                          
-                   
-              <div class="field is-grouped">
-                <div class="control">
-                  <button class="button is-primary">Enviar</button>
+
+                <!-- Mensaje -->
+
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-primary">Enviar</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-primary">Cancelar</button>
+
+                    </div>
                 </div>
-                <div class="control">
-                  <button class="button is-primary">Cancelar</button>
-                  
-                </div>
-              </div>
-        
-              <!-- Enviar y borrar -->
-        
-        </form>
-      </div>
-        
-          </footer>
+
+                <!-- Enviar y borrar -->
+
+            </form>
+        </div>
+
+    </footer>
+
 </body>
 
 </html>

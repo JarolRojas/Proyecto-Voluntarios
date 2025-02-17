@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es" id="pag_organizador_html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/bulma_base.css">
+    <link rel="stylesheet" href="./../css/bulma_editable.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Dashboard - Organizador</title>
+
+</head>
+
+<body id="pag_organizador">
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="./../img/logo.png" alt="Logo" style="max-height:50px;">
+                </a>
+                <!-- Botón burger para móviles -->
+                <a role="button" class="navbar-burger" data-target="dashboardNav" aria-label="menu"
+                    aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="dashboardNav" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span>Dashboard</span>
+                    </a>
+                    <!-- <a class="navbar-item" href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span>Estadísticas</span>
+                    </a>
+                    <a class="navbar-item" href="#">
+                        <span class="icon"><i class="fas fa-folder-open"></i></span>
+                        <span>Proyectos</span>
+                    </a> -->
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item" id="noti">
+                        <!-- Botón de notificaciones -->
+                        <a class="button" title="Notificaciones">
+                            <span class="icon"><i class="fas fa-bell"></i></span>
+                            <span>4</span>
+                        </a>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <figure class="image is-32x32">
+                                <img class="is-rounded" src="./../img/avatar.png" alt="Avatar">
+                            </figure>
+                            <span>Usuario</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="level" id="tabs_edit">
+            <!-- Tabs -->
+            <div class="tabs is-boxed">
+                <ul>
+                    <li data-tab="tab1"><a>Calendario</a></li>
+                    <li class="is-active" data-tab="tab2"><a>Alumnos</a></li>
+                    <li data-tab="tab3"><a>Actividades</a></li>
+                    <li data-tab="tab4"><a>Empresas</a></li>
+                </ul>
+            </div>
+            <!-- Filtros rápidos en línea -->
+            <div class="field has-addons" id="ag_filtros">
+                <button id="reset-filters" class="button is-danger is-small">Restablecer Filtros</button>
+                <button id="add-filter" class="button is-primary is-small">Agregar Filtro</button>
+
+                <div class="control">
+                    <input type="text" id="filter-nombre" class="input is-small" placeholder="Nombre">
+                </div>
+
+                <div class="control">
+                    <div class="select is-small">
+                        <select id="filter-nivel">
+                            <option value="">Ciclo</option>
+                            <option value="1º">1º</option>
+                            <option value="2º">2º</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="select is-small">
+                        <select id="filter-curso">
+                            <option value="">Curso</option>
+                            <option value="DAM">DAM</option>
+                            <option value="ASIR">ASIR</option>
+                            <option value="AF">AF</option>
+                            <option value="CI">CI</option>
+                            <option value="GVEC">GVEC</option>
+                            <option value="TL">TL</option>
+                            <option value="GA">GA</option>
+                            <option value="AC">AC</option>
+                            <option value="SMR">SMR</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="select is-small">
+                        <select id="filter-voluntariado">
+                            <option value="">Tipo Voluntariado</option>
+                            <option value="Social">Social</option>
+                            <option value="Ambiental">Ambiental</option>
+                            <option value="Educativo">Educativo</option>
+                            <option value="Cultural">Cultural</option>
+                            <option value="Deportivo">Deportivo</option>
+                            <option value="Salud">Salud</option>
+                            <option value="Digital">Digital</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <label class="checkbox">
+                        <input type="checkbox" id="filter-mayor-edad"> +18
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Tab Calendario -->
+        <div id="tab1" class="tab-content">
+            <!-- Aquí irá el contenido del calendario -->
+        </div>
+
+        <!-- Tab Alumnos -->
+        <div id="tab2" class="tab-content is-active">
+            <div id="selected-filters" class="mt-3">
+                <p>No hay filtros aplicados.</p>
+            </div>
+            <!-- Filtro Nombre: Input para nombre -->
+            <div class="columns">
+                <div class="column">
+                    <table class="table is-hoverable">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="select-all"></th>
+                                <th>NOMBRE</th>
+                                <th>USUARIO</th>
+                                <th>CURSO</th>
+                                <th>EDAD</th>
+                                <th>TIPO DE VOLUNTARIADO</th>
+                                <th>CORREO</th>
+                                <th>TELÉFONO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Filas generadas dinámicamente con JS -->
+                        </tbody>
+                    </table>
+                    <div id="no-results">No se encontraron resultados con los
+                        filtros aplicados.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Actividades -->
+        <div id="tab3" class="tab-content">
+            <!-- Aquí irá el contenido de Actividades -->
+        </div>
+
+        <!-- Tab Empresas -->
+        <div id="tab4" class="tab-content">
+            <!-- Aquí irá el contenido de Empresas -->
+        </div>
+    </main>
+
+
+    <script src="./../javaScript/tabs.js"></script>
+    <script src="./../javaScript/generarusuarios.js"></script>
+    <script src="./../javaScript/filtros.js"></script>
+    <script src="./../javaScript/sort.js"></script>
+
+</html>

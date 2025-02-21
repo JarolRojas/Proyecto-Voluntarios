@@ -8,7 +8,7 @@ const calendar = document.querySelector(".calendar"),
     dateInput = document.querySelector(".date-input"),
     eventDay = document.querySelector(".event-day"),
     eventDate = document.querySelector(".event-date"),
-    eventsContainer = document.querySelector(".events"), 
+    eventsContainer = document.querySelector(".events"),
     addEventBtn = document.querySelector(".add-event"),
     addEventWrapper = document.querySelector(".add-event-wrapper "),
     addEventCloseBtn = document.querySelector(".close "),
@@ -222,11 +222,10 @@ function updateEvents(date) {
             event.events.forEach((event) => {
                 events += `<div class="event">
             <div class="title">
-              <i class="fas fa-circle"></i>
-              <h3 class="event-title">${event.title}</h3>
+                <h3 class="event-title">${event.title}</h3>
             </div>
             <div class="event-time">
-              <span class="event-time">${event.time}</span>
+                <span class="event-time">${event.time}</span>
             </div>
         </div>`;
             });

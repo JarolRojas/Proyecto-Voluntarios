@@ -16,7 +16,7 @@
         <nav class="navbar">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
-                    <img src="./../img/logo.png" alt="Logo" style="max-height:50px;">
+                    <img src="./../img/logoCuatrovientos/logoCuatrovientos.png" alt="Logo" style="max-height:50px;">
                 </a>
                 <!-- Botón burger para móviles -->
                 <a role="button" class="navbar-burger" data-target="dashboardNav" aria-label="menu"
@@ -67,10 +67,10 @@
             <!-- Tabs -->
             <div class="tabs is-boxed">
                 <ul>
-                    <li data-tab="tab1"><a>Calendario</a></li>
-                    <li class="is-active" data-tab="tab2"><a>Alumnos</a></li>
+                    <li class="is-active" data-tab="tab1"><a>Calendario</a></li>
+                    <li data-tab="tab2"><a>Alumnos</a></li>
                     <li data-tab="tab3"><a>Actividades</a></li>
-                    <li data-tab="tab4"><a>Empresas</a></li>
+                    <li data-tab="tab4"><a>Organizaciones</a></li>
                 </ul>
             </div>
             <!-- Filtros rápidos en línea -->
@@ -131,12 +131,72 @@
             </div>
         </div>
         <!-- Tab Calendario -->
-        <div id="tab1" class="tab-content">
-            <!-- Aquí irá el contenido del calendario -->
+        <div id="tab1" class="tab-content is-active">
+            <section class="calendar-section">
+                <div class="container-calendar">
+                    <div class="left">
+                        <div class="calendar">
+                            <div class="month">
+                                <i class="fas fa-angle-left prev"></i>
+                                <div class="date">diciembre 2015</div>
+                                <i class="fas fa-angle-right next"></i>
+                            </div>
+                            <div class="weekdays">
+                                <div>Lun</div>
+                                <div>Mar</div>
+                                <div>Mié</div>
+                                <div>Jue</div>
+                                <div>Vie</div>
+                                <div>Sáb</div>
+                                <div>Dom</div>
+                            </div>
+                            <div class="days"></div>
+                            <div class="goto-today">
+                                <div class="goto">
+                                    <input type="text" placeholder="mm/aaaa" class="date-input" />
+                                    <button class="goto-btn">Ir</button>
+                                </div>
+                                <button class="today-btn">Hoy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="today-date">
+                            <div class="event-day">mié</div>
+                            <div class="event-date">12 de diciembre de 2022</div>
+                        </div>
+                        <div class="events"></div>
+                        <div class="add-event-wrapper">
+                            <div class="add-event-header">
+                                <div class="title-new-event">Agregar Evento</div>
+                                <i class="fas fa-times close"></i>
+                            </div>
+                            <div class="add-event-body">
+                                <div class="add-event-input">
+                                    <input type="text" placeholder="Nombre del Evento" class="event-name" />
+                                </div>
+                                <div class="add-event-input">
+                                    <input type="text" placeholder="Hora de Inicio del Evento"
+                                        class="event-time-from" />
+                                </div>
+                                <div class="add-event-input">
+                                    <input type="text" placeholder="Hora de Fin del Evento" class="event-time-to" />
+                                </div>
+                            </div>
+                            <div class="add-event-footer">
+                                <button class="add-event-btn">Agregar Evento</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-event">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </section>
         </div>
 
         <!-- Tab Alumnos -->
-        <div id="tab2" class="tab-content is-active">
+        <div id="tab2" class="tab-content">
             <div id="selected-filters" class="mt-3">
                 <p>No hay filtros aplicados.</p>
             </div>
@@ -168,19 +228,931 @@
 
         <!-- Tab Actividades -->
         <div id="tab3" class="tab-content">
-            <!-- Aquí irá el contenido de Actividades -->
+            <div class="container">
+                <div class="columns is-4 is-multiline ">
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                    alt="nosequeponer">
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cuatrovientos</p>
+                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                iaculis mauris.
+                                <br />
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        <!-- Tab Empresas -->
+        <!-- Tab Organizaciones -->
         <div id="tab4" class="tab-content">
-            <!-- Aquí irá el contenido de Empresas -->
-        </div>
-    </main>
 
+            <section class="container">
+                <div class="menuOrg is-flex-wrap-wrap">
+                        <div class="org-menu buttons are medium">
+
+
+                        <p class="button is-success">Añadir</p>
+                        <p class="button is-success">Eliminar</p>
+
+                    </div>
+
+                </div>
+                <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
+                    <div class="org-card-box m-3">
+                        <img class="logo" src="./../img/imgorganizadores/logoAna.png" alt="Logo Ana" onclick="openModal('modalAna')">
+                    </div>
+                    <div class="org-card-box m-3">
+                        <img class="logo" src="./../img/imgorganizadores/Solera_logo.webp" alt="Logo Solera"
+                            onclick="openModal('modalSolera')">
+                    </div>
+                    <div class="org-card-box m-3">
+                        <img class="logo" src="./../img/imgorganizadores/logoUnzutxiki.png" alt="Logo Unzutxiki"
+                            onclick="openModal('modalUnzutxiki')">
+                    </div>
+                    <div class="org-card-box m-3">
+                        <img class="logo" src="./../img/imgorganizadores/logoAmavir.webp" alt="Logo Amavir"
+                            onclick="openModal('modalAmavir')">
+                    </div>
+                    <div class="org-card-box m-3">
+                        <img class="logo" src="./../img/imgorganizadores/logoCuatrovientos.png" alt="Logo Cuatrovientos"
+                            onclick="openModal('modalCuatrovientos')">
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Modales -->
+            <div id="modalAna" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Asociación Navarra de Autismo</p>
+                        <button class="delete" aria-label="close" onclick="closeModal('modalAna')"></button>
+                    </header>
+                    <section class="modal-card-body">
+
+                        <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
+                            <div class="org-modal-contacto ">
+                                <p class="title is-3">Contacto</p>
+                                <p class="subtitle is-6">cuatrovientos@cuatrovientos.org</p>
+                                <div class="org-modal-contacto-botones">
+                                    <button class="button is-small is-success"
+                                        >Añadir
+                                    </button>
+                                    <button class="button is-small is-success"
+                                        >Editar</button>
+                                    <button class="button is-small is-success"
+                                        >Borrar</button>
+
+                                </div>
+                                <div class="org-modal-contacto-redes">
+                                    <a target="_blank"
+                                        href="https://www.facebook.com/p/Asociación-Navarra-de-Autismo-ANA-100064630842033/"><img
+                                            class="logo" src="./../img/imgorganizadores/logoFacebook.png"
+                                            alt="Acceso a facebook de ANA"></a>
+                                    <a target="_blank"
+                                        href="https://www.linkedin.com/company/asociación-navarra-de-autismo/?originalSubdo"><img
+                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png" alt="Acceso a linkedin ANA"></a>
+                                    <a target="_blank"
+                                        href="https://x.com/autismonavarra/status/1808087434833330427"><img class="logo"
+                                            src="./../img/imgorganizadores/logo_x.avif" alt="AccesoTwitter ANA"></a>
+                                    <a target="_blank" href="https://www.instagram.com/autismonavarra/?hl=es"><img
+                                            class="logo" src="./../img/imgorganizadores/Instagram_logo.png"
+                                            alt="Acceso instagram de ANA"></a>
+                                    <a target="_blank" href="https://autismonavarra.com"> <img class="logo"
+                                            src="./../img/imgorganizadores/logoAna.png" alt="Acceso a página web de ANA"></a>
+
+                                </div>
+                                <p class="title is-3">Eventos</p>
+                            </div>
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <p class="modal-card-title is-3">Proyecto Remodelación</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success" >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_2.jpg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Alimentos</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success" >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_3.avif"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Recogida</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success" >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_4.jpeg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Limpieza</p>
+                                <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
+                                    voluntariado muy participativo y con una buena experiencia personal.</p>
+                                <button class="button is-success" >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+                        </div>
+
+
+
+                    </section>
+                    <footer class="org-modal-card-foot">
+                        <button class="button is-success">Añadir
+                            evento</button>
+                        <button class="button is-success" >Cerrar</button>
+                    </footer>
+                </div>
+            </div>
+
+            <div id="modalSolera" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Fundación Solera</p>
+                        <button class="delete" aria-label="close" onclick="closeModal('modalSolera')"></button>
+                    </header>
+                    <section class="modal-card-body">
+
+                        <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
+                            <div class="org-modal-contacto ">
+                                <p class="title is-3">Contacto</p>
+                                <p class="subtitle is-6">solera@solera.org</p>
+                                <div class="org-modal-contacto-botones">
+                                    <button class="button is-small is-success"
+                                        >Añadir
+                                    </button>
+                                    <button class="button is-small is-success"
+                                        >Editar</button>
+                                    <button class="button is-small is-success"
+                                        >Borrar</button>
+
+                                </div>
+                                <div class="org-modal-contacto-redes">
+
+                                    <a target="_blank"
+                                        href="https://www.linkedin.com/company/audatexespana/?originalSubdomain=es"><img
+                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png" alt="Acceso linkedin Solera"></a>
+                                    <a target="_blank" href="https://x.com/sasistencial/status/1067409118846177280"><img
+                                            class="logo" src="./../img/imgorganizadores/logo_x.avif" alt="Acceso twitter de Solera"></a>
+                                    <a target="_blank" href="https://www.instagram.com/soleraasistencial/"><img
+                                            class="logo" src="./../img/imgorganizadores/Instagram_logo.png"
+                                            alt="Acceso a instagram de solera"></a>
+                                    <a target="_blank" href="https://www.soleraasistencial.es"><img class="logo"
+                                            src="./../img/imgorganizadores/Solera_logo.webp" alt="Acceso a página web de Solera"></a>
+
+                                </div>
+                                <p class="title is-3">Eventos</p>
+                            </div>
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <p class="modal-card-title is-3">Proyecto Remodelación</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_2.jpg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Alimentos</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_3.avif"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Recogida</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_4.jpeg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Limpieza</p>
+                                <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
+                                    voluntariado muy participativo y con una buena experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+                        </div>
+
+
+
+                    </section>
+                    <footer class="org-modal-card-foot">
+                        <button class="button is-success" >Añadir
+                            evento</button>
+                            <button class="button is-success" onclick="closeModal('modalAna')">Cerrar</button>
+                    </footer>
+                </div>
+            </div>
+
+            <div id="modalUnzutxiki" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Unzutxiki</p>
+                        <button class="delete" aria-label="close" onclick="closeModal('modalUnzutxiki')"></button>
+                    </header>
+                    <section class="modal-card-body">
+
+                        <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
+                            <div class="org-modal-contacto ">
+                                <p class="title is-3">Contacto</p>
+                                <p class="subtitle is-6">cdnbuztintxuri@gmail.com</p>
+                                <div class="org-modal-contacto-botones">
+                                    <button class="button is-small is-success"
+                                        >Añadir
+                                    </button>
+                                    <button class="button is-small is-success"
+                                        >Editar</button>
+                                    <button class="button is-small is-success"
+                                        >Borrar</button>
+
+                                </div>
+                                <div class="org-modal-contacto-redes">
+
+                                    <a target="_blank" href="https://unzutxikiberri.org/index.php/contacto/"><img
+                                            class="logo" src="./../img/imgorganizadores/logoUnzutxiki.png"
+                                            alt="Acceso a página web de unzutxiki"></a>
+
+                                </div>
+                                <p class="title is-3">Eventos</p>
+                            </div>
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <p class="modal-card-title is-3">Proyecto Remodelación</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_2.jpg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Alimentos</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_3.avif"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Recogida</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_4.jpeg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Limpieza</p>
+                                <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
+                                    voluntariado muy participativo y con una buena experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+                        </div>
+
+
+
+                    </section>
+                    <footer class="org-modal-card-foot">
+                        <button class="button is-success" >Añadir
+                            evento</button>
+                        <button class="button is-success" onclick="closeModal('modalUnzutxiki')">Cerrar</button>
+                    </footer>
+                </div>
+            </div>
+
+
+
+            <div id="modalAmavir" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Residencia Amavir</p>
+                        <button class="delete" aria-label="close" onclick="closeModal('modalAmavir')"></button>
+                    </header>
+                    <section class="modal-card-body">
+
+                        <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
+                            <div class="org-modal-contacto ">
+                                <p class="title is-3">Contacto</p>
+                                <p class="subtitle is-6">contactoAmavir@amavir.org</p>
+                                <div class="org-modal-contacto-botones">
+                                    <button class="button is-small is-success"
+                                        >Añadir
+                                    </button>
+                                    <button class="button is-small is-success"
+                                        >Editar</button>
+                                    <button class="button is-small is-success"
+                                        >Borrar</button>
+
+                                </div>
+                                <div class="org-modal-contacto-redes">
+                                    <a target="_blank" href="https://www.facebook.com/grupoamavir/?locale=es_ES"><img
+                                            class="logo" src="./../img/imgorganizadores/logoFacebook.png" alt="Acceso Facebook Amavir"></a>
+                                    <a target="_blank"
+                                        href="https://www.linkedin.com/company/grupoamavir/?originalSubdomain=es"><img
+                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png" alt="Acceso linkedin Amavir"></a>
+                                    <a target="_blank"
+                                        href="https://x.com/i/flow/login?redirect_after_login=%2FGrupoAmavir"><img
+                                            class="logo" src="./../img/imgorganizadores/logo_x.avif" alt="Accesp Twitter Amavir"></a>
+                                    <a target="_blank" href="https://www.instagram.com/grupoamavir/?hl=es"><img
+                                            class="logo" src="./../img/imgorganizadores/Instagram_logo.png"
+                                            alt="Acceso Instagram Amavir"></a>
+                                    <a target="_blank" href="https://www.amavir.es"><img class="logo"
+                                            src="./../img/imgorganizadores/logoAmavir.webp" alt="Página web de Amavir"></a>
+
+                                </div>
+                                <p class="title is-3">Eventos</p>
+                            </div>
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <p class="modal-card-title is-3">Proyecto Remodelación</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_2.jpg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Alimentos</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_3.avif"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Recogida</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                   >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_4.jpeg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Limpieza</p>
+                                <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
+                                    voluntariado muy participativo y con una buena experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+                        </div>
+
+
+
+                    </section>
+                    <footer class="org-modal-card-foot">
+                        <button class="button is-success" >Añadir
+                            evento</button>
+                            <button class="button is-success" onclick="closeModal('modalAmavir')">Cerrar</button>
+                    </footer>
+                </div>
+            </div>
+
+
+            <div id="modalCuatrovientos" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Asociación Voluntariado Cuatrovientos</p>
+                        <button class="delete" aria-label="close" onclick="closeModal('modalCuatrovientos')"></button>
+                    </header>
+                    <section class="modal-card-body">
+
+                        <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
+                            <div class="org-modal-contacto ">
+                                <p class="title is-3">Contacto</p>
+                                <p class="subtitle is-6">cuatrovientos@cuatrovientos.org</p>
+                                <div class="org-modal-contacto-botones">
+                                    <button class="button is-small is-success"
+                                        >Añadir
+                                    </button>
+                                    <button class="button is-small is-success"
+                                        >Editar</button>
+                                    <button class="button is-small is-success"
+                                        >Borrar</button>
+
+                                </div>
+                                <div class="org-modal-contacto-redes">
+                                    <a target="_blank" href="https://www.facebook.com/cipcuatrovientos/"><img
+                                            class="logo" src="./../img/imgorganizadores/logoFacebook.png"
+                                            alt="Acceso a Facebook Cuatrovientos"></a>
+                                    <a target="_blank"
+                                        href="https://www.linkedin.com/company/institutocuatrovientos/?originalSubdomain=es"><img
+                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png"
+                                            alt="Acceso a Linkedin Cuatrovientos"></a>
+                                    <a target="_blank" href="https://twitter.com/_cuatrovientos"><img class="logo"
+                                            src="./../img/imgorganizadores/logo_x.avif" alt="Acceso a Twitter Cuatrovientos"></a>
+                                    <a target="_blank" href="https://www.instagram.com/cipcuatrovientos/?hl=es"><img
+                                            class="logo" src="./../img/imgorganizadores/Instagram_logo.png"
+                                            alt="Acceso a Instagram Cuatrovientos"></a>
+                                    <a target="_blank" href="https://www.cuatrovientos.org"><img class="logo"
+                                            src="./../img/imgorganizadores/logoCuatrovientos.png" alt="Acceso a web cuatrovientos"></a>
+
+                                </div>
+                                <p class="title is-3">Eventos</p>
+                            </div>
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <p class="modal-card-title is-3">Proyecto Remodelación</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_2.jpg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Alimentos</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_3.avif"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Recogida</p>
+                                <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
+                                    experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+
+                            <div class="org-card-box-modals-img">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_4.jpeg"
+                                    alt="Logo Cuatrovientos">
+                                <p class="modal-card-title is-3">Proyecto Limpieza</p>
+                                <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
+                                    voluntariado muy participativo y con una buena experiencia personal.</p>
+                                <button class="button is-success"
+                                    >Editar</button>
+                                <button class="button is-success"
+                                    >Eliminar</button>
+
+                            </div>
+                        </div>
+
+
+
+                    </section>
+                    <footer class="org-modal-card-foot">
+                        <button class="button is-success" >Añadir
+                            evento</button>
+                        <button class="button is-success" onclick="closeModal('modalCuatrovientos')">Cerrar</button>
+                    </footer>
+                </div>
+            </div>
+        </div> 
+    </main>
 
     <script src="./../javaScript/tabs.js"></script>
     <script src="./../javaScript/generarusuarios.js"></script>
     <script src="./../javaScript/filtros.js"></script>
     <script src="./../javaScript/sort.js"></script>
+    <script src="./../javaScript/Organizador-calendario.js"></script>
+    <script src="./../javaScript/organizador-empresas.js"></script>
 
 </html>

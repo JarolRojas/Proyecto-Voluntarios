@@ -29,3 +29,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tabs ul li');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            const target = this.dataset.tab;
+
+            tabs.forEach(item => item.classList.remove('is-active'));
+            tabContents.forEach(content => content.classList.remove('is-active'));
+
+            this.classList.add('is-active');
+            document.getElementById(target).classList.add('is-active');
+
+            // Permitir desplazamiento cuando el tab4 esté activo
+            if (target === 'tab4' || target === 'tab3') {
+                document.body.style.overflow = 'auto';
+            } else {
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+});

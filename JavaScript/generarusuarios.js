@@ -81,7 +81,7 @@ function generarUsuarios() {
         <tr data-usuario="${usuario}">
             <td><input type="checkbox" class="select-user"></td>
             <td>${nombre} ${apellido} ${apellido2}</td>
-            <td><a href="#">${usuario}</a></td>
+            <td><a href="#">@${usuario}</a></td>
             <td><abbr title="${cursoCompleto}">${curso}</abbr></td>
             <td>${edad}</td>
             <td>${tiposVoluntariado.map(v => `<span class="tag ${voluntariados[v]}">${v}</span>`).join(" ")}</td>

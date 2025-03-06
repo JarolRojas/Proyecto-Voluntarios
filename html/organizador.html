@@ -16,7 +16,7 @@
         <nav class="navbar">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
-                    <img src="./../img/logoCuatrovientos/logoCuatrovientos.png" alt="Logo" style="max-height:50px;">
+                    <img src="./../img/logo.png" alt="Logo" style="max-height:50px;">
                 </a>
                 <!-- Botón burger para móviles -->
                 <a role="button" class="navbar-burger" data-target="dashboardNav" aria-label="menu"
@@ -132,7 +132,7 @@
         </div>
         <!-- Tab Calendario -->
         <div id="tab1" class="tab-content is-active">
-            <section class="calendar-section">
+            <div class="calendar-section">
                 <div class="container-calendar">
                     <div class="left">
                         <div class="calendar">
@@ -153,7 +153,7 @@
                             <div class="days"></div>
                             <div class="goto-today">
                                 <div class="goto">
-                                    <input type="text" placeholder="mm/aaaa" class="date-input" />
+                                    <input type="text" placeholder="mm/aaaa" class="date-input">
                                     <button class="goto-btn">Ir</button>
                                 </div>
                                 <button class="today-btn">Hoy</button>
@@ -173,14 +173,13 @@
                             </div>
                             <div class="add-event-body">
                                 <div class="add-event-input">
-                                    <input type="text" placeholder="Nombre del Evento" class="event-name" />
+                                    <input type="text" placeholder="Nombre del Evento" class="event-name">
                                 </div>
                                 <div class="add-event-input">
-                                    <input type="text" placeholder="Hora de Inicio del Evento"
-                                        class="event-time-from" />
+                                    <input type="text" placeholder="Hora de Inicio del Evento" class="event-time-from">
                                 </div>
                                 <div class="add-event-input">
-                                    <input type="text" placeholder="Hora de Fin del Evento" class="event-time-to" />
+                                    <input type="text" placeholder="Hora de Fin del Evento" class="event-time-to">
                                 </div>
                             </div>
                             <div class="add-event-footer">
@@ -192,7 +191,7 @@
                         <i class="fas fa-plus"></i>
                     </button>
                 </div>
-            </section>
+            </div>
         </div>
 
         <!-- Tab Alumnos -->
@@ -229,370 +228,298 @@
         <!-- Tab Actividades -->
         <div id="tab3" class="tab-content">
             <div class="container">
+                <button class="button mb-4">Añadir actividad</button>
+                <div class="box">
+                    <div class="columns is-vcentered">
+
+                        <!-- Filtro por categoría -->
+                        <div class="column is-one-quarter">
+                            <label class="label">Categoría</label>
+                            <div class="select is-fullwidth">
+                                <select>
+                                    <option>Tipo voluntariado</option>
+                                    <option>Salud</option>
+                                    <option>Educación</option>
+                                    <option>Personas mayores</option>
+                                    <option>Social</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Filtro por fecha -->
+                        <div class="column is-one-quarter">
+                            <label class="label">Organizacion</label>
+                            <input class="input" type="text" placeholder="Buscar...">
+                        </div>
+
+                        <!-- Filtro por búsqueda -->
+                        <div class="column is-one-quarter">
+                            <label class="label">Categoría</label>
+                            <div class="select is-fullwidth">
+                                <select>
+                                    <option value="1">Fin de la Pobreza</option>
+                                    <option value="2">Hambre Cero</option>
+                                    <option value="3">Salud y Bienestar</option>
+                                    <option value="4">Educación de Calidad</option>
+                                    <option value="5">Igualdad de Género</option>
+                                    <option value="6">Agua Limpia y Saneamiento</option>
+                                    <option value="7">Energía Asequible y No Contaminante</option>
+                                    <option value="8">Trabajo Decente y Crecimiento Económico</option>
+                                    <option value="9">Industria, Innovación e Infraestructura</option>
+                                    <option value="10">Reducción de las Desigualdades</option>
+                                    <option value="11">Ciudades y Comunidades Sostenibles</option>
+                                    <option value="12">Producción y Consumo Responsables</option>
+                                    <option value="13">Acción por el Clima</option>
+                                    <option value="14">Vida Submarina</option>
+                                    <option value="15">Vida de Ecosistemas Terrestres</option>
+                                    <option value="16">Paz, Justicia e Instituciones Sólidas</option>
+                                    <option value="17">Alianzas para Lograr los Objetivos</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Botón de aplicar filtros -->
+                        <div class="column is-one-quarter">
+                            <button class="button is-primary is-fullwidth mt-5">Aplicar</button>
+                        </div>
+
+                    </div>
+                </div>
+
                 <div class="columns is-4 is-multiline ">
                     <div class="column is-one-quarter">
+
                         <div class="card">
                             <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
+                                <figure class="image is-4by3">
+                                    <img src="https://www.musicaymercado.org/wp-content/uploads/2019/11/MarketingDigital.jpg"
+                                        alt="Tipo 1">
+                                </figure>
                             </div>
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                        <img class="image is-48x48" src="./../img/logo_solo.png"
+                                            alt="Logo Cuatrovientos">
                                     </div>
                                     <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                        <p class="title is-6">CIP Cuatrovientos</p>
+                                        <a href="#" class="subtitle is-6">@Cuatrovientos</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                <div class="content">
+                                    Lorem ipsum odor amet, consectetuer adipiscing elit. Lacus habitasse pharetra tellus
+
+                                    <br>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-item">
+                                        <img class="image is-48x48" src="./../img/ODS/ods4.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods7.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods12.png" alt="ODS1">
+                                    </div>
+                                </div>
+                                <button class="button is-danger is-hovered mt-5">Eliminar</button>
                             </div>
                         </div>
+
                     </div>
                     <div class="column is-one-quarter">
+
                         <div class="card">
                             <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
+                                <figure class="image is-4by3">
+                                    <img src="https://www.musicaymercado.org/wp-content/uploads/2019/11/MarketingDigital.jpg"
+                                        alt="Tipo 1">
+                                </figure>
                             </div>
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                        <img class="image is-48x48" src="./../img/logo_solo.png"
+                                            alt="Logo Cuatrovientos">
                                     </div>
                                     <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                        <p class="title is-6">CIP Cuatrovientos</p>
+                                        <a href="#" class="subtitle is-6">@Cuatrovientos</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                <div class="content">
+                                    Lorem ipsum odor amet, consectetuer adipiscing elit. Lacus habitasse pharetra tellus
+
+                                    <br>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-item">
+                                        <img class="image is-48x48" src="./../img/ODS/ods4.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods7.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods12.png" alt="ODS1">
+                                    </div>
+                                </div>
+                                <button class="button is-danger is-hovered mt-5">Eliminar</button>
                             </div>
                         </div>
+
                     </div>
                     <div class="column is-one-quarter">
+
                         <div class="card">
                             <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
+                                <figure class="image is-4by3">
+                                    <img src="https://www.musicaymercado.org/wp-content/uploads/2019/11/MarketingDigital.jpg"
+                                        alt="Tipo 1">
+                                </figure>
                             </div>
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                        <img class="image is-48x48" src="./../img/logo_solo.png"
+                                            alt="Logo Cuatrovientos">
                                     </div>
                                     <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                        <p class="title is-6">CIP Cuatrovientos</p>
+                                        <a href="#" class="subtitle is-6">@Cuatrovientos</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                <div class="content">
+                                    Lorem ipsum odor amet, consectetuer adipiscing elit. Lacus habitasse pharetra tellus
+
+                                    <br>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-item">
+                                        <img class="image is-48x48" src="./../img/ODS/ods4.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods7.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods12.png" alt="ODS1">
+                                    </div>
+                                </div>
+                                <button class="button is-danger is-hovered mt-5">Eliminar</button>
                             </div>
                         </div>
+
                     </div>
                     <div class="column is-one-quarter">
+
                         <div class="card">
                             <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
+                                <figure class="image is-4by3">
+                                    <img src="https://www.musicaymercado.org/wp-content/uploads/2019/11/MarketingDigital.jpg"
+                                        alt="Tipo 1">
+                                </figure>
                             </div>
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                        <img class="image is-48x48" src="./../img/logo_solo.png"
+                                            alt="Logo Cuatrovientos">
                                     </div>
                                     <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                        <p class="title is-6">CIP Cuatrovientos</p>
+                                        <a href="#" class="subtitle is-6">@Cuatrovientos</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                <div class="content">
+                                    Lorem ipsum odor amet, consectetuer adipiscing elit. Lacus habitasse pharetra tellus
+
+                                    <br>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-item">
+                                        <img class="image is-48x48" src="./../img/ODS/ods4.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods7.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods12.png" alt="ODS1">
+                                    </div>
+                                </div>
+                                <button class="button is-danger is-hovered mt-5">Eliminar</button>
                             </div>
                         </div>
+
                     </div>
                     <div class="column is-one-quarter">
+
                         <div class="card">
                             <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
+                                <figure class="image is-4by3">
+                                    <img src="https://www.musicaymercado.org/wp-content/uploads/2019/11/MarketingDigital.jpg"
+                                        alt="Tipo 1">
+                                </figure>
                             </div>
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                        <img class="image is-48x48" src="./../img/logo_solo.png"
+                                            alt="Logo Cuatrovientos">
                                     </div>
                                     <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                        <p class="title is-6">CIP Cuatrovientos</p>
+                                        <a href="#" class="subtitle is-6">@Cuatrovientos</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                <div class="content">
+                                    Lorem ipsum odor amet, consectetuer adipiscing elit. Lacus habitasse pharetra tellus
+
+                                    <br>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-item">
+                                        <img class="image is-48x48" src="./../img/ODS/ods4.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods7.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods12.png" alt="ODS1">
+                                    </div>
+                                </div>
+                                <button class="button is-danger is-hovered mt-5">Eliminar</button>
                             </div>
                         </div>
+
                     </div>
                     <div class="column is-one-quarter">
+
                         <div class="card">
                             <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
+                                <figure class="image is-4by3">
+                                    <img src="https://www.musicaymercado.org/wp-content/uploads/2019/11/MarketingDigital.jpg"
+                                        alt="Tipo 1">
+                                </figure>
                             </div>
                             <div class="card-content">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
+                                        <img class="image is-48x48" src="./../img/logo_solo.png"
+                                            alt="Logo Cuatrovientos">
                                     </div>
                                     <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                        <p class="title is-6">CIP Cuatrovientos</p>
+                                        <a href="#" class="subtitle is-6">@Cuatrovientos</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
+                                <div class="content">
+                                    Lorem ipsum odor amet, consectetuer adipiscing elit. Lacus habitasse pharetra tellus
+
+                                    <br>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-item">
+                                        <img class="image is-48x48" src="./../img/ODS/ods4.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods7.png" alt="ODS1">
+                                        <img class="image is-48x48" src="./../img/ODS/ods12.png" alt="ODS1">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                <button class="button is-danger is-hovered mt-5">Eliminar</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="./../img/irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
-                                    alt="nosequeponer">
-                            </div>
-                            <div class="card-content">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="./../img/logoCuatrovientos/logo_solo.png" alt="logo">
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="title is-4">Cuatrovientos</p>
-                                        <p class="subtitle is-6">@cuatrovientos</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-                                iaculis mauris.
-                                <br />
-                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-                            </div>
-                        </div>
+
                     </div>
 
                 </div>
-
             </div>
         </div>
-
         <!-- Tab Organizaciones -->
         <div id="tab4" class="tab-content">
 
-            <section class="container">
+            <div class="container">
                 <div class="menuOrg is-flex-wrap-wrap">
-                        <div class="org-menu buttons are medium">
-
+                    <div class="org-menu buttons are-medium">
 
                         <p class="button is-success">Añadir</p>
                         <p class="button is-success">Eliminar</p>
@@ -602,7 +529,8 @@
                 </div>
                 <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
                     <div class="org-card-box m-3">
-                        <img class="logo" src="./../img/imgorganizadores/logoAna.png" alt="Logo Ana" onclick="openModal('modalAna')">
+                        <img class="logo" src="./../img/imgorganizadores/logoAna.png" alt="Logo Ana"
+                            onclick="openModal('modalAna')">
                     </div>
                     <div class="org-card-box m-3">
                         <img class="logo" src="./../img/imgorganizadores/Solera_logo.webp" alt="Logo Solera"
@@ -622,7 +550,7 @@
                     </div>
                 </div>
 
-            </section>
+            </div>
 
             <!-- Modales -->
             <div id="modalAna" class="modal">
@@ -630,22 +558,19 @@
                 <div class="modal-card">
                     <header class="modal-card-head">
                         <p class="modal-card-title">Asociación Navarra de Autismo</p>
-                        <button class="delete" aria-label="close" onclick="closeModal('modalAna')"></button>
+
                     </header>
-                    <section class="modal-card-body">
+                    <div class="modal-card-body">
 
                         <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
                             <div class="org-modal-contacto ">
                                 <p class="title is-3">Contacto</p>
                                 <p class="subtitle is-6">cuatrovientos@cuatrovientos.org</p>
                                 <div class="org-modal-contacto-botones">
-                                    <button class="button is-small is-success"
-                                        >Añadir
+                                    <button class="button is-small is-success">Añadir
                                     </button>
-                                    <button class="button is-small is-success"
-                                        >Editar</button>
-                                    <button class="button is-small is-success"
-                                        >Borrar</button>
+                                    <button class="button is-small is-success">Editar</button>
+                                    <button class="button is-small is-success">Borrar</button>
 
                                 </div>
                                 <div class="org-modal-contacto-redes">
@@ -655,7 +580,8 @@
                                             alt="Acceso a facebook de ANA"></a>
                                     <a target="_blank"
                                         href="https://www.linkedin.com/company/asociación-navarra-de-autismo/?originalSubdo"><img
-                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png" alt="Acceso a linkedin ANA"></a>
+                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png"
+                                            alt="Acceso a linkedin ANA"></a>
                                     <a target="_blank"
                                         href="https://x.com/autismonavarra/status/1808087434833330427"><img class="logo"
                                             src="./../img/imgorganizadores/logo_x.avif" alt="AccesoTwitter ANA"></a>
@@ -663,20 +589,21 @@
                                             class="logo" src="./../img/imgorganizadores/Instagram_logo.png"
                                             alt="Acceso instagram de ANA"></a>
                                     <a target="_blank" href="https://autismonavarra.com"> <img class="logo"
-                                            src="./../img/imgorganizadores/logoAna.png" alt="Acceso a página web de ANA"></a>
+                                            src="./../img/imgorganizadores/logoAna.png"
+                                            alt="Acceso a página web de ANA"></a>
 
                                 </div>
                                 <p class="title is-3">Eventos</p>
                             </div>
                             <div class="org-card-box-modals-img">
 
-                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg"
+                                    alt="">
                                 <p class="modal-card-title is-3">Proyecto Remodelación</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success" >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -687,9 +614,8 @@
                                 <p class="modal-card-title is-3">Proyecto Alimentos</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success" >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -699,9 +625,8 @@
                                 <p class="modal-card-title is-3">Proyecto Recogida</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success" >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -711,20 +636,19 @@
                                 <p class="modal-card-title is-3">Proyecto Limpieza</p>
                                 <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
                                     voluntariado muy participativo y con una buena experiencia personal.</p>
-                                <button class="button is-success" >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
                         </div>
 
 
 
-                    </section>
+                    </div>
                     <footer class="org-modal-card-foot">
                         <button class="button is-success">Añadir
                             evento</button>
-                        <button class="button is-success" >Cerrar</button>
+                        <button class="button is-success" onclick="closeModal('modalAna')">Cerrar</button>
                     </footer>
                 </div>
             </div>
@@ -734,50 +658,49 @@
                 <div class="modal-card">
                     <header class="modal-card-head">
                         <p class="modal-card-title">Fundación Solera</p>
-                        <button class="delete" aria-label="close" onclick="closeModal('modalSolera')"></button>
+
                     </header>
-                    <section class="modal-card-body">
+                    <div class="modal-card-body">
 
                         <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
                             <div class="org-modal-contacto ">
                                 <p class="title is-3">Contacto</p>
                                 <p class="subtitle is-6">solera@solera.org</p>
                                 <div class="org-modal-contacto-botones">
-                                    <button class="button is-small is-success"
-                                        >Añadir
+                                    <button class="button is-small is-success">Añadir
                                     </button>
-                                    <button class="button is-small is-success"
-                                        >Editar</button>
-                                    <button class="button is-small is-success"
-                                        >Borrar</button>
+                                    <button class="button is-small is-success">Editar</button>
+                                    <button class="button is-small is-success">Borrar</button>
 
                                 </div>
                                 <div class="org-modal-contacto-redes">
 
                                     <a target="_blank"
                                         href="https://www.linkedin.com/company/audatexespana/?originalSubdomain=es"><img
-                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png" alt="Acceso linkedin Solera"></a>
+                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png"
+                                            alt="Acceso linkedin Solera"></a>
                                     <a target="_blank" href="https://x.com/sasistencial/status/1067409118846177280"><img
-                                            class="logo" src="./../img/imgorganizadores/logo_x.avif" alt="Acceso twitter de Solera"></a>
+                                            class="logo" src="./../img/imgorganizadores/logo_x.avif"
+                                            alt="Acceso twitter de Solera"></a>
                                     <a target="_blank" href="https://www.instagram.com/soleraasistencial/"><img
                                             class="logo" src="./../img/imgorganizadores/Instagram_logo.png"
                                             alt="Acceso a instagram de solera"></a>
                                     <a target="_blank" href="https://www.soleraasistencial.es"><img class="logo"
-                                            src="./../img/imgorganizadores/Solera_logo.webp" alt="Acceso a página web de Solera"></a>
+                                            src="./../img/imgorganizadores/Solera_logo.webp"
+                                            alt="Acceso a página web de Solera"></a>
 
                                 </div>
                                 <p class="title is-3">Eventos</p>
                             </div>
                             <div class="org-card-box-modals-img">
 
-                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg"
+                                    alt="">
                                 <p class="modal-card-title is-3">Proyecto Remodelación</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -788,10 +711,8 @@
                                 <p class="modal-card-title is-3">Proyecto Alimentos</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -801,34 +722,25 @@
                                 <p class="modal-card-title is-3">Proyecto Recogida</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
-
                             <div class="org-card-box-modals-img">
                                 <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_4.jpeg"
                                     alt="Logo Cuatrovientos">
                                 <p class="modal-card-title is-3">Proyecto Limpieza</p>
                                 <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
                                     voluntariado muy participativo y con una buena experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
-
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
                             </div>
                         </div>
-
-
-
-                    </section>
+                    </div>
                     <footer class="org-modal-card-foot">
-                        <button class="button is-success" >Añadir
+                        <button class="button is-success">Añadir
                             evento</button>
-                            <button class="button is-success" onclick="closeModal('modalAna')">Cerrar</button>
+                        <button class="button is-success" onclick="closeModal('modalSolera')">Cerrar</button>
                     </footer>
                 </div>
             </div>
@@ -840,20 +752,17 @@
                         <p class="modal-card-title">Unzutxiki</p>
                         <button class="delete" aria-label="close" onclick="closeModal('modalUnzutxiki')"></button>
                     </header>
-                    <section class="modal-card-body">
+                    <div class="modal-card-body">
 
                         <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
                             <div class="org-modal-contacto ">
                                 <p class="title is-3">Contacto</p>
                                 <p class="subtitle is-6">cdnbuztintxuri@gmail.com</p>
                                 <div class="org-modal-contacto-botones">
-                                    <button class="button is-small is-success"
-                                        >Añadir
+                                    <button class="button is-small is-success">Añadir
                                     </button>
-                                    <button class="button is-small is-success"
-                                        >Editar</button>
-                                    <button class="button is-small is-success"
-                                        >Borrar</button>
+                                    <button class="button is-small is-success">Editar</button>
+                                    <button class="button is-small is-success">Borrar</button>
 
                                 </div>
                                 <div class="org-modal-contacto-redes">
@@ -867,14 +776,13 @@
                             </div>
                             <div class="org-card-box-modals-img">
 
-                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg"
+                                    alt="">
                                 <p class="modal-card-title is-3">Proyecto Remodelación</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -885,10 +793,8 @@
                                 <p class="modal-card-title is-3">Proyecto Alimentos</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -898,10 +804,8 @@
                                 <p class="modal-card-title is-3">Proyecto Recogida</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -911,19 +815,17 @@
                                 <p class="modal-card-title is-3">Proyecto Limpieza</p>
                                 <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
                                     voluntariado muy participativo y con una buena experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
                         </div>
 
 
 
-                    </section>
+                    </div>
                     <footer class="org-modal-card-foot">
-                        <button class="button is-success" >Añadir
+                        <button class="button is-success">Añadir
                             evento</button>
                         <button class="button is-success" onclick="closeModal('modalUnzutxiki')">Cerrar</button>
                     </footer>
@@ -939,50 +841,50 @@
                         <p class="modal-card-title">Residencia Amavir</p>
                         <button class="delete" aria-label="close" onclick="closeModal('modalAmavir')"></button>
                     </header>
-                    <section class="modal-card-body">
+                    <div class="modal-card-body">
 
                         <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
                             <div class="org-modal-contacto ">
                                 <p class="title is-3">Contacto</p>
                                 <p class="subtitle is-6">contactoAmavir@amavir.org</p>
                                 <div class="org-modal-contacto-botones">
-                                    <button class="button is-small is-success"
-                                        >Añadir
+                                    <button class="button is-small is-success">Añadir
                                     </button>
-                                    <button class="button is-small is-success"
-                                        >Editar</button>
-                                    <button class="button is-small is-success"
-                                        >Borrar</button>
+                                    <button class="button is-small is-success">Editar</button>
+                                    <button class="button is-small is-success">Borrar</button>
 
                                 </div>
                                 <div class="org-modal-contacto-redes">
                                     <a target="_blank" href="https://www.facebook.com/grupoamavir/?locale=es_ES"><img
-                                            class="logo" src="./../img/imgorganizadores/logoFacebook.png" alt="Acceso Facebook Amavir"></a>
+                                            class="logo" src="./../img/imgorganizadores/logoFacebook.png"
+                                            alt="Acceso Facebook Amavir"></a>
                                     <a target="_blank"
                                         href="https://www.linkedin.com/company/grupoamavir/?originalSubdomain=es"><img
-                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png" alt="Acceso linkedin Amavir"></a>
+                                            class="logo" src="./../img/imgorganizadores/logo_linkedin.png"
+                                            alt="Acceso linkedin Amavir"></a>
                                     <a target="_blank"
                                         href="https://x.com/i/flow/login?redirect_after_login=%2FGrupoAmavir"><img
-                                            class="logo" src="./../img/imgorganizadores/logo_x.avif" alt="Accesp Twitter Amavir"></a>
+                                            class="logo" src="./../img/imgorganizadores/logo_x.avif"
+                                            alt="Accesp Twitter Amavir"></a>
                                     <a target="_blank" href="https://www.instagram.com/grupoamavir/?hl=es"><img
                                             class="logo" src="./../img/imgorganizadores/Instagram_logo.png"
                                             alt="Acceso Instagram Amavir"></a>
                                     <a target="_blank" href="https://www.amavir.es"><img class="logo"
-                                            src="./../img/imgorganizadores/logoAmavir.webp" alt="Página web de Amavir"></a>
+                                            src="./../img/imgorganizadores/logoAmavir.webp"
+                                            alt="Página web de Amavir"></a>
 
                                 </div>
                                 <p class="title is-3">Eventos</p>
                             </div>
                             <div class="org-card-box-modals-img">
 
-                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg"
+                                    alt="">
                                 <p class="modal-card-title is-3">Proyecto Remodelación</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -993,10 +895,8 @@
                                 <p class="modal-card-title is-3">Proyecto Alimentos</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -1006,10 +906,8 @@
                                 <p class="modal-card-title is-3">Proyecto Recogida</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                   >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -1019,25 +917,22 @@
                                 <p class="modal-card-title is-3">Proyecto Limpieza</p>
                                 <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
                                     voluntariado muy participativo y con una buena experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
                         </div>
 
 
 
-                    </section>
+                    </div>
                     <footer class="org-modal-card-foot">
-                        <button class="button is-success" >Añadir
+                        <button class="button is-success">Añadir
                             evento</button>
-                            <button class="button is-success" onclick="closeModal('modalAmavir')">Cerrar</button>
+                        <button class="button is-success" onclick="closeModal('modalAmavir')">Cerrar</button>
                     </footer>
                 </div>
             </div>
-
 
             <div id="modalCuatrovientos" class="modal">
                 <div class="modal-background"></div>
@@ -1046,20 +941,17 @@
                         <p class="modal-card-title">Asociación Voluntariado Cuatrovientos</p>
                         <button class="delete" aria-label="close" onclick="closeModal('modalCuatrovientos')"></button>
                     </header>
-                    <section class="modal-card-body">
+                    <div class="modal-card-body">
 
                         <div class="org-cards is-flex is-flex-wrap-wrap is-justify-content-center">
                             <div class="org-modal-contacto ">
                                 <p class="title is-3">Contacto</p>
                                 <p class="subtitle is-6">cuatrovientos@cuatrovientos.org</p>
                                 <div class="org-modal-contacto-botones">
-                                    <button class="button is-small is-success"
-                                        >Añadir
+                                    <button class="button is-small is-success">Añadir
                                     </button>
-                                    <button class="button is-small is-success"
-                                        >Editar</button>
-                                    <button class="button is-small is-success"
-                                        >Borrar</button>
+                                    <button class="button is-small is-success">Editar</button>
+                                    <button class="button is-small is-success">Borrar</button>
 
                                 </div>
                                 <div class="org-modal-contacto-redes">
@@ -1071,26 +963,27 @@
                                             class="logo" src="./../img/imgorganizadores/logo_linkedin.png"
                                             alt="Acceso a Linkedin Cuatrovientos"></a>
                                     <a target="_blank" href="https://twitter.com/_cuatrovientos"><img class="logo"
-                                            src="./../img/imgorganizadores/logo_x.avif" alt="Acceso a Twitter Cuatrovientos"></a>
+                                            src="./../img/imgorganizadores/logo_x.avif"
+                                            alt="Acceso a Twitter Cuatrovientos"></a>
                                     <a target="_blank" href="https://www.instagram.com/cipcuatrovientos/?hl=es"><img
                                             class="logo" src="./../img/imgorganizadores/Instagram_logo.png"
                                             alt="Acceso a Instagram Cuatrovientos"></a>
                                     <a target="_blank" href="https://www.cuatrovientos.org"><img class="logo"
-                                            src="./../img/imgorganizadores/logoCuatrovientos.png" alt="Acceso a web cuatrovientos"></a>
+                                            src="./../img/imgorganizadores/logoCuatrovientos.png"
+                                            alt="Acceso a web cuatrovientos"></a>
 
                                 </div>
                                 <p class="title is-3">Eventos</p>
                             </div>
                             <div class="org-card-box-modals-img">
 
-                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg" alt="">
+                                <img class="org-cards-box-modals" src="./../img/imgorganizadores/ejemploProyecto_1.jpg"
+                                    alt="">
                                 <p class="modal-card-title is-3">Proyecto Remodelación</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -1101,10 +994,8 @@
                                 <p class="modal-card-title is-3">Proyecto Alimentos</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -1114,10 +1005,8 @@
                                 <p class="modal-card-title is-3">Proyecto Recogida</p>
                                 <p>Evento realizado en Huarte, con voluntariado muy participativo y con una buena
                                     experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
 
@@ -1127,25 +1016,23 @@
                                 <p class="modal-card-title is-3">Proyecto Limpieza</p>
                                 <p class="is-spaced is-justify-content-center">Evento realizado en Huarte, con
                                     voluntariado muy participativo y con una buena experiencia personal.</p>
-                                <button class="button is-success"
-                                    >Editar</button>
-                                <button class="button is-success"
-                                    >Eliminar</button>
+                                <button class="button is-success">Editar</button>
+                                <button class="button is-success">Eliminar</button>
 
                             </div>
                         </div>
 
 
 
-                    </section>
+                    </div>
                     <footer class="org-modal-card-foot">
-                        <button class="button is-success" >Añadir
+                        <button class="button is-success">Añadir
                             evento</button>
                         <button class="button is-success" onclick="closeModal('modalCuatrovientos')">Cerrar</button>
                     </footer>
                 </div>
             </div>
-        </div> 
+        </div>
     </main>
 
     <script src="./../javaScript/tabs.js"></script>

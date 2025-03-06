@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById(target).classList.add('is-active');
 
             // Permitir desplazamiento cuando el tab4 esté activo
-            if (target === 'tab4' || target === 'tab3') {
+            if (target === 'tab4' || target === 'tab3' || target === 'tab1') {
                 document.body.style.overflow = 'auto';
             } else {
                 document.body.style.overflow = 'hidden';

@@ -1,4 +1,10 @@
 /*Header*/
+.section{
+  scroll-margin-top: 20px;
+}
+#sobre_nosotros, .container{
+  scroll-margin-top:50px;
+}
 #pag_index .carousel {
   position: relative;
   width: 100%;
@@ -45,18 +51,6 @@
   font-family: inherit
 }
 
-.texto1 {
-  font-size: 40px;
-  /* Ajusta el tamaño según tus necesidades */
-  font-weight: bold;
-  /* Opcional: para hacer el texto más grueso */
-}
-
-.texto2 {
-  font-size: 30px;
-  /* Ajusta el tamaño según tus necesidades */
-}
-
 .carousel-slide img {
   width: 100vw;
   /* Asegura que las imágenes ocupen todo el ancho del contenedor */
@@ -100,6 +94,7 @@
   }
 }
 
+
 /*Header*/
 /*Sobre nosotros*/
 #pag_index .custom-margin-top {
@@ -119,8 +114,8 @@
   margin-bottom: 3rem;
 }
 
-#sobre_nosotros .column.is-7 {
-  margin-left: 3rem;
+#sobre_nosotros img {
+  margin-right: 3rem;
   /* Margen entre la imagen y el texto */
 }
 
@@ -150,7 +145,7 @@
 
 }
 
-.card {
+#pag_index .card {
   margin-right: 20px;
 
   flex: 0 0 auto;
@@ -163,7 +158,7 @@
   /* Opcional: para un desplazamiento más suave */
 }
 
-.card:nth-child(1) {
+#pag_index card:nth-child(1) {
   margin-left: 20px;
 }
 
@@ -184,21 +179,21 @@
   /* Color del fondo del scrollbar */
 }
 
-.card .card-content {
+#pag_index .card .card-content {
   white-space: normal;
   /* Permite que el texto se ajuste dentro de la tarjeta */
 }
 
-.card-footer {
+#pag_index .card-footer {
   border: none;
   display: block;
 }
 
-.card-footer-item:not(:last-child) {
+#pag_index .card-footer-item:not(:last-child) {
   border-inline-end: none;
 }
 
-.card-footer-item img {
+#pag_index .card-footer-item img {
   margin: 0 10px !important;
 }
 
@@ -260,25 +255,28 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b38add;
+  border-radius: 50px;
+}
+
 @media (max-width: 768px) {
-  .carousel-slide img {
-    max-width: 60vh;
 
-
-  }
 
   body {
     overflow-x: hidden;
   }
 
-  nav a {
-    color: black !important;
-  }
-}
 
-
-#sobre_nosotros img {
-  width: 80vw;
 }
 
 footer .buttons {
@@ -422,20 +420,42 @@ footer ul {
   background-color: #ff0000;
 }
 
-/*Calendario Organizador*/
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
+/*Login*/
+#login body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #f5f5f5;
-  border-radius: 50px;
 }
+.login-box {
+  width: 400px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: white;
+  margin: auto;
+  margin-top: 8%;
+}
+.login-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.login-buttons .button {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.separator {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #aaa;
 
-::-webkit-scrollbar-thumb {
-  background: var(--primary-clr);
-  border-radius: 50px;
 }
+/*Login*/
+
+/*Calendario Organizador*/
 
 .calendar-section {
   position: relative;
@@ -444,9 +464,9 @@ footer ul {
   align-items: center;
   justify-content: center;
   padding-bottom: 30px;
-  margin-top: -100px;
+  margin-top: -175px;
   /* background-color: #e2e1dc; */
-  transform: scale(0.8);
+  transform: scale(0.68);
 }
 
 .container-calendar {
@@ -519,7 +539,7 @@ footer ul {
 
 .calendar .month .prev:hover,
 .calendar .month .next:hover {
-  color: var(--primary-clr);
+  color: #b38add;
 }
 
 .calendar .weekdays {
@@ -560,7 +580,7 @@ footer ul {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--primary-clr);
+  color: #b38add;
   border: 1px solid #f5f5f5;
 }
 
@@ -604,7 +624,7 @@ footer ul {
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 10px 2px var(--primary-clr);
+  box-shadow: 0 0 10px 2px #b38add;
 }
 
 .calendar .days .today {
@@ -649,7 +669,7 @@ footer ul {
   gap: 5px;
   padding: 0 20px;
   margin-bottom: 20px;
-  color: var(--primary-clr);
+  color: #b38add;
 }
 
 .calendar .goto-today .goto {
@@ -657,7 +677,7 @@ footer ul {
   align-items: center;
   border-radius: 5px;
   overflow: hidden;
-  border: 1px solid var(--primary-clr);
+  border: 1px solid #b38add;
 }
 
 .calendar .goto-today .goto input {
@@ -667,17 +687,17 @@ footer ul {
   border: none;
   border-radius: 5px;
   padding: 0 20px;
-  color: var(--primary-clr);
+  color: #b38add;
   border-radius: 5px;
 }
 
 .calendar .goto-today button {
   padding: 5px 10px;
-  border: 1px solid var(--primary-clr);
+  border: 1px solid #b38add;
   border-radius: 5px;
   background-color: transparent;
   cursor: pointer;
-  color: var(--primary-clr);
+  color: #b38add;
 }
 
 .calendar .goto-today button:hover {
@@ -687,7 +707,7 @@ footer ul {
 
 .calendar .goto-today .goto button {
   border: none;
-  border-left: 1px solid var(--primary-clr);
+  border-left: 1px solid #b38add;
   border-radius: 0;
 }
 
@@ -756,7 +776,7 @@ footer ul {
 }
 
 .events .event:hover {
-  background: linear-gradient(90deg, var(--primary-clr), transparent);
+  background: linear-gradient(90deg, #b38add, transparent);
 }
 
 .events .event .title-add-event {
@@ -776,7 +796,7 @@ footer ul {
 }
 
 .events .event i {
-  color: var(--primary-clr);
+  color: #b38add;
   font-size: 0.5rem;
 }
 
@@ -808,7 +828,7 @@ footer ul {
   align-items: center;
   justify-content: center;
   opacity: 0.3;
-  color: var(--primary-clr);
+  color: #b38add;
   transform: translateY(-50%);
 }
 
@@ -887,7 +907,7 @@ footer ul {
 }
 
 .add-event-header .close:hover {
-  color: var(--primary-clr);
+  color: #b38add;
 }
 
 .add-event-header .title-add-event {
@@ -930,11 +950,11 @@ footer ul {
 }
 
 .add-event-body .add-event-input input:focus {
-  border-bottom: 1px solid var(--primary-clr);
+  border-bottom: 1px solid #b38add;
 }
 
 .add-event-body .add-event-input input:focus::placeholder {
-  color: var(--primary-clr);
+  color: #b38add;
 }
 
 .add-event-footer {
@@ -955,12 +975,12 @@ footer ul {
   border-radius: 5px;
   cursor: pointer;
   padding: 5px 10px;
-  border: 1px solid var(--primary-clr);
+  border: 1px solid #b38add;
 }
 
 .add-event-footer .add-event-btn:hover {
   background-color: transparent;
-  color: var(--primary-clr);
+  color: #b38add;
 }
 
 /* media queries */
@@ -1412,6 +1432,7 @@ footer ul {
     text-align: right;
     gap:20px;
   }
+  
   .org-modal-contacto{
 width:100vh;
     padding:10px 0 10px 0;
@@ -1446,3 +1467,37 @@ width:100vh;
   margin: auto 20px;
 }
 
+
+
+
+/* Estilos para tablets (pantallas de 768px a 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  #pag_organizador .card {
+      width: 48%;
+      margin: 1%;
+  }
+}
+
+/* Estilos para móviles (pantallas menores a 768px) */
+@media (max-width: 767px) {
+  #pag_organizador ul li{
+    margin: auto -7px;
+    transform: scale(0.9);
+    
+  }
+  .calendar-section{
+    transform: scale(0.8);
+    margin-top: -140px;
+  }
+  #pag_organizador .card {
+      width: 80%;
+      margin: auto;
+  }
+  #tab4 .org-card-box-modals-img{
+    min-width: 250px;
+  }
+  #register{
+    margin-right: 40px;
+  }
+}

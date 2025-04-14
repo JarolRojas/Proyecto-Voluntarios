@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Panel de Navegación</title>
+    <!-- Enlazar Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Íconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #6AA8FF;
+            --hover-color: #F5F8FC;
+            --bg-color: #ffffff;
+            --text-color: #4a4a4a;
+            --transition: all 0.3s ease;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fc;
+        }
+
+        body {
+            display: flex;
+        }
+
+        /* Sidebar */
+        aside.menu {
+            width: 280px;
+            background: var(--bg-color);
+            height: 100vh;
+            padding: 1.5rem 1rem;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        aside.collapsed {
+            width: 70px;
+        }
+
+        /* Ocultar textos cuando colapsado */
+        aside.collapsed .menu-text,
+        aside.collapsed .menu-label,
+        aside.collapsed .logo-text {
+            display: none;
+        }
+
+        aside.collapsed .menu-list li a {
+            justify-content: center;
+        }
+
+        aside.collapsed .menu-list li a .icon {
+            margin-right: 0;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* Botón Toggle */
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: -15px;
+            background: var(--bg-color);
+            border: 2px solid #f0f4f9;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .toggle-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Etiquetas de menú */
+        .menu-label {
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+            padding-left: 0.5rem;
+            color: #6c757d;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Items del menú */
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-list li {
+            margin: 0.25rem 0;
+        }
+
+        .menu-list li a {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            color: var(--text-color);
+            transition: var(--transition);
+            position: relative;
+            text-decoration: none;
+        }
+
+        a.is-active .icon {
+            padding: 0 5px;
+        }
+
+        .menu-list li a .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: #f0f4f9;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .menu-list li a .menu-text {
+            margin-left: 10px;
+        }
+
+        /* Hover */
+        .menu-list li a:hover {
+            background: var(--hover-color);
+            transform: translateX(5px);
+        }
+
+        .menu-list li a:hover .icon {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Item activo (sidebar expandido) */
+        .menu-list a.is-active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff !important;
+            box-shadow: 0 4px 6px rgba(74, 144, 226, 0.2);
+        }
+
+        .menu-list a.is-active .icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        /* Cuando el sidebar está colapsado, quitar el fondo azul general 
+       y aplicarlo sólo al ícono, con un border-radius menor para 
+       hacerlo más “cuadrado” */
+        aside.collapsed .menu-list a.is-active {
+            background: none;
+            box-shadow: none;
+            transform: none;
+        }
+
+        aside.collapsed .menu-list a.is-active .icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            border-radius: 6px;
+            /* Ajusta este valor para hacerlo más o menos redondo */
+            box-shadow: 0 4px 6px rgba(74, 144, 226, 0.2);
+        }
+
+        /* Ajustar padding en modo colapsado para que el ícono quede centrado */
+        aside.collapsed .menu-list li a {
+            padding: 0.5rem;
+            margin: 0.5rem auto;
+            transform: none;
+        }
+
+        /* Desactivar la animación de "desplazamiento" en modo colapsado */
+        aside.collapsed .menu-list li a:hover {
+            transform: none;
+        }
+
+        aside.collapsed .menu-list li a:hover .icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+        }
+
+        /* Divider */
+        .divider {
+            border: none;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 1rem 0;
+        }
+
+        /* Main */
+        main {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        /* Nuevos estilos responsive */
+        @media (max-width: 768px) {
+            aside.menu {
+                position: fixed;
+                left: -280px;
+                top: 0;
+                z-index: 1000;
+                transition: left 0.3s ease;
+            }
+
+            aside.menu.active {
+                left: 0;
+            }
+
+            .toggle-btn {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1001;
+                background: var(--bg-color);
+            }
+
+            .overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+            }
+
+            aside.menu.active+.overlay {
+                display: block;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="menu">
+        <div class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Logo -->
+        <div class="logo">
+            <span class="icon"><i class="fa-solid fa-handshake"></i></span>
+            <span class="logo-text">Voluntariado</span>
+        </div>
+        <!-- Grupo 1: Perfil y Ajustes -->
+        <ul class="menu-list">
+            <li>
+                <a href="#perfil">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <span class="menu-text">Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="#ajustes">
+                    <span class="icon"><i class="fa-solid fa-cog"></i></span>
+                    <span class="menu-text">Ajustes</span>
+                </a>
+            </li>
+        </ul>
+        <hr class="divider">
+        <!-- Grupo 2: Menú Principal -->
+        <ul class="menu-list">
+            <li>
+                <a href="#estadisticas" class="is-active">
+                    <span class="icon"><i class="fa-solid fa-chart-line"></i></span>
+                    <span class="menu-text">Estadísticas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#gestion">
+                    <span class="icon"><i class="fa-solid fa-user-group"></i></span>
+                    <span class="menu-text">Gestión de Voluntarios</span>
+                </a>
+            </li>
+            <li>
+                <a href="#organizaciones">
+                    <span class="icon"><i class="fa-solid fa-building"></i></span>
+                    <span class="menu-text">Organizaciones</span>
+                </a>
+            </li>
+            <li>
+                <a href="#actividades">
+                    <span class="icon"><i class="fa-solid fa-calendar-check"></i></span>
+                    <span class="menu-text">Actividades</span>
+                </a>
+            </li>
+            <li>
+                <a href="#calendario">
+                    <span class="icon"><i class="fa-solid fa-calendar-days"></i></span>
+                    <span class="menu-text">Calendario</span>
+                </a>
+            </li>
+            <li>
+                <a href="#mensajes">
+                    <span class="icon"><i class="fa-solid fa-comments"></i></span>
+                    <span class="menu-text">Mensajes</span>
+                </a>
+            </li>
+            <li>
+                <a href="#reportes">
+                    <span class="icon"><i class="fa-solid fa-file-invoice"></i></span>
+                    <span class="menu-text">Reportes</span>
+                </a>
+            </li>
+        </ul>
+        <hr class="divider">
+        <!-- Grupo 3: Otras Opciones -->
+        <ul class="menu-list">
+            <li>
+                <a href="#colaboradores">
+                    <span class="icon"><i class="fa-solid fa-users"></i></span>
+                    <span class="menu-text">Colaboradores</span>
+                </a>
+            </li>
+            <li>
+                <a href="#configuracion">
+                    <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                    <span class="menu-text">Configuración</span>
+                </a>
+            </li>
+            <li>
+                <a href="#cerrar-sesion">
+                    <span class="icon"><i class="fa-solid fa-door-open"></i></span>
+                    <span class="menu-text">Cerrar Sesión</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="overlay"></div> <!-- Nuevo elemento overlay -->
+    <main>
+        <h1>Bienvenido al Dashboard</h1>
+    </main>
+
+
+    <script>
+
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const sidebar = document.querySelector('aside');
+        const overlay = document.querySelector('.overlay');
+
+        function toggleSidebar() {
+            const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+            if (isMobile) {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            } else {
+                sidebar.classList.toggle('collapsed');
+            }
+
+            // Cambiar ícono
+            const icon = toggleBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        }
+
+        toggleBtn.addEventListener('click', toggleSidebar);
+
+        // Cerrar sidebar al hacer clic en overlay
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            const icon = toggleBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+
+        // Resetear al cambiar tamaño de pantalla
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+        // Cambio de item activo en el menú
+        const navLinks = document.querySelectorAll('.menu-list a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(nav => nav.classList.remove('is-active'));
+                this.classList.add('is-active');
+            });
+        });
+    </script>
+</body>
+
+</html>

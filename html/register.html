@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./../img/Irina/Logos/logo-voluntarios_completo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bulma.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Formulario de Registro</title>
+</head>
+
+<body id="register">
+    <span id="backpageindex"><a href="./../index.html">Volver al inicio</a></span>
+    <div class="container">
+        <p class="title is-1 is-txt4v has-text-centered">FORMULARIO DE REGISTRO</p>
+        <div class="tabs is-medium is-centered">
+            <ul>
+                <li class="is-active" data-tab="tab1"><a>Voluntarios</a></li>
+                <li data-tab="tab2"><a>Organizaciones</a></li>
+            </ul>
+        </div>
+        <!--! TAB1 -->
+        <div id="tab1" class="tab-content is-active">
+            <form action="./../html/organizador.html" method="GET" id="register">
+
+                <div class="field">
+                    <label class="label is-txt4v">Nombre</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Introduce tu nombre" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label is-txt4v">Apellidos</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Introduce tus apellidos" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label is-txt4v">Email</label>
+                    <div class="control">
+                        <input class="input" type="email" placeholder="Introduce tu email" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label is-txt4v">Teléfono</label>
+                    <div class="is-flex is-align-items-center">
+                        <div class="control is-flex-grow-1">
+                            <input id="phoneInput" class="input" type="tel" 
+                            placeholder="Introduce tu número de teléfono" 
+                            pattern="[6-9][0-9]{8}" 
+                            title="El número de teléfono debe contener 9 dígitos" 
+                            required>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label is-txt4v">Fecha de nacimiento</label>
+                    <div class="control">
+                        <input class="input" type="date" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label is-txt4v">Clase</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select required>
+                                <option value="" disabled selected>Selecciona tu clase</option>
+                                <option>FP básica Servicios Comerciales</option>
+                                <option>FP especial Auxiliar Administrativo General</option>
+                                <option>FP Imagen</option>
+                                <option>CFM Gestión Administrativa</option>
+                                <option>CFM Actividades Comerciales</option>
+                                <option>CFM Sistemas Microinformáticos y redes</option>
+                                <option>CFS Administración y finanzas</option>
+                                <option>CFS Comercio Internacional</option>
+                                <option>CFS Gestión de ventas</option>
+                                <option>CFS Transporte y logística</option>
+                                <option>CFS Administración de sistemas informáticos y redes</option>
+                                <option>CFS Desarrollo de aplicaciones multiplataforma</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label is-txt4v">Curso</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select required>
+                                <option value="" disabled selected>Selecciona tu curso</option>
+                                <option>1º</option>
+                                <option>2º</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label is-txt4v">Tipo de voluntariado</label>
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox"> Social
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Ambiental
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Educativo
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Cultural
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Deportivo
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Salud
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Digital
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Técnico
+                        </label>
+                        <label class="checkbox">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label is-txt4v">Disponibilidad</label>
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" class="day-checkbox" data-day="lunes"> Lunes
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="day-checkbox" data-day="martes"> Martes
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="day-checkbox" data-day="miercoles"> Miércoles
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="day-checkbox" data-day="jueves"> Jueves
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="day-checkbox" data-day="viernes"> Viernes
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="day-checkbox" data-day="sabado"> Sábado
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="day-checkbox" data-day="domingo"> Domingo
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Contenedor para los horarios dinámicos -->
+                <div id="horarios-container"></div>
+
+                <div class="field">
+                    <label class="label is-txt4v">Háblanos sobre ti</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Escribe algo sobre ti"></textarea>
+                        <div class="control">
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox" required>
+                                    Acepto los <a href="#">términos y condiciones</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-bg4v" type="submit">Aceptar</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-light" type="reset">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <!--! TAB2 -->
+
+        <div id="tab2" class="tab-content">
+            <form action="./../html/organizador.html" method="GET" id="register">
+
+                <div class="field">
+                    <label class="label is-txt4v">Nombre de la Organización</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Introduce el nombre de la organización" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label is-txt4v">Dirección</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Introduce la dirección" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label is-txt4v">Email de contacto</label>
+                    <div class="control">
+                        <input class="input" type="email" placeholder="Introduce el email de contacto" required>
+                    </div>
+                </div>
+
+                <!-- Cambios en la sección del organizador -->
+                <div class="field">
+                    <label class="label is-txt4v">Teléfono de contacto</label>
+                    <div class="is-flex is-align-items-center">
+                        <div class="control is-flex-grow-1">
+                            <input id="phoneInput" class="input" type="tel" 
+                            placeholder="Introduce tu número de teléfono" 
+                            pattern="[0-9]{9}" 
+                            title="El número de teléfono debe contener 9 dígitos" 
+                            required>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label is-txt4v">Tipo de organización</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select required>
+                                <option value="" disabled selected>Selecciona el tipo de organización</option>
+                                <option>ONG</option>
+                                <option>Fundación</option>
+                                <option>Asociación</option>
+                                <option>Entidad pública</option>
+                                <option>Otra</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label is-txt4v">Sector</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select required>
+                                <option value="" disabled selected>Selecciona el sector de la organización</option>
+                                <option>Social</option>
+                                <option>Salud</option>
+                                <option>Educativo</option>
+                                <option>Ambiental</option>
+                                <option>Cultural</option>
+                                <option>Deportivo</option>
+                                <option>Tecnológico</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label is-txt4v">Ámbito de actuación</label>
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox"> Local
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Regional
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Nacional
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox"> Internacional
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label is-txt4v">Descripción de la organización</label>
+                    <div class="control">
+                        <textarea class="textarea"
+                            placeholder="Escribe una breve descripción de la organización"></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" required>
+                            Acepto los <a href="#">términos y condiciones</a>
+                        </label>
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-bg4v" type="submit">Registrar</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-light" type="reset">Cancelar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="./../js/tabs.js"></script>
+</body>
+
+</html>

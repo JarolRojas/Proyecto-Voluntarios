@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Coordinador</title>
+    <link rel="stylesheet" href="/css/bulma.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha384-..." crossorigin="anonymous">
+</head>
+
+<body id="dash_organizador">
+    <div class="dashboard-wrapper">
+        <aside class="dashboard-sidebar menu">
+            <div class="logo">
+                <img src="/img/Irina/Logos/logo-voluntarios_completo.png" alt="Logo Voluntariado" class="logo-image">
+                <h1 class="title is-4 is-txt4v">Voluntariado</h1>
+            </div>
+            <ul class="menu-list">
+                <li><span class="menu-group is-txt4v">Perfil</span></li>
+                <li><a href="#perfil" data-section="perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                <li><a href="#calendario" data-section="calendario"><i class="fa-solid fa-calendar"></i> Calendario</a>
+                </li>
+
+                <li>
+                    <hr class="divider my-3">
+                </li>
+
+                <li><span class="menu-group is-txt4v">Gestión</span></li>
+                <li><a href="#estadisticas" data-section="estadisticas"><i class="fa-solid fa-chart-line"></i>
+                        Estadísticas</a></li>
+                <li><a href="#gestion" data-section="gestion" class="is-active"><i class="fa-solid fa-user-group"></i>
+                        Gestión de Voluntarios</a></li>
+                <li><a href="#organizaciones" data-section="organizaciones"><i class="fa-solid fa-building"></i>
+                        Organizaciones</a></li>
+
+                <li><a href="#colaboradores" data-section="colaboradores"><i class="fa-solid fa-clipboard-list"></i>
+                        Actividades</a></li>
+
+                <hr class="divider my-3">
+                </li>
+
+                <li><span class="menu-group is-txt4v">Comunicación</span></li>
+                <li><a href="#mensajes" data-section="mensajes"><i class="fa-solid fa-comments"></i> Mensajes</a></li>
+                <li><a href="#reportes" data-section="reportes"><i class="fa-solid fa-file-invoice"></i> Reportes</a>
+                </li>
+
+                <li>
+                    <hr class="divider my-3">
+                </li>
+
+                <li><span class="menu-group is-txt4v">Opciones</span></li>
+                <li><a href="./../index.html"><i class="fa-solid fa-door-open"></i> Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-main ml-3">
+            <button class="hamburger-button" aria-label="Abrir menú" onclick="toggleSidebar()">☰</button>
+            <div class="section-content" id="perfil">
+                <div class="columns">
+                    <div class="column is-8">
+                        <div class="box">
+                            <div class="columns ">
+                                <div class="column is-4 has-text-centered">
+                                    <figure class="image is-img-perfil is-inline-block">
+                                        <img src="./../img/icons/miavatar.png" alt="Foto de perfil" class="is-rounded">
+                                    </figure>
+                                    <div class="mt-3">
+                                        <button class="button is-bg4v">Editar perfil</button>
+                                    </div>
+                                </div>
+                                <div class="column">
+
+                                    <h2 class="title is-3 is-txt4v">Información del Usuario</h2>
+                                    <p><strong>Nombre:</strong> Juan Pérez</p>
+                                    <p><strong>Email:</strong> juan.perez@example.com</p>
+                                    <p><strong>Teléfono:</strong> +34 600 123 456</p>
+                                    <p><strong>Rol:</strong> Coordinador</p>
+                                    <hr>
+                                    <h3 class="subtitle is-6">Acerca de mí</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime exercitationem
+                                        labore totam hic? Iste quis corporis suscipit, a qui tenetur assumenda
+                                        consequuntur rerum, ipsum optio voluptate non blanditiis eveniet. Commodi.</p>
+                                    <hr>
+                                    <div class="level">
+                                        <div class="level-item">
+                                            <a href="https://facebook.com" target="_blank">
+                                                <span class="icon is-large"><i class="fab fa-facebook fa-2x"></i></span>
+                                            </a>
+                                        </div>
+                                        <div class="level-item">
+                                            <a href="https://twitter.com" target="_blank">
+                                                <span class="icon is-large"><i class="fab fa-twitter fa-2x"></i></span>
+                                            </a>
+                                        </div>
+                                        <div class="level-item">
+                                            <a href="https://linkedin.com" target="_blank">
+                                                <span class="icon is-large"><i class="fab fa-linkedin fa-2x"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h3 class="title is-3 is-txt4v">Últimas Actividades Asistidas</h3>
+                            <div class="activity-list">
+                                <article class="message is-light">
+                                    <div class="message-body has-left-border">
+                                        <span class="icon-text">
+                                            <span class="icon"><i
+                                                    class="fa-solid fa-hand-holding-heart is-txt4v"></i></span>
+                                            <span><strong>Recogida de Alimentos</strong></span>
+                                        </span>
+                                        <p class="is-size-7 has-text-grey">28 de marzo, 10:00 AM</p>
+                                    </div>
+                                </article>
+                                <article class="message is-light">
+                                    <div class="message-body has-left-border">
+                                        <span class="icon-text">
+                                            <span class="icon"><i class="fa-solid fa-leaf is-txt4v"></i></span>
+                                            <span><strong>Jornada de Limpieza de Playas</strong></span>
+                                        </span>
+                                        <p class="is-size-7 has-text-grey">25 de marzo, 3:00 PM</p>
+                                    </div>
+                                </article>
+                                <article class="message is-light">
+                                    <div class="message-body has-left-border">
+                                        <span class="icon-text">
+                                            <span class="icon"><i class="fa-solid fa-book is-txt4v"></i></span>
+                                            <span><strong>Apoyo Escolar en la Biblioteca</strong></span>
+                                        </span>
+                                        <p class="is-size-7 has-text-grey">20 de marzo, 4:30 PM</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box">
+                            <h3 class="title is-3 has-text-centered is-txt4v">Calendario Personal</h3>
+                            <div class="calendarioPerfil">
+                                <div class="box">
+                                    <div id="calendarioPerfil" class="has-text-centered"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h3 class="title is-3 is-txt4v">Notificaciones</h3>
+                            <article class="message is-light notification-item">
+                                <button class="delete remove-notification"></button>
+                                <div class="message-body has-left-border">
+                                    <p><b>Nueva actividad:</b> La organización Amavir ha solicitado una nueva
+                                        actividad.</p>
+                                    <span class="is-size-7 has-text-grey">Hace 2 horas</span>
+                                </div>
+                            </article>
+                            <article class="message is-light notification-item">
+                                <button class="delete remove-notification"></button>
+                                <div class="message-body has-left-border">
+                                    <p><b>Recordatorio:</b> Actualiza tu perfil para acceder a nuevas
+                                        funciones.</p>
+                                    <span class="is-size-7 has-text-grey">Hace 1 día</span>
+                                </div>
+                            </article>
+                            <article class="message is-light notification-item">
+                                <button class="delete remove-notification"></button>
+                                <div class="message-body has-left-border">
+                                    <p><b>Mensaje:</b> Tienes un mensaje de Silvia Sanz.</p>
+                                    <span class="is-size-7 has-text-grey">Hace 30 minutos</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content" id="calendario">
+                <h1 class="title is-1 is-txt4v">Calendario</h1>
+                <div class="calendar-section">
+                    <div class="container-calendar">
+                        <div class="left">
+                            <div class="calendar">
+                                <div class="month">
+                                    <i class="fas fa-angle-left prev"></i>
+                                    <div class="date">diciembre 2015</div>
+                                    <i class="fas fa-angle-right next"></i>
+                                </div>
+                                <div class="weekdays">
+                                    <div>Lun</div>
+                                    <div>Mar</div>
+                                    <div>Mié</div>
+                                    <div>Jue</div>
+                                    <div>Vie</div>
+                                    <div>Sáb</div>
+                                    <div>Dom</div>
+                                </div>
+                                <div class="days"></div>
+                                <div class="goto-today">
+                                    <div class="goto">
+                                        <input type="text" placeholder="mm/aaaa" class="date-input">
+                                        <button class="goto-btn">Ir</button>
+                                    </div>
+                                    <button class="today-btn">Hoy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="today-date">
+                                <div class="event-day">mié</div>
+                                <div class="event-date">12 de diciembre de 2022</div>
+                            </div>
+                            <div class="events"></div>
+                            <div class="add-event-wrapper">
+                                <div class="add-event-header">
+                                    <div class="title-new-event">Agregar Evento</div>
+                                    <i class="fas fa-times close"></i>
+                                </div>
+                                <div class="add-event-body">
+                                    <div class="add-event-input">
+                                        <input type="text" placeholder="Nombre del Evento" class="event-name">
+                                    </div>
+                                    <div class="add-event-input">
+                                        <input type="text" placeholder="Hora de Inicio del Evento"
+                                            class="event-time-from">
+                                    </div>
+                                    <div class="add-event-input">
+                                        <input type="text" placeholder="Hora de Fin del Evento" class="event-time-to">
+                                    </div>
+                                </div>
+                                <div class="add-event-footer">
+                                    <button class="add-event-btn">Agregar Evento</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-event">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="section-content is-visible" id="estadisticas">
+                <h1 class="title is-1 is-txt4v">Estadísticas</h1>
+                <div class="columns has-text-centered">
+                    <div class="column is-3">
+                        <div class="notification is-info">
+                            <p class="title">143</p>
+                            <p class="subtitle">Voluntarios Registrados</p>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class=" notification is-success">
+                            <p class="title">12</p>
+                            <p class="subtitle">Organizaciones Participantes</p>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="  notification is-warning">
+                            <p class="title">46</p>
+                            <p class="subtitle">Actividades Realizadas</p>
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class=" notification is-danger">
+                            <p class="title">12</p>
+                            <p class="subtitle">ODS Promovidos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
+                        GRAFICO de voluntarios en actividades por mes (se puede elegir el año)
+                    </div>
+                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
+                        GRAFICO de actividades realizadas por mes (se puede elegir el año)
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
+                        Gráfico de ciclos con voluntarios (Ciclo 2024 \ 145 Voluntarios)
+                    </div>
+                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
+                        Gráfico de organizaciones por año (Ciclo 2024 \ 5 organizaciones)
+                    </div>
+
+                </div>
+                <div class="columns">
+                    <div class="column is-6 box">
+                        Lista de voluntarios con más participaciones (Nombre | Actividades asistidas | Horas)
+                    </div>
+                    <div class="column is-6 box">
+                        Lista de Organizaciones con más actividades realizadas (Organización | Num Actividades)
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
+                        tabla con los tipos actividad y cuantas actividades realizadas con ello hay
+                    </div>
+                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
+                        tabla con la cantidad de alumnos que prefieren ciertos tipos de actividades
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="section-content" id="gestion">
+                <h1 class="title is-1 is-txt4v">Gestión de voluntarios</h1>
+                <button class="button is-bg4v is-fullwidth mb-3 is-hidden-desktop" id="toggle-filters">
+                    Mostrar/Ocultar Filtros
+                </button>
+                <div id="filter-container" class="box">
+                    <div class="columns is-multiline">
+                        <div class="column is-3">
+                            <div class="field">
+                                <label class="label">Nombre</label>
+                                <div class="control">
+                                    <input type="text" id="filter-nombre" class="input" placeholder="Nombre">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="field">
+                                <label class="label">Ciclo</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-nivel">
+                                            <option value="">Ciclo</option>
+                                            <option value="1º">1º</option>
+                                            <option value="2º">2º</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="field">
+                                <label class="label">Curso</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-curso">
+                                            <option value="">Curso</option>
+                                            <option value="DAM">DAM</option>
+                                            <option value="ASIR">ASIR</option>
+                                            <option value="AF">AF</option>
+                                            <option value="CI">CI</option>
+                                            <option value="GVEC">GVEC</option>
+                                            <option value="TL">TL</option>
+                                            <option value="GA">GA</option>
+                                            <option value="AC">AC</option>
+                                            <option value="SMR">SMR</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="field">
+                                <label class="label">Tipo Voluntariado</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-voluntariado">
+                                            <option value="">Tipo Voluntariado</option>
+                                            <option value="Social">Social</option>
+                                            <option value="Ambiental">Ambiental</option>
+                                            <option value="Educativo">Educativo</option>
+                                            <option value="Cultural">Cultural</option>
+                                            <option value="Deportivo">Deportivo</option>
+                                            <option value="Salud">Salud</option>
+                                            <option value="Digital">Digital</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="field">
+                                <label class="label">Disponibilidad</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-disponibilidad">
+                                            <option value="">Turno disponible</option>
+                                            <option value="Mañana">Mañana</option>
+                                            <option value="Tarde">Tarde</option>
+                                            <option value="Noche">Noche</option>
+                                            <option value="Fines de Semana">Fines de Semana</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-multiline box mt-1" id="user-list">
+                    <div class="column is-4 user-card" data-nombre="Juan Pérez" data-curso="DAM"
+                        data-voluntariado="Social" data-disponibilidad="Mañana">
+                        <div class="box">
+                            <div class="columns is-vcentered">
+                                <div class="column is-narrow">
+                                    <figure class="image is-64x64">
+                                        <img class="is-rounded" src="./../img/icons/miavatar.png" alt="Foto de perfil">
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <h3 class="title is-5">Juan Pérez</h3>
+                                    <p><strong>Email:</strong> juan.perez@example.com</p>
+                                    <p><strong>Ciclo:</strong> 1</p>
+                                    <p><strong>Curso:</strong> DAM</p>
+                                    <p><strong>Tipo Voluntariado:</strong> Social</p>
+                                    <p><strong>Disponibilidad:</strong> Mañana</p>
+                                </div>
+                            </div>
+                            <div class="buttons mt-3">
+                                <button class="button is-small is-danger">Eliminar</button>
+                                <button class="button is-small is-info">Enviar Mensaje</button>
+                                <button class="button is-small is-success">Añadir a Actividad</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TODO: AGREGAR QUE SE PUEDE HACER CON LOS USUARIOS (Eliminar voluntario - Enviar mensaje - Añadir a Actividad - ) -->
+                </div>
+            </div>
+            <div class="section-content" id="organizaciones">Organizaciones - Lista de organizaciones asociadas.</div>
+            <div class="section-content" id="mensajes">Mensajes - Comunícate con tus contactos.</div>
+            <div class="section-content" id="reportes">Reportes - Revisa informes y resultados.</div>
+            <div class="section-content" id="calendario">Calendario - Tareas pendientes y eventos programados.</div>
+            <div class="section-content" id="colaboradores">Colaboradores - Gestiona tu equipo de trabajo.</div>
+        </main>
+    </div>
+    <script src="./../js/organizador/org_tabs.js"></script>
+    <script src="./../js/organizador/org_cal_perfil.js"></script>
+    <script src="./../js/organizador/Organizador-calendario.js"></script>
+    <script src="./../js/organizador/filtrado.js"></script>
+</body>
+
+</html>

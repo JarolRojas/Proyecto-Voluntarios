@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tabs li');
     const tabContents = document.querySelectorAll('.tab-content');
+    
 
     // Ocultar todos los contenidos excepto el activo
     tabContents.forEach(content => {

@@ -20,31 +20,48 @@ document.addEventListener('DOMContentLoaded', function() {
         fechaNacimiento: {
             required: true,
             validar: function(value) {
+                // Verificar si el valor está vacío
                 if (!value) {
                     return 'La fecha de nacimiento es obligatoria.';
                 }
 
-                // Crear objeto Date directamente desde el valor (AAAA-MM-DD)
-                const fechaNac = new Date(value);
-                const fechaActual = new Date('2025-04-10'); // 10 de abril de 2025
-                const fechaMinima = new Date('1905-04-10'); // 120 años atrás
+                // Validar formato básico de fecha (AAAA-MM-DD)
+                const regexFecha = /^\d{4}-\d{2}-\d{2}$/;
+                if (!regexFecha.test(value)) {
+                    return 'Formato de fecha inválido (use AAAA-MM-DD).';
+                }
 
-                // Normalizar horas para evitar problemas
+                // Crear objeto Date desde el valor
+                const fechaNac = new Date(value);
+                
+                // Verificar si la fecha es válida
+                if (isNaN(fechaNac.getTime())) {
+                    return 'Fecha inválida.';
+                }
+
+                // Obtener fecha actual del sistema
+                const fechaActual = new Date();
+                
+                // Calcular fecha mínima (120 años atrás desde hoy)
+                const fechaMinima = new Date();
+                fechaMinima.setFullYear(fechaActual.getFullYear() - 120);
+
+                // Normalizar horas para evitar problemas de comparación
                 fechaNac.setHours(0, 0, 0, 0);
                 fechaActual.setHours(0, 0, 0, 0);
                 fechaMinima.setHours(0, 0, 0, 0);
 
-                // Comparar usando getTime() para mayor precisión
+                // Validaciones
                 if (fechaNac.getTime() > fechaActual.getTime()) {
-                    return 'La fecha no puede ser posterior al 10 de abril de 2025.';
+                    return 'La fecha no puede ser futura.';
                 }
                 if (fechaNac.getTime() < fechaMinima.getTime()) {
-                    return 'La fecha no puede ser anterior al 10 de abril de 1905.';
+                    return `La fecha no puede ser anterior a ${fechaMinima.toISOString().split('T')[0]}.`;
                 }
+
                 return true;
             }
         },
-           
         email: {
             required: true,
             regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(es|com|org|net)$/,
@@ -53,6 +70,18 @@ document.addEventListener('DOMContentLoaded', function() {
         direccion: {
             required: true,
             mensaje: 'La dirección es obligatoria.'
+        },
+        clase: {
+            required: true,
+            mensaje: 'Debes seleccionar una clase.'
+        },
+        curso: {
+            required: true,
+            mensaje: 'Debes seleccionar un curso.'
+        },
+        terminos: {
+            required: true,
+            mensaje: 'Debes aceptar los términos y condiciones.'
         }
     };
 
@@ -73,23 +102,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función genérica para validar cualquier formulario
     function validarFormulario(form) {
         let esValido = true;
-        const campos = form.querySelectorAll('input[name]');
+        const campos = form.querySelectorAll('input[name], select[name]');
         
         campos.forEach(input => {
             const nombreCampo = input.name;
             const regla = reglasValidacion[nombreCampo];
             if (regla) {
-                const valor = input.value.trim();
-                const errorElement = form.querySelector(`#${nombreCampo}-error-${form.id.split('-')[1]}`);
                 let resultado = true;
                 let mensajeError = '';
+                const errorElement = form.querySelector(`#${nombreCampo}-error-${form.id.split('-')[1]}`) || 
+                                   form.querySelector(`#${nombreCampo}-error`);
 
-                if (regla.required && !valor) {
-                    resultado = false;
-                    mensajeError = regla.mensaje || 'Este campo es obligatorio.';
-                } else if (regla.regex && !regla.regex.test(valor)) {
-                    resultado = false;
-                    mensajeError = regla.mensaje;
+                if (input.type === 'checkbox') {
+                    // Validar checkboxes
+                    if (regla.required && !input.checked) {
+                        resultado = false;
+                        mensajeError = regla.mensaje || 'Este campo es obligatorio.';
+                    }
+                } else {
+                    // Validar otros campos
+                    const valor = input.value.trim();
+                    if (regla.required && !valor) {
+                        resultado = false;
+                        mensajeError = regla.mensaje || 'Este campo es obligatorio.';
+                    } else if (regla.regex && !regla.regex.test(valor)) {
+                        resultado = false;
+                        mensajeError = regla.mensaje;
+                    } else if (regla.validar) {
+                        const validacion = regla.validar(valor);
+                        if (validacion !== true) {
+                            resultado = false;
+                            mensajeError = validacion;
+                        }
+                    }
                 }
 
                 actualizarEstadoInput(input, errorElement, resultado, mensajeError);

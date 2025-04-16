@@ -521,12 +521,97 @@
                     </div>
                 </div>
             </div>
-            <div class="section-content" id="organizaciones">Organizaciones - Lista de organizaciones asociadas.</div>
-            <div class="section-content" id="mensajes">Mensajes - Comunícate con tus contactos.</div>
-            <div class="section-content" id="reportes">Reportes - Revisa informes y resultados.</div>
-            <div class="section-content" id="calendario">Calendario - Tareas pendientes y eventos programados.</div>
-            <div class="section-content" id="colaboradores">Colaboradores - Gestiona tu equipo de trabajo.</div>
+            <div class="section-content" id="organizaciones">
+                <h1 class="title is-1 is-txt4v">Gestión de Organizaciones</h1>
+                <button class="button is-bg4v is-fullwidth mb-3 is-hidden-desktop" id="toggle-filters">
+                    Mostrar/Ocultar Filtros
+                </button>
+                <div id="filter-container" class="box">
+                    <div class="columns is-multiline">
+                        <div class="column is-3">
+                            <div class="field">
+                                <label class="label">Nombre</label>
+                                <div class="control">
+                                    <input type="text" id="filter-nombre" class="input" placeholder="Nombre">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-4 is-mobile">
+                            <div class="box" data-nombre="AMAVIR">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="../img/logos/organizaciones/amavir_icon.png" alt="Image" />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>AMAVIR</strong> <small></small>
+                                                <br>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="column is-4 is-mobile">
+                            <div class="box" data-nombre="ANA">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="../img/logos/organizaciones/amavir_icon.png" alt="Image" />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>ANA</strong> <small></small>
+                                                <br>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="column is-4 is-mobile">
+                            <div class="box" data-nombre="CUATROVIENTOS">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="../img/logos/organizaciones/amavir_icon.png" alt="Image" />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>CUATROVIENTOS</strong> <small></small>
+                                                <br>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    <div class="section-content" id="mensajes">Mensajes - Comunícate con tus contactos.</div>
+                    <div class="section-content" id="reportes">Reportes - Revisa informes y resultados.</div>
+                    <div class="section-content" id="calendario">Calendario - Tareas pendientes y eventos programados.
+                    </div>
+                    <div class="section-content" id="colaboradores">Colaboradores - Gestiona tu equipo de trabajo.</div>
         </main>
+    </div>
     </div>
     <script src="./../js/organizador/org_tabs.js"></script>
     <script src="./../js/organizador/org_cal_perfil.js"></script>

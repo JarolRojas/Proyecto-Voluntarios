@@ -94,6 +94,13 @@ html {
     #perfil .delete{
         margin-right: -80px;
     }
+
+    #gestion .voluntarios .box{
+      height: 350px;
+    }
+    #gestion .voluntarios .column.is-8{
+      margin-left: 20px;
+    }
 }
 
 /*? ESCRITORIO */
@@ -799,10 +806,6 @@ transition: ease-in-out all 0.3s;
 
 #perfil {
     margin-left: -25px;
-}
-
-.is-img-perfil {
-    height: 25.6vh;
 }
 
 #perfil .column .box {

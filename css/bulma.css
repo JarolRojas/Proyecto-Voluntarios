@@ -21601,3 +21601,14 @@ has-background-danger.is-hoverable:active {
   width: 256px;
   height: 256px;
 }
+
+.is-img-perfil img{
+  width: 20vh !important;
+}
+.is-img-perfil-mobile img{
+  height: 10vh !important;
+}
+
+.rating i {
+  color: rgb(230, 230, 45);
+}

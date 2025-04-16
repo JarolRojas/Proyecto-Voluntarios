@@ -29,8 +29,6 @@
                 </li>
 
                 <li><span class="menu-group is-txt4v">Gestión</span></li>
-                <li><a href="#estadisticas" data-section="estadisticas"><i class="fa-solid fa-chart-line"></i>
-                        Estadísticas</a></li>
                 <li><a href="#gestion" data-section="gestion" class="is-active"><i class="fa-solid fa-user-group"></i>
                         Gestión de Voluntarios</a></li>
                 <li><a href="#organizaciones" data-section="organizaciones"><i class="fa-solid fa-building"></i>
@@ -74,10 +72,10 @@
                                 <div class="column">
 
                                     <h2 class="title is-3 is-txt4v">Información del Usuario</h2>
-                                    <p><strong>Nombre:</strong> Juan Pérez</p>
-                                    <p><strong>Email:</strong> juan.perez@example.com</p>
-                                    <p><strong>Teléfono:</strong> +34 600 123 456</p>
-                                    <p><strong>Rol:</strong> Coordinador</p>
+                                    <p><b>Nombre:</b> Juan Pérez</p>
+                                    <p><b>Email:</b> juan.perez@example.com</p>
+                                    <p><b>Teléfono:</b> +34 600 123 456</p>
+                                    <p><b>Rol:</b> Coordinador</p>
                                     <hr>
                                     <h3 class="subtitle is-6">Acerca de mí</h3>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime exercitationem
@@ -102,7 +100,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="box">
@@ -113,7 +110,7 @@
                                         <span class="icon-text">
                                             <span class="icon"><i
                                                     class="fa-solid fa-hand-holding-heart is-txt4v"></i></span>
-                                            <span><strong>Recogida de Alimentos</strong></span>
+                                            <span><b>Recogida de Alimentos</b></span>
                                         </span>
                                         <p class="is-size-7 has-text-grey">28 de marzo, 10:00 AM</p>
                                     </div>
@@ -122,7 +119,7 @@
                                     <div class="message-body has-left-border">
                                         <span class="icon-text">
                                             <span class="icon"><i class="fa-solid fa-leaf is-txt4v"></i></span>
-                                            <span><strong>Jornada de Limpieza de Playas</strong></span>
+                                            <span><b>Jornada de Limpieza de Playas</b></span>
                                         </span>
                                         <p class="is-size-7 has-text-grey">25 de marzo, 3:00 PM</p>
                                     </div>
@@ -131,7 +128,7 @@
                                     <div class="message-body has-left-border">
                                         <span class="icon-text">
                                             <span class="icon"><i class="fa-solid fa-book is-txt4v"></i></span>
-                                            <span><strong>Apoyo Escolar en la Biblioteca</strong></span>
+                                            <span><b>Apoyo Escolar en la Biblioteca</b></span>
                                         </span>
                                         <p class="is-size-7 has-text-grey">20 de marzo, 4:30 PM</p>
                                     </div>
@@ -242,77 +239,59 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <div class="section-content is-visible" id="estadisticas">
-                <h1 class="title is-1 is-txt4v">Estadísticas</h1>
-                <div class="columns has-text-centered">
-                    <div class="column is-3">
-                        <div class="notification is-info">
-                            <p class="title">143</p>
-                            <p class="subtitle">Voluntarios Registrados</p>
+            <div class="modal" id="modal-voluntario">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title" id="modal-nombre">Nombre Apellido</p>
+                        <button class="delete" aria-label="close" id="cerrar-modal"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <div class="columns">
+                            <div class="column is-4 has-text-centered">
+                                <figure class="image is-img-perfil is-inline-block">
+                                    <img id="modal-img" class="is-rounded" src="" alt="Foto perfil">
+                                </figure>
+                            </div>
+                            <div class="column is-8">
+                                <p><b><i class="fas fa-envelope"></i> Correo:</b> <span id="modal-correo"></span></p>
+                                <p><b><i class="fas fa-phone"></i> Teléfono:</b> <span id="modal-telefono"></span></p>
+                                <p><b><i class="fas fa-calendar"></i> Fecha de Nacimiento:</b> <span
+                                        id="modal-fecha"></span></p>
+                                <p><b><i class="fas fa-graduation-cap"></i> Curso:</b> <span id="modal-curso"></span>
+                                </p>
+                                <p><b><i class="fas fa-hands-helping"></i> Tipo de Voluntariado:</b> <span
+                                        id="modal-voluntariado"></span></p>
+                                <p><b><i class="fas fa-clock"></i> Disponibilidad:</b> <span
+                                        id="modal-disponibilidad"></span></p>
+                                <p><b><i class="fas fa-star"></i> Valoración:</b> <span id="modal-valoracion"></span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="column is-3">
-                        <div class=" notification is-success">
-                            <p class="title">12</p>
-                            <p class="subtitle">Organizaciones Participantes</p>
-                        </div>
-                    </div>
-                    <div class="column is-3">
-                        <div class="  notification is-warning">
-                            <p class="title">46</p>
-                            <p class="subtitle">Actividades Realizadas</p>
-                        </div>
-                    </div>
-                    <div class="column is-3">
-                        <div class=" notification is-danger">
-                            <p class="title">12</p>
-                            <p class="subtitle">ODS Promovidos</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
-                        GRAFICO de voluntarios en actividades por mes (se puede elegir el año)
-                    </div>
-                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
-                        GRAFICO de actividades realizadas por mes (se puede elegir el año)
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
-                        Gráfico de ciclos con voluntarios (Ciclo 2024 \ 145 Voluntarios)
-                    </div>
-                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
-                        Gráfico de organizaciones por año (Ciclo 2024 \ 5 organizaciones)
-                    </div>
+                        <hr>
+                        <p><b><i class="fas fa-info-circle"></i> Descripción:</b></p>
+                        <p id="modal-descripcion" class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed do eiusmod tempor incididunt ut labore.</p>
 
+                        <p><b><i class="fas fa-list-check"></i> Actividades realizadas:</b></p>
+                        <ul id="modal-actividades" class="ml-4">
+                            <li><i class="fas fa-leaf has-text-success"></i> Participación en campañas de reciclaje</li>
+                            <li><i class="fas fa-laptop has-text-info"></i> Asistencia en clases de informática básica
+                            </li>
+                            <li><i class="fas fa-theater-masks has-text-warning"></i> Colaboración en ferias culturales
+                            </li>
+                        </ul>
+                    </section>
+                    <footer class="modal-card-foot is-justify-content-flex-end">
+                        <button class="button is-info mx-1" id="editar-voluntario">Editar</button>
+                        <button class="button is-danger mx-1" id="eliminar-voluntario">Eliminar</button>
+                    </footer>
                 </div>
-                <div class="columns">
-                    <div class="column is-6 box">
-                        Lista de voluntarios con más participaciones (Nombre | Actividades asistidas | Horas)
-                    </div>
-                    <div class="column is-6 box">
-                        Lista de Organizaciones con más actividades realizadas (Organización | Num Actividades)
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
-                        tabla con los tipos actividad y cuantas actividades realizadas con ello hay
-                    </div>
-                    <div class="column is-12-mobile is-6-tablet is-6-desktop box">
-                        tabla con la cantidad de alumnos que prefieren ciertos tipos de actividades
-                    </div>
-                </div>
-
-
-
-
             </div>
 
-            <div class="section-content" id="gestion">
+
+
+            <div class="section-content is-visible" id="gestion">
                 <h1 class="title is-1 is-txt4v">Gestión de voluntarios</h1>
                 <button class="button is-bg4v is-fullwidth mb-3 is-hidden-desktop" id="toggle-filters">
                     Mostrar/Ocultar Filtros
@@ -387,11 +366,14 @@
                                 <div class="control">
                                     <div class="select">
                                         <select id="filter-disponibilidad">
-                                            <option value="">Turno disponible</option>
-                                            <option value="Mañana">Mañana</option>
-                                            <option value="Tarde">Tarde</option>
-                                            <option value="Noche">Noche</option>
-                                            <option value="Fines de Semana">Fines de Semana</option>
+                                            <option value="">Dias disponibles</option>
+                                            <option value="Lunes">Lunes</option>
+                                            <option value="Martes">Martes</option>
+                                            <option value="Miércoles">Miércoles</option>
+                                            <option value="Jueves">Jueves</option>
+                                            <option value="Viernes">Viernes</option>
+                                            <option value="Sábado">Sábado</option>
+                                            <option value="Domingo">Domingo</option>
                                         </select>
                                     </div>
                                 </div>
@@ -399,34 +381,144 @@
                         </div>
                     </div>
                 </div>
-                <div class="columns is-multiline box mt-1" id="user-list">
-                    <div class="column is-4 user-card" data-nombre="Juan Pérez" data-curso="DAM"
-                        data-voluntariado="Social" data-disponibilidad="Mañana">
+                <hr class="divider my-3">
+                <div class="columns is-multiline mt-1" id="user-list">
+                    <!-- Alumno 1 -->
+                    <div class="column is-6-desktop voluntarios">
                         <div class="box">
-                            <div class="columns is-vcentered">
-                                <div class="column is-narrow">
-                                    <figure class="image is-64x64">
-                                        <img class="is-rounded" src="./../img/icons/miavatar.png" alt="Foto de perfil">
+                            <div class="columns is-variable is-1 is-flex-direction-column-mobile">
+                                <div
+                                    class="column is-4 has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
+                                    <figure class="image is-128x128 mb-3">
+                                        <img src="./../img/icons/miavatar.png" alt="perfil" class="is-rounded">
                                     </figure>
+                                    <button class="button mostrarperfil">Mostrar Perfil</button>
                                 </div>
-                                <div class="column">
-                                    <h3 class="title is-5">Juan Pérez</h3>
-                                    <p><strong>Email:</strong> juan.perez@example.com</p>
-                                    <p><strong>Ciclo:</strong> 1</p>
-                                    <p><strong>Curso:</strong> DAM</p>
-                                    <p><strong>Tipo Voluntariado:</strong> Social</p>
-                                    <p><strong>Disponibilidad:</strong> Mañana</p>
+                                <div class="column is-8">
+                                    <h3 class="title is-3 is-txt4v">Juan Pérez Garcia</h3>
+                                    <p><b>Correo:</b> juanpgar@gmail.com</p>
+                                    <p><b>Teléfono:</b> +34 600 123 456</p>
+                                    <p><b>Curso:</b> 2º DAM</p>
+                                    <p><b>Tipo de Voluntariado:</b>
+                                        <span class="tag is-digital">Digital</span>
+                                        <span class="tag is-educativo">Educativo</span>
+                                        <span class="tag is-ambiental">Ambiental</span>
+                                    </p>
+                                    <p><b>Disponibilidad:</b> Lunes, Miércoles, Viernes, Domingo</p>
+                                    <p><b>Valoración:</b></p>
+                                    <div class="rating">
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star-half-alt"></i></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="buttons mt-3">
-                                <button class="button is-small is-danger">Eliminar</button>
-                                <button class="button is-small is-info">Enviar Mensaje</button>
-                                <button class="button is-small is-success">Añadir a Actividad</button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- TODO: AGREGAR QUE SE PUEDE HACER CON LOS USUARIOS (Eliminar voluntario - Enviar mensaje - Añadir a Actividad - ) -->
+                    <!-- Alumno 2 -->
+                    <div class="column is-6-desktop voluntarios">
+                        <div class="box">
+                            <div class="columns is-variable is-1 is-flex-direction-column-mobile">
+                                <div
+                                    class="column is-4 has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
+                                    <figure class="image is-128x128 mb-3">
+                                        <img src="./../img/icons/avatar.png" alt="perfil" class="is-rounded">
+                                    </figure>
+                                    <button class="button mostrarperfil">Mostrar Perfil</button>
+                                </div>
+                                <div class="column is-8">
+                                    <h3 class="title is-3 is-txt4v">Laura Martínez Ruiz</h3>
+                                    <p><b>Correo:</b> lauramr@hotmail.com</p>
+                                    <p><b>Teléfono:</b> +34 698 321 987</p>
+                                    <p><b>Curso:</b> 1º DAM</p>
+                                    <p><b>Tipo de Voluntariado:</b>
+                                        <span class="tag is-educativo">Educativo</span>
+                                        <span class="tag is-social">Social</span>
+                                    </p>
+                                    <p><b>Disponibilidad:</b> Martes, Jueves</p>
+                                    <p><b>Valoración:</b></p>
+                                    <div class="rating">
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star-half-alt"></i></span>
+                                        <span class="icon is-small"><i class="fa-regular fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alumno 3 -->
+                    <div class="column is-6-desktop voluntarios">
+                        <div class="box">
+                            <div class="columns is-variable is-1 is-flex-direction-column-mobile">
+                                <div
+                                    class="column is-4 has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
+                                    <figure class="image is-128x128 mb-3">
+                                        <img src="./../img/icons/avatar.png" alt="perfil" class="is-rounded">
+                                    </figure>
+                                    <button class="button mostrarperfil">Mostrar Perfil</button>
+                                </div>
+                                <div class="column is-8">
+                                    <h3 class="title is-3 is-txt4v">Carlos López Díaz</h3>
+                                    <p><b>Correo:</b> carlosldiaz@gmail.com</p>
+                                    <p><b>Teléfono:</b> +34 612 345 678</p>
+                                    <p><b>Curso:</b> 2º ASIR</p>
+                                    <p><b>Tipo de Voluntariado:</b>
+                                        <span class="tag is-ambiental">Ambiental</span>
+                                        <span class="tag is-social">Social</span>
+                                    </p>
+                                    <p><b>Disponibilidad:</b> Sábado, Domingo</p>
+                                    <p><b>Valoración:</b></p>
+                                    <div class="rating">
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-regular fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-regular fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alumno 4 -->
+                    <div class="column is-6-desktop voluntarios">
+                        <div class="box">
+                            <div class="columns is-variable is-1 is-flex-direction-column-mobile">
+                                <div
+                                    class="column is-4 has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
+                                    <figure class="image is-128x128 mb-3">
+                                        <img src="./../img/icons/avatar.png" alt="perfil" class="is-rounded">
+                                    </figure>
+                                    <button class="button mostrarperfil">Mostrar Perfil</button>
+                                </div>
+                                <div class="column is-8">
+                                    <h3 class="title is-3 is-txt4v">Ana Gómez Torres</h3>
+                                    <p><b>Correo:</b> anagt93@gmail.com</p>
+                                    <p><b>Teléfono:</b> +34 645 555 555</p>
+                                    <p><b>Curso:</b> 1º DAM</p>
+                                    <p><b>Tipo de Voluntariado:</b>
+                                        <span class="tag is-digital">Digital</span>
+                                        <span class="tag is-cultural">Cultural</span>
+                                    </p>
+                                    <p><b>Disponibilidad:</b> Lunes, Jueves, Sábado</p>
+                                    <p><b>Valoración:</b></p>
+                                    <div class="rating">
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-solid fa-star-half-alt"></i></span>
+                                        <span class="icon is-small"><i class="fa-regular fa-star"></i></span>
+                                        <span class="icon is-small"><i class="fa-regular fa-star"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="section-content" id="organizaciones">Organizaciones - Lista de organizaciones asociadas.</div>
@@ -440,6 +532,7 @@
     <script src="./../js/organizador/org_cal_perfil.js"></script>
     <script src="./../js/organizador/Organizador-calendario.js"></script>
     <script src="./../js/organizador/filtrado.js"></script>
+    <script src="./../js/organizador/modals.js"></script>
 </body>
 
 </html>

@@ -434,90 +434,280 @@
                 <button class="button is-bg4v is-fullwidth mb-3 is-hidden-desktop" id="toggle-filters">
                     Mostrar/Ocultar Filtros
                 </button>
-                <div id="filter-container" class="box">
+                <div id="filter-container-nombre" class="box">
                     <div class="columns is-multiline">
                         <div class="column is-3">
                             <div class="field">
                                 <label class="label">Nombre</label>
                                 <div class="control">
-                                    <input type="text" id="filter-nombre" class="input" placeholder="Nombre">
+                                    <input type="text" id="filter-nombreOrg" class="input" placeholder="Nombre">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            
-                <div class="container">
-                    <div class="columns">
-                        <div class="column is-4 is-mobile">
-                            <div class="box" data-nombre="AMAVIR">
-                                <article class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-64x64">
-                                            <img src="../img/logos/organizaciones/amavir_icon.png" alt="Image" />
-                                        </figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong>AMAVIR</strong> <small></small>
-                                                <br>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="column is-4 is-mobile">
-                            <div class="box" data-nombre="ANA">
-                                <article class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-64x64">
-                                            <img src="../img/logos/organizaciones/amavir_icon.png" alt="Image" />
-                                        </figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong>ANA</strong> <small></small>
-                                                <br>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="column is-4 is-mobile">
-                            <div class="box" data-nombre="CUATROVIENTOS">
-                                <article class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-64x64">
-                                            <img src="../img/logos/organizaciones/amavir_icon.png" alt="Image" />
-                                        </figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong>CUATROVIENTOS</strong> <small></small>
-                                                <br>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-                    <div class="section-content" id="mensajes">Mensajes - Comunícate con tus contactos.</div>
-                    <div class="section-content" id="reportes">Reportes - Revisa informes y resultados.</div>
-                    <div class="section-content" id="calendario">Calendario - Tareas pendientes y eventos programados.
-                    </div>
-                    <div class="section-content" id="colaboradores">Colaboradores - Gestiona tu equipo de trabajo.</div>
+                <div class="container">
+                    <div class="columns is-multiline">
+                        <!-- AMAVIR -->
+                        <div class="column is-4" data-nombre="AMAVIR">
+                            <div class="box">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="../img/logos/organizaciones/amavir_icon.png" alt="Image" />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>AMAVIR</strong><br>
+                                                <strong>Correo:</strong> amavir@amavir.com<br>
+                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
+                                                <strong>Teléfono:</strong> 912345678
+                                            </p>
+                                        </div>
+                                        <button class="button is-small is-success mt-1">Modificar</button>
+                                        <button class="button is-small is-danger mt-1">Eliminar</button>
+                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
+                                        <button class="button is-small is-light mt-1" open-modal="modalAmavir">Mostrar
+                                            perfil</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- MODAL DE AMAVIR -->
+                        <div class="modal modalAmavir">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Perfil de Amavir</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <p>Información adicional sobre Amavir...</p>
+                                    <img src="./../img/icons/avatar.png" alt="">
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <div class="buttons">
+                                        <button class="button is-success">Aceptar</button>
+                                        <button class="button" aria-label="close">Cerrar</button>
+                                    </div>
+                                </footer>
+                            </div>
+
+                        </div>
+
+
+                        <!-- ANA -->
+                        <div class="column is-4" data-nombre="ANA">
+                            <div class="box">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="https://cermin.org/wp-content/uploads/2021/02/logo-ana.jpg"
+                                                alt="Logo Autismo Navarra">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>ANA</strong><br>
+                                                <strong>Correo:</strong> amavir@amavir.com<br>
+                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
+                                                <strong>Teléfono:</strong> 912345678
+                                            </p>
+                                        </div>
+                                        <button class="button is-small is-success mt-1">Modificar</button>
+                                        <button class="button is-small is-danger mt-1">Eliminar</button>
+                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
+                                        <button class="button is-small is-light mt-1" open-modal="modalAna">Mostrar
+                                            perfil</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- MODAL DE ANA -->
+                        <div class="modal modalAna">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Perfil de Ana</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <p>Información adicional sobre Ana...</p>
+                                    <img src="./../img/icons/avatar.png" alt="">
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <div class="buttons">
+                                        <button class="button is-success">Aceptar</button>
+                                        <button class="button" aria-label="close">Cerrar</button>
+                                    </div>
+                                </footer>
+                            </div>
+
+                        </div>
+
+
+                        <!-- CUATROVIENTOS -->
+                        <div class="column is-4" data-nombre="CUATROVIENTOS">
+                            <div class="box">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="../img/logos/logo.png" alt="Image" />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>CUATROVIENTOS</strong><br>
+                                                <strong>Correo:</strong> amavir@amavir.com<br>
+                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
+                                                <strong>Teléfono:</strong> 912345678
+                                            </p>
+                                        </div>
+                                        <button class="button is-small is-success mt-1">Modificar</button>
+                                        <button class="button is-small is-danger mt-1">Eliminar</button>
+                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
+                                        <button class="button is-small is-light mt-1"
+                                            open-modal="modalCuatrovientos">Mostrar perfil</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- MODAL DE CUATROVIENTOS -->
+                        <div class="modal modalCuatrovientos">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Perfil de Cuatrovientos</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <p>Información adicional sobre Cuatrovientos...</p>
+                                    <img src="./../img/icons/avatar.png" alt="">
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <div class="buttons">
+                                        <button class="button is-success">Aceptar</button>
+                                        <button class="button" aria-label="close">Cerrar</button>
+                                    </div>
+                                </footer>
+                            </div>
+
+                        </div>
+
+
+                        <!-- UNZUTXIKI -->
+                        <div class="column is-4" data-nombre="UNZUTXIKI">
+                            <div class="box">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="../img/logos/organizaciones/Unzutxiki.png" alt="Image" />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>UNZUTXIKI</strong><br>
+                                                <strong>Correo:</strong> amavir@amavir.com<br>
+                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
+                                                <strong>Teléfono:</strong> 912345678
+                                            </p>
+                                        </div>
+                                        <button class="button is-small is-success mt-1">Modificar</button>
+                                        <button class="button is-small is-danger mt-1">Eliminar</button>
+                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
+                                        <button class="button is-small is-light mt-1"
+                                            open-modal="modalUnzutxiki">Mostrar perfil</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- MODAL DE UNZUTXIKI -->
+
+
+                        
+                        <div class="modal modalUnzutxiki">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Perfil de Unzutxiki</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <p>Información adicional sobre Unzutxiki...</p>
+                                    <img src="./../img/icons/avatar.png" alt="">
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <div class="buttons">
+                                        <button class="button is-success">Aceptar</button>
+                                        <button class="button" aria-label="close">Cerrar</button>
+                                    </div>
+                                </footer>
+                            </div>
+
+                        </div>
+
+                        <!-- SOLERA -->
+                        <div class="column is-4" data-nombre="SOLERA">
+                            <div class="box">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="https://www.soleraasistencial.es/wp-content/uploads/2020/04/Solera_Asistencial.jpg"
+                                                alt="Logo Solera Asistencial">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>SOLERA</strong><br>
+                                                <strong>Correo:</strong> amavir@amavir.com<br>
+                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
+                                                <strong>Teléfono:</strong> 912345678
+                                            </p>
+                                        </div>
+                                        <button class="button is-small is-success mt-1">Modificar</button>
+                                        <button class="button is-small is-danger mt-1">Eliminar</button>
+                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
+                                        <button class="button is-small is-light mt-1" open-modal="modalSolera">Mostrar
+                                            perfil</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- MODAL DE SOLERA -->
+                        <div class="modal modalSolera">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Perfil de Solera</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <p>Información adicional sobre Solera...</p>
+                                    <img src="./../img/icons/avatar.png" alt="">
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <div class="buttons">
+                                        <button class="button is-success">Aceptar</button>
+                                        <button class="button" aria-label="close">Cerrar</button>
+                                    </div>
+                                </footer>
+                            </div>
+
+                        </div>
+
+
+                <div class="section-content" id="mensajes">Mensajes - Comunícate con tus contactos.</div>
+                <div class="section-content" id="reportes">Reportes - Revisa informes y resultados.</div>
+                <div class="section-content" id="calendario">Calendario - Tareas pendientes y eventos programados.
+                </div>
+                <div class="section-content" id="colaboradores">Colaboradores - Gestiona tu equipo de trabajo.</div>
         </main>
     </div>
     </div>
@@ -525,6 +715,8 @@
     <script src="./../js/organizador/org_cal_perfil.js"></script>
     <script src="./../js/organizador/Organizador-calendario.js"></script>
     <script src="./../js/organizador/filtrado.js"></script>
+    <script src="./../js/organizador/org_filtrado_organizaciones.js"></script>
+    <script src="./../js/organizador/org_modal.js"></script>
 </body>
 
 </html>

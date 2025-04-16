@@ -173,4 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Formulario register-organizacion no encontrado");
     }
+
+    
 });

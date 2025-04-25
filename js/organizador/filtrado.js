@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterVoluntariado = document.getElementById('filter-voluntariado');
     const filterDisponibilidad = document.getElementById('filter-disponibilidad');
     const userList = document.getElementById('user-list');
-    
+
     // Función para filtrar los voluntarios
     function filterVolunteers() {
         const nombre = filterNombre.value.toLowerCase();
@@ -14,23 +14,27 @@ document.addEventListener('DOMContentLoaded', function () {
         const curso = filterCurso.value.toLowerCase();
         const voluntariado = filterVoluntariado.value.toLowerCase();
         const disponibilidad = filterDisponibilidad.value.toLowerCase();
-        
+
         const volunteers = userList.getElementsByClassName('voluntarios');
-        
+
         // Recorrer todos los voluntarios y comprobar si cumplen con los filtros
         Array.from(volunteers).forEach(voluntario => {
             const nombreVoluntario = voluntario.querySelector('h3').textContent.toLowerCase();
-            const cursoVoluntario = voluntario.querySelector('p').textContent.toLowerCase();
+            const cursoVoluntario = voluntario.querySelector('p:nth-of-type(3)').textContent.toLowerCase();
             const tags = voluntario.querySelectorAll('.tag');
-            const disponibilidadVoluntario = voluntario.querySelector('p').textContent.toLowerCase();
-            
+            const disponibilidadVoluntario = voluntario.querySelector('p:nth-of-type(5)').textContent.toLowerCase();
+
             // Verificar si el voluntario cumple con todos los filtros
-            const matchesNombre = nombreVoluntario.includes(nombre);
+            const matchesNombre = nombre ? nombreVoluntario.includes(nombre) : true;
             const matchesNivel = nivel ? cursoVoluntario.includes(nivel) : true;
             const matchesCurso = curso ? cursoVoluntario.includes(curso) : true;
-            const matchesVoluntariado = Array.from(tags).some(tag => tag.textContent.toLowerCase().includes(voluntariado));
-            const matchesDisponibilidad = disponibilidad ? disponibilidadVoluntario.includes(disponibilidad) : true;
-            
+            const matchesVoluntariado = voluntariado
+                ? Array.from(tags).some(tag => tag.textContent.toLowerCase().includes(voluntariado))
+                : true;
+            const matchesDisponibilidad = disponibilidad
+                ? disponibilidadVoluntario.includes(disponibilidad)
+                : true;
+
             if (matchesNombre && matchesNivel && matchesCurso && matchesVoluntariado && matchesDisponibilidad) {
                 voluntario.style.display = ''; // Mostrar el voluntario
             } else {
@@ -38,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-    
+
     // Agregar eventos a los filtros para que se actualicen al cambiar
     filterNombre.addEventListener('input', filterVolunteers);
     filterNivel.addEventListener('change', filterVolunteers);

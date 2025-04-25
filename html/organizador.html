@@ -24,9 +24,9 @@
                 <li><a href="#calendario" data-section="calendario"><i class="fa-solid fa-calendar"></i> Calendario</a>
                 </li>
 
-                <li>
-                    <hr class="divider my-3">
-                </li>
+
+                <hr class="divider my-3">
+
 
                 <li><span class="menu-group is-txt4v">Gestión</span></li>
                 <li><a href="#gestion" data-section="gestion" class="is-active"><i class="fa-solid fa-user-group"></i>
@@ -34,23 +34,23 @@
                 <li><a href="#organizaciones" data-section="organizaciones"><i class="fa-solid fa-building"></i>
                         Organizaciones</a></li>
 
-                <li><a href="#colaboradores" data-section="colaboradores"><i class="fa-solid fa-clipboard-list"></i>
+                <li><a href="#actividad" data-section="actividad"><i class="fa-solid fa-clipboard-list"></i>
                         Actividades</a></li>
 
                 <hr class="divider my-3">
+
+
+                <li><span class="menu-group is-txt4v">Aprobación</span></li>
+                <li><a href="#aprobacion" data-section="aprobacion"><i class="fa-solid fa-file-invoice"></i>
+                        Aprobación</a>
                 </li>
 
-                <li><span class="menu-group is-txt4v">Comunicación</span></li>
-                <li><a href="#mensajes" data-section="mensajes"><i class="fa-solid fa-comments"></i> Mensajes</a></li>
-                <li><a href="#reportes" data-section="reportes"><i class="fa-solid fa-file-invoice"></i> Reportes</a>
-                </li>
 
-                <li>
-                    <hr class="divider my-3">
-                </li>
+                <hr class="divider my-3">
+
 
                 <li><span class="menu-group is-txt4v">Opciones</span></li>
-                <li><a href="./../index.html"><i class="fa-solid fa-door-open"></i> Cerrar Sesión</a></li>
+                <li><a href="/index.html"><i class="fa-solid fa-door-open"></i> Cerrar Sesión</a></li>
             </ul>
         </aside>
 
@@ -239,60 +239,8 @@
                     </div>
                 </div>
             </div>
-            <div class="modal" id="modal-voluntario">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                    <header class="modal-card-head">
-                        <p class="modal-card-title" id="modal-nombre">Nombre Apellido</p>
-                        <button class="delete" aria-label="close" id="cerrar-modal"></button>
-                    </header>
-                    <section class="modal-card-body">
-                        <div class="columns">
-                            <div class="column is-4 has-text-centered">
-                                <figure class="image is-img-perfil is-inline-block">
-                                    <img id="modal-img" class="is-rounded" src="" alt="Foto perfil">
-                                </figure>
-                            </div>
-                            <div class="column is-8">
-                                <p><b><i class="fas fa-envelope"></i> Correo:</b> <span id="modal-correo"></span></p>
-                                <p><b><i class="fas fa-phone"></i> Teléfono:</b> <span id="modal-telefono"></span></p>
-                                <p><b><i class="fas fa-calendar"></i> Fecha de Nacimiento:</b> <span
-                                        id="modal-fecha"></span></p>
-                                <p><b><i class="fas fa-graduation-cap"></i> Curso:</b> <span id="modal-curso"></span>
-                                </p>
-                                <p><b><i class="fas fa-hands-helping"></i> Tipo de Voluntariado:</b> <span
-                                        id="modal-voluntariado"></span></p>
-                                <p><b><i class="fas fa-clock"></i> Disponibilidad:</b> <span
-                                        id="modal-disponibilidad"></span></p>
-                                <p><b><i class="fas fa-star"></i> Valoración:</b> <span id="modal-valoracion"></span>
-                                </p>
-                            </div>
-                        </div>
-                        <hr>
-                        <p><b><i class="fas fa-info-circle"></i> Descripción:</b></p>
-                        <p id="modal-descripcion" class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Sed do eiusmod tempor incididunt ut labore.</p>
-
-                        <p><b><i class="fas fa-list-check"></i> Actividades realizadas:</b></p>
-                        <ul id="modal-actividades" class="ml-4">
-                            <li><i class="fas fa-leaf has-text-success"></i> Participación en campañas de reciclaje</li>
-                            <li><i class="fas fa-laptop has-text-info"></i> Asistencia en clases de informática básica
-                            </li>
-                            <li><i class="fas fa-theater-masks has-text-warning"></i> Colaboración en ferias culturales
-                            </li>
-                        </ul>
-                    </section>
-                    <footer class="modal-card-foot is-justify-content-flex-end">
-                        <button class="button is-info mx-1" id="editar-voluntario">Editar</button>
-                        <button class="button is-danger mx-1" id="eliminar-voluntario">Eliminar</button>
-                    </footer>
-                </div>
-            </div>
-
-
-
-            <div class="section-content is-visible" id="gestion">
-                <h1 class="title is-1 is-txt4v">Gestión de voluntarios</h1>
+            <div class="section-content" id="gestion">
+                <h1 class="title is-1 is-txt4v">Gestión de Voluntarios</h1>
                 <button class="button is-bg4v is-fullwidth mb-3 is-hidden-desktop" id="toggle-filters">
                     Mostrar/Ocultar Filtros
                 </button>
@@ -355,6 +303,7 @@
                                             <option value="Deportivo">Deportivo</option>
                                             <option value="Salud">Salud</option>
                                             <option value="Digital">Digital</option>
+                                            <option value="Tecnológico">Tecnológico</option>
                                         </select>
                                     </div>
                                 </div>
@@ -381,12 +330,22 @@
                         </div>
                     </div>
                 </div>
-                <hr class="divider my-3">
+                <div class="has-text-right">
+                    <button class="button select-all">Seleccionar Todos</button>
+                    <button class="button">Eliminar Voluntarios</button>
+                    <button class="button" id="abrir-modal-mensaje">Enviar Mensaje</button>
+                </div>
+
                 <div class="columns is-multiline mt-1" id="user-list">
                     <!-- Alumno 1 -->
                     <div class="column is-6-desktop voluntarios">
-                        <div class="box">
+                        <div class="box voluntario-box">
+                            <!-- Checkbox en la esquina superior derecha -->
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="voluntario-checkbox">
+                            </div>
                             <div class="columns is-variable is-1 is-flex-direction-column-mobile">
+
                                 <div
                                     class="column is-4 has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
                                     <figure class="image is-128x128 mb-3">
@@ -404,7 +363,8 @@
                                         <span class="tag is-educativo">Educativo</span>
                                         <span class="tag is-ambiental">Ambiental</span>
                                     </p>
-                                    <p><b>Disponibilidad:</b> Lunes, Miércoles, Viernes, Domingo</p>
+                                    <p><b>Disponibilidad:</b> <span class="tag">Lunes</span> <span
+                                            class="tag">Miércoles</span> <span class="tag">Domingo</span></p>
                                     <p><b>Valoración:</b></p>
                                     <div class="rating">
                                         <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
@@ -414,13 +374,18 @@
                                         <span class="icon is-small"><i class="fa-solid fa-star-half-alt"></i></span>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
 
                     <!-- Alumno 2 -->
                     <div class="column is-6-desktop voluntarios">
-                        <div class="box">
+                        <div class="box voluntario-box">
+                            <!-- Checkbox en la esquina superior derecha -->
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="voluntario-checkbox">
+                            </div>
                             <div class="columns is-variable is-1 is-flex-direction-column-mobile">
                                 <div
                                     class="column is-4 has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
@@ -438,7 +403,8 @@
                                         <span class="tag is-educativo">Educativo</span>
                                         <span class="tag is-social">Social</span>
                                     </p>
-                                    <p><b>Disponibilidad:</b> Martes, Jueves</p>
+                                    <p><b>Disponibilidad:</b><span class="tag">Martes</span> <span
+                                            class="tag">Jueves</span></p>
                                     <p><b>Valoración:</b></p>
                                     <div class="rating">
                                         <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
@@ -448,14 +414,20 @@
                                         <span class="icon is-small"><i class="fa-regular fa-star"></i></span>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
 
                     <!-- Alumno 3 -->
                     <div class="column is-6-desktop voluntarios">
-                        <div class="box">
+                        <div class="box voluntario-box">
+                            <!-- Checkbox en la esquina superior derecha -->
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="voluntario-checkbox">
+                            </div>
                             <div class="columns is-variable is-1 is-flex-direction-column-mobile">
+
                                 <div
                                     class="column is-4 has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
                                     <figure class="image is-128x128 mb-3">
@@ -472,7 +444,8 @@
                                         <span class="tag is-ambiental">Ambiental</span>
                                         <span class="tag is-social">Social</span>
                                     </p>
-                                    <p><b>Disponibilidad:</b> Sábado, Domingo</p>
+                                    <p><b>Disponibilidad:</b> <span class="tag">Sábado</span> <span
+                                            class="tag">Domingo</span></p>
                                     <p><b>Valoración:</b></p>
                                     <div class="rating">
                                         <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
@@ -482,13 +455,18 @@
                                         <span class="icon is-small"><i class="fa-regular fa-star"></i></span>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
 
                     <!-- Alumno 4 -->
                     <div class="column is-6-desktop voluntarios">
-                        <div class="box">
+                        <div class="box voluntario-box">
+                            <!-- Checkbox en la esquina superior derecha -->
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="voluntario-checkbox">
+                            </div>
                             <div class="columns is-variable is-1 is-flex-direction-column-mobile">
                                 <div
                                     class="column is-4 has-text-centered is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
@@ -506,7 +484,8 @@
                                         <span class="tag is-digital">Digital</span>
                                         <span class="tag is-cultural">Cultural</span>
                                     </p>
-                                    <p><b>Disponibilidad:</b> Lunes, Jueves, Sábado</p>
+                                    <p><b>Disponibilidad:</b> <span class="tag">Lunes</span> <span
+                                            class="tag">Jueves</span> <span class="tag">Domingo</span></p>
                                     <p><b>Valoración:</b></p>
                                     <div class="rating">
                                         <span class="icon is-small"><i class="fa-solid fa-star"></i></span>
@@ -722,7 +701,7 @@
                         <!-- MODAL DE UNZUTXIKI -->
 
 
-                        
+
                         <div class="modal modalUnzutxiki">
                             <div class="modal-background"></div>
                             <div class="modal-card">
@@ -793,16 +772,484 @@
                             </div>
 
                         </div>
-
-
-                <div class="section-content" id="mensajes">Mensajes - Comunícate con tus contactos.</div>
-                <div class="section-content" id="reportes">Reportes - Revisa informes y resultados.</div>
-                <div class="section-content" id="calendario">Calendario - Tareas pendientes y eventos programados.
+                    </div>
                 </div>
-                <div class="section-content" id="colaboradores">Colaboradores - Gestiona tu equipo de trabajo.</div>
+            </div>
+
+
+            <div class="section-content" id="actividad">
+                <h1 class="title is-1 is-txt4v">Gestión de Actividades</h1>
+                <div class="box">
+                    <div class="columns is-multiline is-centered">
+                        <div class="column is-3">
+                            <div class="field">
+                                <label class="label">Nombre</label>
+                                <div class="control">
+                                    <input type="text" id="filter-nombreAct" class="input" placeholder="Nombre">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="field">
+                                <label class="label">Fecha</label>
+                                <div class="control">
+                                    <input type="date" id="filter-fechaAct" class="input" placeholder="Fecha">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="field">
+                                <label class="label">Tipo Actividad</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-tipoAct">
+                                            <option value="">Tipo de Actividad</option>
+                                            <option value="Cultural">Cultural</option>
+                                            <option value="Deportivo">Deportivo</option>
+                                            <option value="Social">Social</option>
+                                            <option value="Educativo">Educativo</option>
+                                            <option value="Ambiental">Ambiental</option>
+                                            <option value="Digital">Digital</option>
+                                            <option value="Tecnológico">Tecnológico</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-1">
+                            <div class="field">
+                                <label class="label">Estado</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-estadoAct">
+                                            <option value="">Estado</option>
+                                            <option value="Pendiente">Pendiente</option>
+                                            <option value="En Curso">En Curso</option>
+                                            <option value="Finalizado">Finalizado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="field">
+                                <label class="label">ODS Realizados</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-odsAct">
+                                            <option value="">ODS Realizados</option>
+                                            <option value="1">Fin de la Pobreza</option>
+                                            <option value="2">Hambre Cero</option>
+                                            <option value="3">Salud y Bienestar</option>
+                                            <option value="4">Educación de Calidad</option>
+                                            <option value="5">Igualdad de Género</option>
+                                            <option value="6">Agua Limpia y Saneamiento</option>
+                                            <option value="7">Energía Asequible y No Contaminante</option>
+                                            <option value="8">Trabajo Decente y Crecimiento Económico</option>
+                                            <option value="9">Industria, Innovación e Infraestructura</option>
+                                            <option value="10">Reducción de las Desigualdades</option>
+                                            <option value="11">Ciudades y Comunidades Sostenibles</option>
+                                            <option value="12">Producción y Consumo Responsables</option>
+                                            <option value="13">Acción por el Clima</option>
+                                            <option value="14">Vida Submarina</option>
+                                            <option value="15">Vida de Ecosistemas Terrestres</option>
+                                            <option value="16">Paz, Justicia e Instituciones Sólidas</option>
+                                            <option value="17">Alianzas para Lograr los Objetivos</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="has-text-right">
+                    <button class="button">Seleccionar Todos</button>
+                    <button class="button">Eliminar Actividad</button>
+                    <button class="button">Crear Nueva Actividad</button>
+                </div>
+                <div class="columns is-multiline mt-4 actividades">
+                    <!-- Actividad 1 -->
+                    <div class="column is-12 is-6-desktop">
+                        <div class="box">
+                            <div class="columns">
+                                <div class="column is-4">
+                                    <figure class="img-actividad">
+                                        <img src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_165847_resized_20240430_082312818.jpg"
+                                            alt="Actividad 1">
+                                    </figure>
+                                </div>
+                                <div class="column is-8">
+                                    <p class="title is-4 is-txt4v">Taller de Reciclaje Creativo</p>
+                                    <p><b class="is-txt4v">Organización: </b><a href="">@Amavir</a></p>
+                                    <p><b class="is-txt4v">Descripción: </b>Los participantes aprendieron a crear
+                                        objetos decorativos utilizando materiales reciclados.</p>
+                                    <p class="is-txt4v my-1"><b>Estado: </b><span class="tag is-success">En Curso</span>
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-04-15</span></p>
+                                    <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">4h</span></p>
+                                    <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
+                                        <span class="tag is-ambiental">Ambiental</span>
+                                        <span class="tag is-educativo">Educativo</span>
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>ODS Realizados</b></p>
+                                    <div class="is-flex">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods12.png" alt="ODS12">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods15.png" alt="ODS15">
+                                    </div>
+                                    <div class="has-text-right mt-1">
+                                        <button class="button">Módificar Actividad</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Actividad 2 -->
+                    <div class="column is-12 is-6-desktop">
+                        <div class="box">
+                            <div class="columns">
+                                <div class="column is-4">
+                                    <figure class="img-actividad">
+                                        <img
+                                            src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_171727_resized_20240430_082311496.jpg">
+                                    </figure>
+                                </div>
+                                <div class="column is-8">
+                                    <p class="title is-4 is-txt4v">Curso de Programación Básica</p>
+                                    <p><b class="is-txt4v">Organización: </b><a href="">@Unzutxiki</a></p>
+
+                                    <p><b class="is-txt4v">Descripción: </b>Introducción a la programación con Python,
+                                        enfocado en enseñar conceptos básicos a estudiantes sin experiencia previa.</p>
+                                    <p class="is-txt4v my-1"><b>Estado: </b><span
+                                            class="tag is-danger">Finalizado</span></p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-02-10</span></p>
+                                    <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">6h</span></p>
+                                    <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
+                                        <span class="tag is-educativo">Educativo</span>
+                                        <span class="tag is-digital">Digital</span>
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>ODS Realizados</b></p>
+                                    <div class="is-flex">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods4.png" alt="ODS4">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods9.png" alt="ODS9">
+                                    </div>
+                                    <div class="has-text-right mt-1">
+                                        <button class="button">Módificar Actividad</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Actividad 3 -->
+                    <div class="column is-12 is-6-desktop">
+                        <div class="box">
+                            <div class="columns">
+                                <div class="column is-4">
+                                    <figure class="img-actividad">
+                                        <img src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_173725_resized_20240430_082310936.jpg"
+                                            alt="Actividad 3">
+                                    </figure>
+                                </div>
+                                <div class="column is-8">
+                                    <p class="title is-4 is-txt4v">Jornada de Reforestación</p>
+                                    <p><b class="is-txt4v">Organización: </b><a href="">@Cuatrovientos</a></p>
+
+                                    <p><b class="is-txt4v">Descripción: </b>Actividad comunitaria para plantar árboles
+                                        nativos en un área degradada, promoviendo la biodiversidad y la sostenibilidad.
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>Estado: </b><span class="tag is-success">En Curso</span>
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-04-20</span></p>
+                                    <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">5h</span></p>
+                                    <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
+                                        <span class="tag is-ambiental">Ambiental</span>
+                                        <span class="tag is-social">Social</span>
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>ODS Realizados</b></p>
+                                    <div class="is-flex">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods13.png" alt="ODS13">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods15.png" alt="ODS15">
+                                    </div>
+                                    <div class="has-text-right mt-1">
+                                        <button class="button">Módificar Actividad</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Actividad 4 -->
+                    <div class="column is-12 is-6-desktop">
+                        <div class="box">
+                            <div class="columns">
+                                <div class="column is-4">
+                                    <figure class="img-actividad">
+                                        <img src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_174856_resized_20240430_082310325.jpg"
+                                            alt="Actividad 4">
+                                    </figure>
+                                </div>
+                                <div class="column is-8">
+                                    <p class="title is-4 is-txt4v">Taller de Alfabetización Digital</p>
+                                    <p><b class="is-txt4v">Organización: </b><a href="">@ANA</a></p>
+
+                                    <p><b class="is-txt4v">Descripción: </b>Sesiones prácticas para enseñar a personas
+                                        mayores el uso de herramientas digitales, como correo electrónico y redes
+                                        sociales.</p>
+                                    <p class="is-txt4v my-1"><b>Estado: </b><span
+                                            class="tag is-danger">Finalizado</span></p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-03-05</span></p>
+                                    <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">3h</span></p>
+                                    <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
+                                        <span class="tag is-educativo">Educativo</span>
+                                        <span class="tag is-digital">Digital</span>
+                                        <span class="tag is-social">Social</span>
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>ODS Realizados</b></p>
+                                    <div class="is-flex">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods4.png" alt="ODS4">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods10.png" alt="ODS10">
+                                    </div>
+                                    <div class="has-text-right mt-1">
+                                        <button class="button">Módificar Actividad</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content is-visible" id="aprobacion">
+                <h1 class="title is-1 is-txt4v">Aprobaciones</h1>
+                <div class="tabs is-toggle">
+                    <ul>
+                        <li class="is-active" data-tab="tab1">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-users" aria-hidden="true"></i></span>
+                                <span>Voluntarios</span>
+                            </a>
+                        </li>
+                        <li data-tab="tab2">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-building" aria-hidden="true"></i></span>
+                                <span>Organizaciones</span>
+                            </a>
+                        </li>
+                        <li data-tab="tab3">
+                            <a>
+                                <span class="icon is-small"><i class="fas fa-clipboard-list"
+                                        aria-hidden="true"></i></span>
+                                <span>Actividades</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div id="tab1" class="tab-content is-active">
+                    <h2 class="subtitle is-txt4v">Voluntarios Pendientes de Aprobación</h2>
+                    <table class="table is-hoverable is-fullwidth">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>Fecha de Nacimiento</th>
+                                <th>Curso</th>
+                                <th>Tipo de Voluntariado</th>
+                                <th>Disponibilidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img class="image is-64x64" src="/img/icons/avatar.png" alt=""></td>
+                                <td>Juan Carlos Garcia</td>
+                                <td><a href="">juancarlosgarcia@gmail.com</a></td>
+                                <td><a href="">+34 695 65 23 56</a></td>
+                                <td>1995-05-15</td>
+                                <td>2º ASIR</td>
+                                <td><span class="tag is-educativo">Educativo</span> <span class="tag is-cultural">Cultural</span></td>
+                                <td><span class="tag">Lunes</span><span class="tag">Miércoles</span></td>
+                                <td>
+                                    <div class="buttons">
+                                        <button class="button is-danger is-small">
+                                            <span class="icon"><i class="fas fa-times"></i></span>
+                                        </button>
+                                        <button class="button is-success is-small">
+                                            <span class="icon"><i class="fas fa-check"></i></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="image is-64x64" src="/img/icons/avatar.png" alt=""></td>
+                                <td>Laura Martínez</td>
+                                <td><a href="">lauramartinez@gmail.com</a></td>
+                                <td><a href="">+34 612 34 56 78</a></td>
+                                <td>1998-03-22</td>
+                                <td>1º DAM</td>
+                                <td><span class="tag is-social">Social</span> <span class="tag is-digital">Digital</span></td>
+                                <td><span class="tag">Martes</span><span class="tag">Jueves</span></td>
+                                <td>
+                                    <div class="buttons">
+                                        <button class="button is-danger is-small">
+                                            <span class="icon"><i class="fas fa-times"></i></span>
+                                        </button>
+                                        <button class="button is-success is-small">
+                                            <span class="icon"><i class="fas fa-check"></i></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="image is-64x64" src="/img/icons/avatar.png" alt=""></td>
+                                <td>Carlos López</td>
+                                <td><a href="">carloslopez@gmail.com</a></td>
+                                <td><a href="">+34 678 90 12 34</a></td>
+                                <td>1997-07-10</td>
+                                <td>2º SMR</td>
+                                <td><span class="tag is-ambiental">Ambiental</span> <span class="tag is-cultural">Cultural</span></td>
+                                <td><span class="tag">Viernes</span><span class="tag">Sábado</span></td>
+                                <td>
+                                    <div class="buttons">
+                                        <button class="button is-danger is-small">
+                                            <span class="icon"><i class="fas fa-times"></i></span>
+                                        </button>
+                                        <button class="button is-success is-small">
+                                            <span class="icon"><i class="fas fa-check"></i></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="image is-64x64" src="/img/icons/avatar.png" alt=""></td>
+                                <td>Ana Gómez</td>
+                                <td><a href="">anagomez@gmail.com</a></td>
+                                <td><a href="">+34 654 32 10 98</a></td>
+                                <td>1996-11-05</td>
+                                <td>1º ASIR</td>
+                                <td><span class="tag is-educativo">Educativo</span> <span class="tag is-social">Social</span></td>
+                                <td><span class="tag">Miércoles</span><span class="tag">Domingo</span></td>
+                                <td>
+                                    <div class="buttons">
+                                        <button class="button is-danger is-small">
+                                            <span class="icon"><i class="fas fa-times"></i></span>
+                                        </button>
+                                        <button class="button is-success is-small">
+                                            <span class="icon"><i class="fas fa-check"></i></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img class="image is-64x64" src="/img/icons/avatar.png" alt=""></td>
+                                <td>María Torres</td>
+                                <td><a href="">mariatorres@gmail.com</a></td>
+                                <td><a href="">+34 600 12 34 56</a></td>
+                                <td>1999-02-18</td>
+                                <td>2º GVEC</td>
+                                <td><span class="tag is-digital">Digital</span> <span class="tag is-ambiental">Ambiental</span></td>
+                                <td><span class="tag">Lunes</span><span class="tag">Viernes</span></td>
+                                <td>
+                                    <div class="buttons">
+                                        <button class="button is-danger is-small">
+                                            <span class="icon"><i class="fas fa-times"></i></span>
+                                        </button>
+                                        <button class="button is-success is-small">
+                                            <span class="icon"><i class="fas fa-check"></i></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+                <div id="tab2" class="tab-content">
+2
+                </div>
+                <div id="tab3" class="tab-content">
+3
+                </div>
+            </div>
         </main>
     </div>
+    <!-- Modal para mostrar informacion de Voluntarios -->
+    <div class="modal" id="modal-voluntario">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="modal-nombre">Nombre Apellido</p>
+                <button class="delete" aria-label="close" id="cerrar-modal"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="columns">
+                    <div class="column is-4 has-text-centered">
+                        <figure class="image is-img-perfil is-inline-block">
+                            <img id="modal-img" class="is-rounded" src="" alt="Foto perfil">
+                        </figure>
+                    </div>
+                    <div class="column is-8">
+                        <p><b><i class="fas fa-envelope"></i> Correo:</b> <span id="modal-correo"></span></p>
+                        <p><b><i class="fas fa-phone"></i> Teléfono:</b> <span id="modal-telefono"></span></p>
+                        <p><b><i class="fas fa-calendar"></i> Fecha de Nacimiento:</b> <span id="modal-fecha"></span>
+                        </p>
+                        <p><b><i class="fas fa-graduation-cap"></i> Curso:</b> <span id="modal-curso"></span>
+                        </p>
+                        <p><b><i class="fas fa-hands-helping"></i> Tipo de Voluntariado:</b> <span
+                                id="modal-voluntariado"></span></p>
+                        <p><b><i class="fas fa-clock"></i> Disponibilidad:</b> <span id="modal-disponibilidad"></span>
+                        </p>
+                        <p><b><i class="fas fa-star"></i> Valoración:</b> <span id="modal-valoracion"></span>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <p><b><i class="fas fa-info-circle"></i> Descripción:</b></p>
+                <p id="modal-descripcion" class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore.</p>
+
+                <p><b><i class="fas fa-list-check"></i> Actividades realizadas:</b></p>
+                <ul id="modal-actividades" class="ml-4">
+                    <li><i class="fas fa-leaf has-text-success"></i> Participación en campañas de reciclaje</li>
+                    <li><i class="fas fa-laptop has-text-info"></i> Asistencia en clases de informática básica
+                    </li>
+                    <li><i class="fas fa-theater-masks has-text-warning"></i> Colaboración en ferias culturales
+                    </li>
+                </ul>
+            </section>
+            <footer class="modal-card-foot is-justify-content-flex-end">
+                <button class="button is-info mx-1" id="editar-voluntario">Editar</button>
+                <button class="button is-danger mx-1" id="eliminar-voluntario">Eliminar</button>
+            </footer>
+        </div>
     </div>
+    <!-- Modal para enviar mensaje -->
+    <div class="modal" id="modal-enviar-mensaje">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Enviar Mensaje</p>
+                <button class="delete" aria-label="close" id="cerrar-modal-mensaje"></button>
+            </header>
+            <section class="modal-card-body">
+                <h3 class="subtitle">Voluntarios Seleccionados</h3>
+                <ul id="voluntarios-seleccionados" class="mb-3">
+                    <!-- Lista de voluntarios seleccionados -->
+                </ul>
+                <div class="field">
+                    <label class="label">Mensaje</label>
+                    <div class="control">
+                        <textarea id="mensaje-texto" class="textarea"
+                            placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" id="enviar-mensaje">Enviar</button>
+                <button class="button" id="cancelar-mensaje">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+    <script src="./../js/organizador/org_filtrado_actividad.js"></script>
     <script src="./../js/organizador/org_tabs.js"></script>
     <script src="./../js/organizador/org_cal_perfil.js"></script>
     <script src="./../js/organizador/Organizador-calendario.js"></script>
@@ -810,6 +1257,9 @@
     <script src="./../js/organizador/org_filtrado_organizaciones.js"></script>
     <script src="./../js/organizador/org_modal.js"></script>
     <script src="./../js/organizador/modals.js"></script>
+    <script src="./../js/organizador/select.js"></script>
+    <script src="./../js/organizador/organizador_mensajes.js"></script>
+    <script src="./../js/tabs.js"></script>
 </body>
 
 </html>

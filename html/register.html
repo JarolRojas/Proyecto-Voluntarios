@@ -57,7 +57,7 @@
                 <div class="field">
                     <label class="label is-txt4v">Teléfono</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="tel" name="telefono" placeholder="Introduce tu número de teléfono" required>
+                        <input class="input" type="tel" name="telefono" placeholder="Introduce tu número de teléfono" maxlength="9" required>
                         <span class="icon is-small is-left"><i class="fas fa-phone"></i></span>
                         <span class="icon is-small is-right"><i class="fas fa-check"></i></span>
                     </div>
@@ -211,15 +211,15 @@
                 <div class="field">
                     <label class="label is-txt4v">Teléfono de contacto</label>
                     <div class="control">
-                        <input class="input" type="tel" name="telefono" placeholder="Introduce tu número de teléfono" required>
+                        <input class="input" type="tel" name="telefono" placeholder="Introduce tu número de teléfono" maxlength="9" required>
                     </div>
                     <p class="help is-danger" id="telefono-error-organizacion" style="display: none;"></p>
                 </div>
-                                <div class="field">
+                <div class="field">
                     <label class="label is-txt4v">Tipo de organización</label>
                     <div class="control">
                         <div class="select is-fullwidth">
-                            <select required>
+                            <select name="tipo" required>
                                 <option value="" disabled selected>Selecciona el tipo de organización</option>
                                 <option>ONG</option>
                                 <option>Fundación</option>
@@ -230,12 +230,11 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="field">
                     <label class="label is-txt4v">Sector</label>
                     <div class="control">
                         <div class="select is-fullwidth">
-                            <select required>
+                            <select name="sector" required>
                                 <option value="" disabled selected>Selecciona el sector de la organización</option>
                                 <option>Social</option>
                                 <option>Salud</option>
@@ -249,33 +248,21 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="field">
                     <label class="label is-txt4v">Ámbito de actuación</label>
                     <div class="control">
-                        <label class="checkbox">
-                            <input type="checkbox"> Local
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox"> Regional
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox"> Nacional
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox"> Internacional
-                        </label>
+                        <label class="checkbox"><input type="checkbox" name="ambito" value="Local"> Local</label>
+                        <label class="checkbox"><input type="checkbox" name="ambito" value="Regional"> Regional</label>
+                        <label class="checkbox"><input type="checkbox" name="ambito" value="Nacional"> Nacional</label>
+                        <label class="checkbox"><input type="checkbox" name="ambito" value="Internacional"> Internacional</label>
                     </div>
                 </div>
-
                 <div class="field">
                     <label class="label is-txt4v">Descripción de la organización</label>
                     <div class="control">
-                        <textarea class="textarea"
-                            placeholder="Escribe una breve descripción de la organización"></textarea>
+                        <textarea class="textarea" name="descripcion" placeholder="Escribe una breve descripción de la organización"></textarea>
                     </div>
                 </div>
-
                 <div class="field">
                     <div class="control">
                         <label class="checkbox">
@@ -293,7 +280,6 @@
                         <button class="button is-light" type="button" onclick="window.location.href='./../index.html'">Cancelar</button>
                     </div>
                 </div>
-                                        
             </form>
         </div>
     </div>

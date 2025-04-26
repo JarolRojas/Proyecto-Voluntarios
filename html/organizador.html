@@ -521,6 +521,8 @@
                     </div>
                 </div>
             </div>
+            <!-- Organizaciones -->
+            <!-- Organizaciones -->
             <div class="section-content" id="organizaciones">
                 <h1 class="title is-1 is-txt4v">Gestión de Organizaciones</h1>
                 <button class="button is-bg4v is-fullwidth mb-3 is-hidden-desktop" id="toggle-filters">
@@ -536,273 +538,377 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="column is-3">
+                            <button class="button is-primary" id="add-organization">Añadir Organización</button>
+                        </div>
                     </div>
                 </div>
 
                 <div class="container">
                     <div class="columns is-multiline">
-                        <!-- AMAVIR -->
-                        <div class="column is-4" data-nombre="AMAVIR">
-                            <div class="box">
-                                <article class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-64x64">
-                                            <img src="../img/logos/organizaciones/amavir_icon.png" alt="Image" />
-                                        </figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong>AMAVIR</strong><br>
-                                                <strong>Correo:</strong> amavir@amavir.com<br>
-                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
-                                                <strong>Teléfono:</strong> 912345678
-                                            </p>
-                                        </div>
-                                        <button class="button is-small is-success mt-1">Modificar</button>
-                                        <button class="button is-small is-danger mt-1">Eliminar</button>
-                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
-                                        <button class="button is-small is-light mt-1" open-modal="modalAmavir">Mostrar
-                                            perfil</button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
                         <!-- MODAL DE AMAVIR -->
-                        <div class="modal modalAmavir">
+                        <div class="modal" id="modalAmavir">
                             <div class="modal-background"></div>
                             <div class="modal-card">
                                 <header class="modal-card-head">
-                                    <p class="modal-card-title">Perfil de Amavir</p>
-                                    <button class="delete" aria-label="close"></button>
+                                    <p class="modal-card-title">Perfil de la Organización</p>
+                                    <button class="delete" aria-label="close" onclick="closeModal('modalAmavir')"></button>
                                 </header>
-                                <section class="modal-card-body">
-                                    <p>Información adicional sobre Amavir...</p>
-                                    <img src="./../img/icons/avatar.png" alt="">
-                                </section>
-                                <footer class="modal-card-foot">
-                                    <div class="buttons">
-                                        <button class="button is-success">Aceptar</button>
-                                        <button class="button" aria-label="close">Cerrar</button>
-                                    </div>
-                                </footer>
-                            </div>
-
-                        </div>
-
-
-                        <!-- ANA -->
-                        <div class="column is-4" data-nombre="ANA">
-                            <div class="box">
-                                <article class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-64x64">
-                                            <img src="https://cermin.org/wp-content/uploads/2021/02/logo-ana.jpg"
-                                                alt="Logo Autismo Navarra">
-                                        </figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong>ANA</strong><br>
-                                                <strong>Correo:</strong> amavir@amavir.com<br>
-                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
-                                                <strong>Teléfono:</strong> 912345678
-                                            </p>
+                                <section class="modal-card-body" id="modalContent">
+                                    <!-- Modo visualización -->
+                                    <div id="viewMode">
+                                        <div class="field">
+                                            <label class="label is-txt4v">Nombre de la Organización</label>
+                                            <p id="viewNombre"></p>
                                         </div>
-                                        <button class="button is-small is-success mt-1">Modificar</button>
-                                        <button class="button is-small is-danger mt-1">Eliminar</button>
-                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
-                                        <button class="button is-small is-light mt-1" open-modal="modalAna">Mostrar
-                                            perfil</button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <!-- MODAL DE ANA -->
-                        <div class="modal modalAna">
-                            <div class="modal-background"></div>
-                            <div class="modal-card">
-                                <header class="modal-card-head">
-                                    <p class="modal-card-title">Perfil de Ana</p>
-                                    <button class="delete" aria-label="close"></button>
-                                </header>
-                                <section class="modal-card-body">
-                                    <p>Información adicional sobre Ana...</p>
-                                    <img src="./../img/icons/avatar.png" alt="">
-                                </section>
-                                <footer class="modal-card-foot">
-                                    <div class="buttons">
-                                        <button class="button is-success">Aceptar</button>
-                                        <button class="button" aria-label="close">Cerrar</button>
-                                    </div>
-                                </footer>
-                            </div>
-
-                        </div>
-
-
-                        <!-- CUATROVIENTOS -->
-                        <div class="column is-4" data-nombre="CUATROVIENTOS">
-                            <div class="box">
-                                <article class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-64x64">
-                                            <img src="../img/logos/logo.png" alt="Image" />
-                                        </figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong>CUATROVIENTOS</strong><br>
-                                                <strong>Correo:</strong> amavir@amavir.com<br>
-                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
-                                                <strong>Teléfono:</strong> 912345678
-                                            </p>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Dirección</label>
+                                            <p id="viewDireccion"></p>
                                         </div>
-                                        <button class="button is-small is-success mt-1">Modificar</button>
-                                        <button class="button is-small is-danger mt-1">Eliminar</button>
-                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
-                                        <button class="button is-small is-light mt-1"
-                                            open-modal="modalCuatrovientos">Mostrar perfil</button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <!-- MODAL DE CUATROVIENTOS -->
-                        <div class="modal modalCuatrovientos">
-                            <div class="modal-background"></div>
-                            <div class="modal-card">
-                                <header class="modal-card-head">
-                                    <p class="modal-card-title">Perfil de Cuatrovientos</p>
-                                    <button class="delete" aria-label="close"></button>
-                                </header>
-                                <section class="modal-card-body">
-                                    <p>Información adicional sobre Cuatrovientos...</p>
-                                    <img src="./../img/icons/avatar.png" alt="">
-                                </section>
-                                <footer class="modal-card-foot">
-                                    <div class="buttons">
-                                        <button class="button is-success">Aceptar</button>
-                                        <button class="button" aria-label="close">Cerrar</button>
-                                    </div>
-                                </footer>
-                            </div>
-
-                        </div>
-
-
-                        <!-- UNZUTXIKI -->
-                        <div class="column is-4" data-nombre="UNZUTXIKI">
-                            <div class="box">
-                                <article class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-64x64">
-                                            <img src="../img/logos/organizaciones/Unzutxiki.png" alt="Image" />
-                                        </figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong>UNZUTXIKI</strong><br>
-                                                <strong>Correo:</strong> amavir@amavir.com<br>
-                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
-                                                <strong>Teléfono:</strong> 912345678
-                                            </p>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Email de contacto</label>
+                                            <p id="viewEmail"></p>
                                         </div>
-                                        <button class="button is-small is-success mt-1">Modificar</button>
-                                        <button class="button is-small is-danger mt-1">Eliminar</button>
-                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
-                                        <button class="button is-small is-light mt-1"
-                                            open-modal="modalUnzutxiki">Mostrar perfil</button>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <!-- MODAL DE UNZUTXIKI -->
-
-
-                        
-                        <div class="modal modalUnzutxiki">
-                            <div class="modal-background"></div>
-                            <div class="modal-card">
-                                <header class="modal-card-head">
-                                    <p class="modal-card-title">Perfil de Unzutxiki</p>
-                                    <button class="delete" aria-label="close"></button>
-                                </header>
-                                <section class="modal-card-body">
-                                    <p>Información adicional sobre Unzutxiki...</p>
-                                    <img src="./../img/icons/avatar.png" alt="">
-                                </section>
-                                <footer class="modal-card-foot">
-                                    <div class="buttons">
-                                        <button class="button is-success">Aceptar</button>
-                                        <button class="button" aria-label="close">Cerrar</button>
-                                    </div>
-                                </footer>
-                            </div>
-
-                        </div>
-
-                        <!-- SOLERA -->
-                        <div class="column is-4" data-nombre="SOLERA">
-                            <div class="box">
-                                <article class="media">
-                                    <div class="media-left">
-                                        <figure class="image is-64x64">
-                                            <img src="https://www.soleraasistencial.es/wp-content/uploads/2020/04/Solera_Asistencial.jpg"
-                                                alt="Logo Solera Asistencial">
-                                        </figure>
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="content">
-                                            <p>
-                                                <strong>SOLERA</strong><br>
-                                                <strong>Correo:</strong> amavir@amavir.com<br>
-                                                <strong>Dirección:</strong> c/manuel de falla 12, 28020 Madrid<br>
-                                                <strong>Teléfono:</strong> 912345678
-                                            </p>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Teléfono de contacto</label>
+                                            <p id="viewTelefono"></p>
                                         </div>
-                                        <button class="button is-small is-success mt-1">Modificar</button>
-                                        <button class="button is-small is-danger mt-1">Eliminar</button>
-                                        <button class="button is-small is-info mt-1">Enviar Mensaje</button>
-                                        <button class="button is-small is-light mt-1" open-modal="modalSolera">Mostrar
-                                            perfil</button>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Tipo de organización</label>
+                                            <p id="viewTipo"></p>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Sector</label>
+                                            <p id="viewSector"></p>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Ámbito de actuación</label>
+                                            <p id="viewAmbito"></p>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Descripción</label>
+                                            <p id="viewDescripcion"></p>
+                                        </div>
                                     </div>
-                                </article>
-                            </div>
-                        </div>
-                        <!-- MODAL DE SOLERA -->
-                        <div class="modal modalSolera">
-                            <div class="modal-background"></div>
-                            <div class="modal-card">
-                                <header class="modal-card-head">
-                                    <p class="modal-card-title">Perfil de Solera</p>
-                                    <button class="delete" aria-label="close"></button>
-                                </header>
-                                <section class="modal-card-body">
-                                    <p>Información adicional sobre Solera...</p>
-                                    <img src="./../img/icons/avatar.png" alt="">
+                                    <!-- Modo edición -->
+                                    <div id="editMode" style="display: none;">
+                                        <form id="editForm">
+                                            <div class="field">
+                                                <label class="label is-txt4v">Nombre de la Organización</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" id="editNombre" required>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label is-txt4v">Dirección</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" id="editDireccion" required>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label is-txt4v">Email de contacto</label>
+                                                <div class="control">
+                                                    <input class="input" type="email" id="editEmail" required>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label is-txt4v">Teléfono de contacto</label>
+                                                <div class="control">
+                                                    <input class="input" type="tel" id="editTelefono" maxlength="9" required>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label is-txt4v">Tipo de organización</label>
+                                                <div class="control">
+                                                    <div class="select is-fullwidth">
+                                                        <select id="editTipo" required>
+                                                            <option value="" disabled>Selecciona el tipo</option>
+                                                            <option>ONG</option>
+                                                            <option>Fundación</option>
+                                                            <option>Asociación</option>
+                                                            <option>Entidad pública</option>
+                                                            <option>Otra</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label is-txt4v">Sector</label>
+                                                <div class="control">
+                                                    <div class="select is-fullwidth">
+                                                        <select id="editSector" required>
+                                                            <option value="" disabled>Selecciona el sector</option>
+                                                            <option>Social</option>
+                                                            <option>Salud</option>
+                                                            <option>Educativo</option>
+                                                            <option>Ambiental</option>
+                                                            <option>Cultural</option>
+                                                            <option>Deportivo</option>
+                                                            <option>Tecnológico</option>
+                                                            <option>Otro</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label is-txt4v">Ámbito de actuación</label>
+                                                <div class="control">
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" id="editAmbitoLocal"> Local
+                                                    </label>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" id="editAmbitoRegional"> Regional
+                                                    </label>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" id="editAmbitoNacional"> Nacional
+                                                    </label>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" id="editAmbitoInternacional"> Internacional
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label is-txt4v">Logo</label>
+                                                <div class="control">
+                                                    <input type="file" id="editLogo" accept="image/*">
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <label class="label is-txt4v">Descripción</label>
+                                                <div class="control">
+                                                    <textarea class="textarea" id="editDescripcion"></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </section>
                                 <footer class="modal-card-foot">
                                     <div class="buttons">
-                                        <button class="button is-success">Aceptar</button>
-                                        <button class="button" aria-label="close">Cerrar</button>
+                                        <button class="button is-success" id="modifyButton" onclick="toggleEditMode()">Modificar</button>
+                                        <button class="button is-success" id="saveButton" style="display: none;" onclick="saveChanges()">Guardar</button>
+                                        <button class="button" id="cancelButton" style="display: none;" onclick="toggleEditMode()">Cancelar</button>
+                                        <button class="button" onclick="closeModal('modalAmavir')">Cerrar</button>
                                     </div>
                                 </footer>
                             </div>
-
                         </div>
-
-
-                <div class="section-content" id="mensajes">Mensajes - Comunícate con tus contactos.</div>
-                <div class="section-content" id="reportes">Reportes - Revisa informes y resultados.</div>
-                <div class="section-content" id="calendario">Calendario - Tareas pendientes y eventos programados.
+                        <!-- MODAL PARA AÑADIR ORGANIZACIÓN -->
+                        <div class="modal" id="modalAddOrganization">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Añadir Nueva Organización</p>
+                                    <button class="delete" aria-label="close" onclick="closeModal('modalAddOrganization')"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <form id="addOrganizationForm">
+                                        <div class="field">
+                                            <label class="label is-txt4v">Logo de la Organización</label>
+                                            <div class="control">
+                                                <input class="input" type="file" name="logo" accept="image/*">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Nombre de la Organización</label>
+                                            <div class="control">
+                                                <input class="input" type="text" name="nombreOrg" required>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Dirección</label>
+                                            <div class="control">
+                                                <input class="input" type="text" name="direccionOrg" required>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Email de contacto</label>
+                                            <div class="control">
+                                                <input class="input" type="email" name="emailOrg" required>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Teléfono de contacto</label>
+                                            <div class="control">
+                                                <input class="input" type="tel" name="telefonoOrg" maxlength="9" required>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Tipo de organización</label>
+                                            <div class="control">
+                                                <div class="select is-fullwidth">
+                                                    <select name="tipoOrg" required>
+                                                        <option value="" disabled selected>Selecciona el tipo</option>
+                                                        <option>ONG</option>
+                                                        <option>Fundación</option>
+                                                        <option>Asociación</option>
+                                                        <option>Entidad pública</option>
+                                                        <option>Otra</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Sector</label>
+                                            <div class="control">
+                                                <div class="select is-fullwidth">
+                                                    <select name="sectorOrg" required>
+                                                        <option value="" disabled selected>Selecciona el sector</option>
+                                                        <option>Social</option>
+                                                        <option>Salud</option>
+                                                        <option>Educativo</option>
+                                                        <option>Ambiental</option>
+                                                        <option>Cultural</option>
+                                                        <option>Deportivo</option>
+                                                        <option>Tecnológico</option>
+                                                        <option>Otro</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Ámbito de actuación</label>
+                                            <div class="control">
+                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg" value="Local"> Local</label>
+                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg" value="Regional"> Regional</label>
+                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg" value="Nacional"> Nacional</label>
+                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg" value="Internacional"> Internacional</label>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="label is-txt4v">Descripción</label>
+                                            <div class="control">
+                                                <textarea class="textarea" name="descripcionOrg" placeholder="Descripción de la organización"></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </section>
+                                <footer class="modal-card-foot">
+                                    <button class="button is-success" onclick="saveNewOrganization()">Guardar</button>
+                                    <button class="button" onclick="closeModal('modalAddOrganization')">Cancelar</button>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="section-content" id="colaboradores">Colaboradores - Gestiona tu equipo de trabajo.</div>
+            </div>
+
+            <!-- AÑADIR ACTIVIDAD -->
+
+            <div class="section-content" id="colaboradores">
+                <h1 class="title is-1 is-txt4v">Gestión de Actividades</h1>
+
+                <div class="container">
+                    <div class="columns">
+                        <!-- AMAVIR -->
+                        <div class="column is-3" data-nombre="anadirActividad">
+                            <div class="box">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="./../img/logos/organizaciones/anadirActividad.png"
+                                                alt="img Añadir actividad">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>Añadir actividad</strong><br>
+
+                                            </p>
+                                        </div>
+
+                                        <button class="button is-small is-info mt-1"
+                                            open-modal="modalAnadirActividad">Añadir
+                                            actividad</button>
+
+
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- MODAL AÑADIR ACTIVIDAD -->
+                        <div class="modal modalAnadirActividad">
+                            <div class="modal-background"></div>
+                            <div class="modal-card">
+                                <header class="modal-card-head">
+                                    <p class="modal-card-title">Añadir Actividad</p>
+                                    <button class="delete" aria-label="close"></button>
+                                </header>
+                                <section class="modal-card-body">
+                                    <!-- Nombre Actividad-->
+                                    <div class="field">
+                                        <label class="label is-txt4v">Nombre Actividad</label>
+                                        <input class="input" type="text" name="nombre"
+                                            placeholder="Introduce el nombre de la actividad" required>
+
+                                        <br>
+                                        <label class="label is-txt4v">Descripción</label>
+                                        <textarea class="textarea" name="descripcion"
+                                            placeholder="Descripción de la actividad" required></textarea>
+                                        <br>
+                                        <label class="label is-txt4v">Fecha</label>
+                                        <input class="input" type="date" name="fecha" required>
+                                        <br>
+                                        <checkbox class="checkbox" name="recurrente">Tipo de actividad</checkbox>
+                                        <label class="radio">
+                                            <input type="radio" name="tipo" value="Deportivo" required>
+                                            Deportivo
+                                            <input type="radio" name="tipo" value="social" required>
+                                            Social
+                                        </label>
+
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container">
+
+
+                    <div class="columns">
+                        <!-- Nueva actividad -->
+                        <div class="column is-4" data-nombre="actividad1">
+                            <div class="box">
+                                <article class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-64x64">
+                                            <img src="./../img/carrusel/portada.jpg" alt="Act 1">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>Actividad 1</strong><br>
+
+                                            </p>
+                                        </div>
+
+                                        <button class="button is-small is-info mt-1">Modificar actividad</button>
+                                        <button class="button is-small is-danger mt-1">Eliminar actividad</button>
+
+
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
         </main>
+
+
+
+        <div class="section-content" id="mensajes">Mensajes - Comunícate con tus contactos.</div>
+        <div class="section-content" id="reportes">Reportes - Revisa informes y resultados.</div>
+
+
+
     </div>
-    </div>
+
     <script src="./../js/organizador/org_tabs.js"></script>
     <script src="./../js/organizador/org_cal_perfil.js"></script>
     <script src="./../js/organizador/Organizador-calendario.js"></script>
@@ -810,6 +916,11 @@
     <script src="./../js/organizador/org_filtrado_organizaciones.js"></script>
     <script src="./../js/organizador/org_modal.js"></script>
     <script src="./../js/organizador/modals.js"></script>
+    <script src="./../js/organizador/org_modificarOrganizaciones.js"></script>
+    <script src="./../js/formularios/validacion_form.js"></script>
+    <script src="./../js/organizador/org_agregado_organizaciones.js"></script>
+   
+
 </body>
 
 </html>

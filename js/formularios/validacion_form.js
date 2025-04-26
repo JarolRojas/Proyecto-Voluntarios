@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función genérica para validar cualquier formulario
     function validarFormulario(form) {
         let esValido = true;
-        const campos = form.querySelectorAll('input[name], select[name]');
+        const campos = form.querySelectorAll('input[name], select[name], textarea[name]');
         
         campos.forEach(input => {
             const nombreCampo = input.name;
@@ -112,15 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 let mensajeError = '';
                 const errorElement = form.querySelector(`#${nombreCampo}-error-${form.id.split('-')[1]}`) || 
                                    form.querySelector(`#${nombreCampo}-error`);
-
+    
                 if (input.type === 'checkbox') {
-                    // Validar checkboxes
+                    if (nombreCampo === 'ambito') return; // Manejar ámbito más adelante
                     if (regla.required && !input.checked) {
                         resultado = false;
                         mensajeError = regla.mensaje || 'Este campo es obligatorio.';
                     }
                 } else {
-                    // Validar otros campos
                     const valor = input.value.trim();
                     if (regla.required && !valor) {
                         resultado = false;
@@ -136,20 +135,38 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     }
                 }
-
+    
                 actualizarEstadoInput(input, errorElement, resultado, mensajeError);
                 esValido = esValido && resultado;
             }
         });
-
+    
         if (esValido) {
-            alert("Formulario enviado con éxito.");
-            form.submit();
+            if (form.id === 'register-organizacion') {
+                const formData = new FormData(form);
+                const organizacion = {};
+                const ambitos = [];
+                formData.forEach((value, key) => {
+                    if (key === 'ambito') {
+                        ambitos.push(value);
+                    } else {
+                        organizacion[key] = value;
+                    }
+                });
+                organizacion.ambito = ambitos;
+                organizacion.logo = '../img/logos/organizaciones/default.png'; // Logo por defecto
+                let organizaciones = JSON.parse(localStorage.getItem('organizaciones')) || [];
+                organizaciones.push(organizacion);
+                localStorage.setItem('organizaciones', JSON.stringify(organizaciones));
+                window.location.href = './../html/organizador.html';
+            } else {
+                alert("Formulario enviado con éxito.");
+                form.submit();
+            }
         } else {
             console.log("Validación fallida en formulario: ", form.id);
         }
     }
-
     // Asignar eventos a los formularios
     const formVoluntario = document.getElementById('register-voluntario');
     const formOrganizacion = document.getElementById('register-organizacion');
@@ -176,3 +193,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
 });
+ 
+ 

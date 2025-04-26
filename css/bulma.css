@@ -21558,10 +21558,10 @@ has-background-danger.is-hoverable:active {
   color: white;
 }
 .is-bg4v:hover{
-  background-color: #3a6ea5;
+  background-color: #3a6ea5 !important;
 }
 .is-txt4v{
-  color: #3a6ea5;
+  color: #3a6ea5 !important;
 }
 
 /* tags tipos de voluntariados */

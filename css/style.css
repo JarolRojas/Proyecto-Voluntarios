@@ -112,7 +112,7 @@ html {
     margin-left: -110px;
   }
 
-  #dash_organizador main {
+main {
     left: 270px;
     margin: auto 270px;
 
@@ -661,13 +661,13 @@ html {
 }
 
 
-/*! DASHBOARD ORGANIZADOR - #dash_organizador*/
-#dash_organizador .dashboard-wrapper {
+/*! DASHBOARD*/
+.dashboard-wrapper {
   display: flex;
   min-height: 100vh;
 }
 
-#dash_organizador .dashboard-sidebar {
+.dashboard-sidebar {
   flex: 0 0 270px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
@@ -676,14 +676,14 @@ html {
   bottom: 0;
 }
 
-#dash_organizador .dashboard-main {
+.dashboard-main {
   flex-grow: 1;
   position: relative;
   overflow-y: auto;
   height: 100vh;
 }
 
-#dash_organizador .hamburger-button {
+.hamburger-button {
   position: fixed;
   top: 10px;
   left: 10px;
@@ -695,7 +695,7 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-  #dash_organizador .dashboard-sidebar {
+.dashboard-sidebar {
     position: fixed;
     left: -250px;
     top: 0;
@@ -705,22 +705,22 @@ html {
     background-color: white;
   }
 
-  #dash_organizador .dashboard-sidebar.is-active {
+.dashboard-sidebar.is-active {
     left: 0;
   }
 
-  #dash_organizador .dashboard-main {
+.dashboard-main {
     margin-left: 0;
 
   }
 
-  #dash_organizador .hamburger-button {
+.hamburger-button {
     display: block;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  #dash_organizador .dashboard-sidebar {
+.dashboard-sidebar {
     position: fixed;
     left: -290px;
     top: 0;
@@ -730,62 +730,62 @@ html {
     background-color: white;
   }
 
-  #dash_organizador .dashboard-sidebar.is-active {
+.dashboard-sidebar.is-active {
     left: 0;
   }
 
-  #dash_organizador .dashboard-main {
+.dashboard-main {
     margin-left: 0;
   }
 
-  #dash_organizador .hamburger-button {
+.hamburger-button {
     display: block;
   }
 }
 
-#dash_organizador .menu {
+.menu {
   padding: 1rem;
 }
 
-#dash_organizador .menu-list a {
+.menu-list a {
   border-radius: 5px;
   margin: 2px 0;
 }
 
-#dash_organizador .logo {
+.logo {
   padding: 1.5rem 1rem;
   text-align: center;
 }
 
-#dash_organizador .logo-image {
+.logo-image {
   max-width: 150px;
   margin-bottom: 0.5rem;
 }
 
-#dash_organizador .menu-group {
+.menu-group {
   font-weight: bold;
   padding-left: 0.5rem;
 }
 
-#dash_organizador a.is-active {
+a.is-active {
   background-color: #5894d4;
 }
 
-#dash_organizador .section-content {
+.section-content {
   display: none;
   padding: 2rem;
 }
 
-#dash_organizador .section-content.is-visible {
+.section-content.is-visible {
   display: block;
 }
 
-#dash_organizador .menu-list a i {
+.menu-list a i {
   color: #558ac2;
   width: 20px;
 }
 
-#dash_organizador .menu-list a.is-active i {
+.menu-list a.is-active i {
   color: white;
 }
 

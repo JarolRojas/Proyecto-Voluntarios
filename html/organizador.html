@@ -517,10 +517,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column is-3">
-                            <button class="button is-primary" id="add-organization">Añadir Organización</button>
-                        </div>
                     </div>
+                </div>
+
+                <div class="hast-text-right mb-3">
+                    <button class="button is-primary" id="add-organization">Añadir Organización</button>
                 </div>
 
                 <div class="container">
@@ -570,7 +571,7 @@
                                         </div>
                                     </div>
                                     <!-- Modo edición -->
-                                    <div id="editMode" style="display: none;">
+                                    <div id="editMode" class="is-none">
                                         <form id="editForm">
                                             <div class="field">
                                                 <label class="label is-txt4v">Nombre de la Organización</label>
@@ -664,8 +665,8 @@
                                 <footer class="modal-card-foot">
                                     <div class="buttons">
                                         <button class="button is-success" id="modifyButton" onclick="toggleEditMode()">Modificar</button>
-                                        <button class="button is-success" id="saveButton" style="display: none;" onclick="saveChanges()">Guardar</button>
-                                        <button class="button" id="cancelButton" style="display: none;" onclick="toggleEditMode()">Cancelar</button>
+                                        <button class="button is-success" id="saveButton" class="is-none" onclick="saveChanges()">Guardar</button>
+                                        <button class="button" id="cancelButton" class="is-none" onclick="toggleEditMode()">Cancelar</button>
                                         <button class="button" onclick="closeModal('modalAmavir')">Cerrar</button>
                                     </div>
                                 </footer>

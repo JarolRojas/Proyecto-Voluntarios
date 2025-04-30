@@ -222,7 +222,6 @@ function updateEvents(date) {
             event.events.forEach((event) => {
                 events += `<div class="event">
             <div class="title">
-                <i class="fas fa-circle"></i>
                 <h3 class="event-title">${event.title}</h3>
             </div>
             <div class="event-time">

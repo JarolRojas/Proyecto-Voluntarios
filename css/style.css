@@ -1227,6 +1227,14 @@ html {
   color: #fff;
 }
 
+.events .event:hover .event-title {
+  color: #fff !important; /* Asegúrate de que el color no cambie al pasar el ratón */
+}
+
+.events .event .event-title {
+  color: #fff !important; /* Cambia #000 por el color que prefieras */
+}
+
 /* add tick in event after */
 .events .event::after {
   content: "✓";

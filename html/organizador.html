@@ -500,7 +500,7 @@
                     </div>
                 </div>
             </div>
-          
+
             <!-- Organizaciones -->
             <div class="section-content" id="organizaciones">
                 <h1 class="title is-1 is-txt4v">Gestión de Organizaciones</h1>
@@ -516,11 +516,15 @@
                                     <input type="text" id="filter-nombreOrg" class="input" placeholder="Nombre">
                                 </div>
                             </div>
+                            
                         </div>
-                        <div class="column is-3">
-                            <button class="button is-primary" id="add-organization">Añadir Organización</button>
-                        </div>
+                        
+                        
+
                     </div>
+                </div>
+                <div class="has-text-right">
+                    <button class="button is-primary" id="add-organization">Añadir Organización</button>
                 </div>
 
                 <div class="container">
@@ -531,7 +535,8 @@
                             <div class="modal-card">
                                 <header class="modal-card-head">
                                     <p class="modal-card-title">Perfil de la Organización</p>
-                                    <button class="delete" aria-label="close" onclick="closeModal('modalAmavir')"></button>
+                                    <button class="delete" aria-label="close"
+                                        onclick="closeModal('modalAmavir')"></button>
                                 </header>
                                 <section class="modal-card-body" id="modalContent">
                                     <!-- Modo visualización -->
@@ -593,7 +598,8 @@
                                             <div class="field">
                                                 <label class="label is-txt4v">Teléfono de contacto</label>
                                                 <div class="control">
-                                                    <input class="input" type="tel" id="editTelefono" maxlength="9" required>
+                                                    <input class="input" type="tel" id="editTelefono" maxlength="9"
+                                                        required>
                                                 </div>
                                             </div>
                                             <div class="field">
@@ -642,7 +648,8 @@
                                                         <input type="checkbox" id="editAmbitoNacional"> Nacional
                                                     </label>
                                                     <label class="checkbox">
-                                                        <input type="checkbox" id="editAmbitoInternacional"> Internacional
+                                                        <input type="checkbox" id="editAmbitoInternacional">
+                                                        Internacional
                                                     </label>
                                                 </div>
                                             </div>
@@ -663,9 +670,12 @@
                                 </section>
                                 <footer class="modal-card-foot">
                                     <div class="buttons">
-                                        <button class="button is-success" id="modifyButton" onclick="toggleEditMode()">Modificar</button>
-                                        <button class="button is-success" id="saveButton" style="display: none;" onclick="saveChanges()">Guardar</button>
-                                        <button class="button" id="cancelButton" style="display: none;" onclick="toggleEditMode()">Cancelar</button>
+                                        <button class="button is-success" id="modifyButton"
+                                            onclick="toggleEditMode()">Modificar</button>
+                                        <button class="button is-success" id="saveButton" style="display: none;"
+                                            onclick="saveChanges()">Guardar</button>
+                                        <button class="button" id="cancelButton" style="display: none;"
+                                            onclick="toggleEditMode()">Cancelar</button>
                                         <button class="button" onclick="closeModal('modalAmavir')">Cerrar</button>
                                     </div>
                                 </footer>
@@ -677,7 +687,8 @@
                             <div class="modal-card">
                                 <header class="modal-card-head">
                                     <p class="modal-card-title">Añadir Nueva Organización</p>
-                                    <button class="delete" aria-label="close" onclick="closeModal('modalAddOrganization')"></button>
+                                    <button class="delete" aria-label="close"
+                                        onclick="closeModal('modalAddOrganization')"></button>
                                 </header>
                                 <section class="modal-card-body">
                                     <form id="addOrganizationForm">
@@ -708,7 +719,8 @@
                                         <div class="field">
                                             <label class="label is-txt4v">Teléfono de contacto</label>
                                             <div class="control">
-                                                <input class="input" type="tel" name="telefonoOrg" maxlength="9" required>
+                                                <input class="input" type="tel" name="telefonoOrg" maxlength="9"
+                                                    required>
                                             </div>
                                         </div>
                                         <div class="field">
@@ -747,23 +759,29 @@
                                         <div class="field">
                                             <label class="label is-txt4v">Ámbito de actuación</label>
                                             <div class="control">
-                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg" value="Local"> Local</label>
-                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg" value="Regional"> Regional</label>
-                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg" value="Nacional"> Nacional</label>
-                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg" value="Internacional"> Internacional</label>
+                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg"
+                                                        value="Local"> Local</label>
+                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg"
+                                                        value="Regional"> Regional</label>
+                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg"
+                                                        value="Nacional"> Nacional</label>
+                                                <label class="checkbox"><input type="checkbox" name="ambitoOrg"
+                                                        value="Internacional"> Internacional</label>
                                             </div>
                                         </div>
                                         <div class="field">
                                             <label class="label is-txt4v">Descripción</label>
                                             <div class="control">
-                                                <textarea class="textarea" name="descripcionOrg" placeholder="Descripción de la organización"></textarea>
+                                                <textarea class="textarea" name="descripcionOrg"
+                                                    placeholder="Descripción de la organización"></textarea>
                                             </div>
                                         </div>
                                     </form>
                                 </section>
                                 <footer class="modal-card-foot">
                                     <button class="button is-success" onclick="saveNewOrganization()">Guardar</button>
-                                    <button class="button" onclick="closeModal('modalAddOrganization')">Cancelar</button>
+                                    <button class="button"
+                                        onclick="closeModal('modalAddOrganization')">Cancelar</button>
                                 </footer>
                             </div>
                         </div>
@@ -771,7 +789,7 @@
                 </div>
             </div>
 
-                   
+
 
             <div class="section-content" id="actividad">
                 <h1 class="title is-1 is-txt4v">Gestión de Actividades</h1>
@@ -1037,7 +1055,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div id="tab1" class="tab-content is-active">
                     <h2 class="subtitle is-txt4v">Voluntarios Pendientes de Aprobación</h2>
                     <table class="table is-hoverable is-fullwidth">
@@ -1062,7 +1080,8 @@
                                 <td><a href="">+34 695 65 23 56</a></td>
                                 <td>1995-05-15</td>
                                 <td>2º ASIR</td>
-                                <td><span class="tag is-educativo">Educativo</span> <span class="tag is-cultural">Cultural</span></td>
+                                <td><span class="tag is-educativo">Educativo</span> <span
+                                        class="tag is-cultural">Cultural</span></td>
                                 <td><span class="tag">Lunes</span><span class="tag">Miércoles</span></td>
                                 <td>
                                     <div class="buttons">
@@ -1082,7 +1101,8 @@
                                 <td><a href="">+34 612 34 56 78</a></td>
                                 <td>1998-03-22</td>
                                 <td>1º DAM</td>
-                                <td><span class="tag is-social">Social</span> <span class="tag is-digital">Digital</span></td>
+                                <td><span class="tag is-social">Social</span> <span
+                                        class="tag is-digital">Digital</span></td>
                                 <td><span class="tag">Martes</span><span class="tag">Jueves</span></td>
                                 <td>
                                     <div class="buttons">
@@ -1102,7 +1122,8 @@
                                 <td><a href="">+34 678 90 12 34</a></td>
                                 <td>1997-07-10</td>
                                 <td>2º SMR</td>
-                                <td><span class="tag is-ambiental">Ambiental</span> <span class="tag is-cultural">Cultural</span></td>
+                                <td><span class="tag is-ambiental">Ambiental</span> <span
+                                        class="tag is-cultural">Cultural</span></td>
                                 <td><span class="tag">Viernes</span><span class="tag">Sábado</span></td>
                                 <td>
                                     <div class="buttons">
@@ -1122,7 +1143,8 @@
                                 <td><a href="">+34 654 32 10 98</a></td>
                                 <td>1996-11-05</td>
                                 <td>1º ASIR</td>
-                                <td><span class="tag is-educativo">Educativo</span> <span class="tag is-social">Social</span></td>
+                                <td><span class="tag is-educativo">Educativo</span> <span
+                                        class="tag is-social">Social</span></td>
                                 <td><span class="tag">Miércoles</span><span class="tag">Domingo</span></td>
                                 <td>
                                     <div class="buttons">
@@ -1142,7 +1164,8 @@
                                 <td><a href="">+34 600 12 34 56</a></td>
                                 <td>1999-02-18</td>
                                 <td>2º GVEC</td>
-                                <td><span class="tag is-digital">Digital</span> <span class="tag is-ambiental">Ambiental</span></td>
+                                <td><span class="tag is-digital">Digital</span> <span
+                                        class="tag is-ambiental">Ambiental</span></td>
                                 <td><span class="tag">Lunes</span><span class="tag">Viernes</span></td>
                                 <td>
                                     <div class="buttons">
@@ -1157,13 +1180,13 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                 </div>
                 <div id="tab2" class="tab-content">
-2
+                    2
                 </div>
                 <div id="tab3" class="tab-content">
-3
+                    3
                 </div>
             </div>
         </main>
@@ -1256,7 +1279,7 @@
     <script src="./../js/organizador/org_modificarOrganizaciones.js"></script>
     <script src="./../js/formularios/validacion_form.js"></script>
     <script src="./../js/organizador/org_agregado_organizaciones.js"></script>
-   
+
 
     <script src="./../js/organizador/select.js"></script>
     <script src="./../js/organizador/organizador_mensajes.js"></script>

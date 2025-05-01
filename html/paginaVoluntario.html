@@ -23,8 +23,9 @@
                 <li><a href="#perfil" data-section="perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
                 <li><a href="#calendario" data-section="calendario"><i class="fa-solid fa-calendar"></i> Calendario</a>
                 </li>
-                <li><a href="#actividad" data-section="actividad"><i class="fa-solid fa-clipboard-list"></i>
+                <li><a href="#misActividades" data-section="misActividades"><i class="fa-solid fa-clipboard-list"></i>
                      Mis Actividades</a></li>
+                     
                 <hr class="divider my-3">
 
 
@@ -227,6 +228,103 @@
             </div>
    
 
+
+<!-- MIS ACTIVIDADES -->
+<div class="section-content" id="misActividades">
+    <h1 class="title is-1 is-txt4v">Mis actividades</h1>
+    <div class="box">
+        <div class="columns is-multiline is-centered">
+            <div class="column is-3">
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input type="text" id="filter-nombreAct" class="input" placeholder="Nombre">
+                    </div>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="field">
+                    <label class="label">Fecha</label>
+                    <div class="control">
+                        <input type="date" id="filter-fechaAct" class="input" placeholder="Fecha">
+                    </div>
+                </div>
+            </div>
+            <div class="column is-2">
+                <div class="field">
+                    <label class="label">Tipo Actividad</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="filter-tipoAct">
+                                <option value="">Tipo de Actividad</option>
+                                <option value="Cultural">Cultural</option>
+                                <option value="Deportivo">Deportivo</option>
+                                <option value="Social">Social</option>
+                                <option value="Educativo">Educativo</option>
+                                <option value="Ambiental">Ambiental</option>
+                                <option value="Digital">Digital</option>
+                                <option value="Tecnológico">Tecnológico</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-1">
+                <div class="field">
+                    <label class="label">Estado</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="filter-estadoAct">
+                                <option value="">Estado</option>
+                                <option value="Pendiente">Pendiente</option>
+                                <option value="En Curso">En Curso</option>
+                                <option value="Finalizado">Finalizado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="field">
+                    <label class="label">ODS Realizados</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="filter-odsAct">
+                                <option value="">ODS Realizados</option>
+                                <option value="1">Fin de la Pobreza</option>
+                                <option value="2">Hambre Cero</option>
+                                <option value="3">Salud y Bienestar</option>
+                                <option value="4">Educación de Calidad</option>
+                                <option value="5">Igualdad de Género</option>
+                                <option value="6">Agua Limpia y Saneamiento</option>
+                                <option value="7">Energía Asequible y No Contaminante</option>
+                                <option value="8">Trabajo Decente y Crecimiento Económico</option>
+                                <option value="9">Industria, Innovación e Infraestructura</option>
+                                <option value="10">Reducción de las Desigualdades</option>
+                                <option value="11">Ciudades y Comunidades Sostenibles</option>
+                                <option value="12">Producción y Consumo Responsables</option>
+                                <option value="13">Acción por el Clima</option>
+                                <option value="14">Vida Submarina</option>
+                                <option value="15">Vida de Ecosistemas Terrestres</option>
+                                <option value="16">Paz, Justicia e Instituciones Sólidas</option>
+                                <option value="17">Alianzas para Lograr los Objetivos</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns is-multiline mt-4 actividades">
+        <!-- AñadirActividad -->
+        
+        
+    </div>
+</div>
+
+
+
+
             <div class="section-content" id="actividad">
                 <h1 class="title is-1 is-txt4v">Gestión de Actividades</h1>
                 <div class="box">
@@ -342,7 +440,7 @@
                                         <img class="image is-48x48 mx-2" src="/img/ODS/ods15.png" alt="ODS15">
                                     </div>
                                     <div class="has-text-right mt-1">
-                                        <button class="button">Apuntarse</button>
+                                        <button class="button apuntarse-button">Apuntarse</button>
                                     </div>
                                 </div>
                             </div>
@@ -378,7 +476,7 @@
                                         <img class="image is-48x48 mx-2" src="/img/ODS/ods9.png" alt="ODS9">
                                     </div>
                                     <div class="has-text-right mt-1">
-                                        <button class="button">Apuntarse</button>
+                                        <button class="button apuntarse-button">Apuntarse</button>
                                     </div>
                                 </div>
                             </div>
@@ -415,7 +513,7 @@
                                         <img class="image is-48x48 mx-2" src="/img/ODS/ods15.png" alt="ODS15">
                                     </div>
                                     <div class="has-text-right mt-1">
-                                        <button class="button">Apuntarse</button>
+                                        <button class="button apuntarse-button">Apuntarse</button>
                                     </div>
                                 </div>
                             </div>
@@ -452,7 +550,7 @@
                                         <img class="image is-48x48 mx-2" src="/img/ODS/ods10.png" alt="ODS10">
                                     </div>
                                     <div class="has-text-right mt-1">
-                                        <button class="button">Apuntarse</button>
+                                        <button class="button apuntarse-button">Apuntarse</button>
                                     </div>
                                 </div>
                             </div>
@@ -468,9 +566,13 @@
     <script src="./../js/organizador/org_cal_perfil.js"></script>
     <script src="./../js/organizador/Organizador-calendario.js"></script>
 
+
     <script src="./../js/organizador/select.js"></script>
     <script src="./../js/organizador/organizador_mensajes.js"></script>
     <script src="./../js/tabs.js"></script>
+
+    <!-- Scripts paginaVoluntario -->
+     <script src="./../js/paginaVoluntario/gestionMisActividades.js"></script>
 </body>
 
 </html>

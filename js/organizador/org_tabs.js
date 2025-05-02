@@ -29,7 +29,7 @@ window.addEventListener('resize', () => {
 
 
 // ! OCULTAR FILTROS EN VOLUNTARIOS:
-document.getElementById('toggle-filters').addEventListener('click', function () {
+document.getElementById('toggle-filtersvol').addEventListener('click', function () {
     const filterContainer = document.getElementById('filter-container');
     filterContainer.classList.toggle('is-active');
 });

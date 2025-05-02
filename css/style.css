@@ -16,7 +16,13 @@ html {
   border-radius: 5px;
   text-decoration: none;
 }
-
+#disponibilidad-horas{
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: 
+  flex-start; 
+  margin-top: 10px;
+}
 /*! RESPONSIVE PERSONALIZADO*/
 /*? MÓVIL */
 @media screen and (max-width: 768px) {

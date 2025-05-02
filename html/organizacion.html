@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bulma.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Dahsboard - Organización</title>
+</head>
+
+<body id="Organizacion">
+    <div class="dashboard-wrapper">
+        <aside class="dashboard-sidebar menu">
+            <div class="logo">
+                <img src="/img/Irina/Logos/logo-voluntarios_completo.png" alt="Logo Voluntariado" class="logo-image">
+                <h1 class="title is-4 is-txt4v">Organización</h1>
+            </div>
+            <ul class="menu-list">
+                <li><span class="menu-group is-txt4v">Perfil</span></li>
+                <li><a href="#perfil" data-section="perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                <li><a href="#calendario" data-section="calendario"><i class="fa-solid fa-calendar"></i> Calendario</a>
+                </li>
+
+
+                <hr class="divider my-3">
+
+
+                <li><span class="menu-group is-txt4v">Gestión</span></li>
+                <li><a href="#gestion_Actividad" data-section="gestion_Actividad" class="is-active"><i
+                            class="fa-solid fa-user-group"></i>
+                        Gestión de Actividades</a></li>
+
+                <hr class="divider my-3">
+
+                <li><span class="menu-group is-txt4v">Opciones</span></li>
+                <li><a href="./../index.html"><i class="fa-solid fa-door-open"></i> Cerrar Sesión</a></li>
+
+            </ul>
+        </aside>
+        <main class="dashboard-main ml-3">
+            <button class="hamburger-button" aria-label="Abrir menú" onclick="toggleSidebar()">☰</button>
+            <div class="section-content" id="perfil">
+                <div class="columns">
+                    <div class="column is-8">
+                        <div class="box">
+                            <div class="columns ">
+                                <div class="column is-4 has-text-centered">
+                                    <figure class="image is-img-perfil is-inline-block">
+                                        <img src="/img/icons/miavatar.png" alt="Foto de perfil" class="is-rounded">
+                                    </figure>
+                                    <div class="mt-3">
+                                        <button class="button is-bg4v">Editar perfil</button>
+                                    </div>
+                                </div>
+                                <div class="column">
+
+                                    <h2 class="title is-3 is-txt4v">Información Organización</h2>
+                                    <p><b>Nombre:</b> Amavir</p>
+                                    <p><b>Email:</b> amavir@info.com</p>
+                                    <p><b>Teléfono:</b> +34 600 123 456</p>
+                                    <p><b>Rol:</b> Organización</p>
+                                    <hr>
+                                    <h3 class="subtitle is-6">Descripción</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime exercitationem
+                                        labore totam hic? Iste quis corporis suscipit, a qui tenetur assumenda
+                                        consequuntur rerum, ipsum optio voluptate non blanditiis eveniet. Commodi.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h3 class="title is-3 is-txt4v">Últimas Actividades Realizadas</h3>
+                            <div class="activity-list">
+                                <article class="message is-light">
+                                    <div class="message-body has-left-border">
+                                        <span class="icon-text">
+                                            <span class="icon"><i
+                                                    class="fa-solid fa-hand-holding-heart is-txt4v"></i></span>
+                                            <span><b>Recogida de Alimentos</b></span>
+                                        </span>
+                                        <p class="is-size-7 has-text-grey">28 de marzo, 10:00 AM</p>
+                                    </div>
+                                </article>
+                                <article class="message is-light">
+                                    <div class="message-body has-left-border">
+                                        <span class="icon-text">
+                                            <span class="icon"><i class="fa-solid fa-leaf is-txt4v"></i></span>
+                                            <span><b>Jornada de Limpieza de Playas</b></span>
+                                        </span>
+                                        <p class="is-size-7 has-text-grey">25 de marzo, 3:00 PM</p>
+                                    </div>
+                                </article>
+                                <article class="message is-light">
+                                    <div class="message-body has-left-border">
+                                        <span class="icon-text">
+                                            <span class="icon"><i class="fa-solid fa-book is-txt4v"></i></span>
+                                            <span><b>Apoyo Escolar en la Biblioteca</b></span>
+                                        </span>
+                                        <p class="is-size-7 has-text-grey">20 de marzo, 4:30 PM</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box">
+                            <h3 class="title is-3 has-text-centered is-txt4v">Calendario Personal</h3>
+                            <div class="calendarioPerfil">
+                                <div class="box">
+                                    <div id="calendarioPerfil" class="has-text-centered"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h3 class="title is-3 is-txt4v">Notificaciones</h3>
+                            <article class="message is-light notification-item">
+                                <button class="delete remove-notification"></button>
+                                <div class="message-body has-left-border">
+                                    <p><b>Nueva actividad:</b> La organización Amavir ha solicitado una nueva
+                                        actividad.</p>
+                                    <span class="is-size-7 has-text-grey">Hace 2 horas</span>
+                                </div>
+                            </article>
+                            <article class="message is-light notification-item">
+                                <button class="delete remove-notification"></button>
+                                <div class="message-body has-left-border">
+                                    <p><b>Recordatorio:</b> Actualiza tu perfil para acceder a nuevas
+                                        funciones.</p>
+                                    <span class="is-size-7 has-text-grey">Hace 1 día</span>
+                                </div>
+                            </article>
+                            <article class="message is-light notification-item">
+                                <button class="delete remove-notification"></button>
+                                <div class="message-body has-left-border">
+                                    <p><b>Mensaje:</b> Tienes un mensaje de Silvia Sanz.</p>
+                                    <span class="is-size-7 has-text-grey">Hace 30 minutos</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content" id="calendario">
+                <h1 class="title is-1 is-txt4v">Calendario</h1>
+                <div class="calendar-section">
+                    <div class="container-calendar">
+                        <div class="left">
+                            <div class="calendar">
+                                <div class="month">
+                                    <i class="fas fa-angle-left prev"></i>
+                                    <div class="date">diciembre 2015</div>
+                                    <i class="fas fa-angle-right next"></i>
+                                </div>
+                                <div class="weekdays">
+                                    <div>Lun</div>
+                                    <div>Mar</div>
+                                    <div>Mié</div>
+                                    <div>Jue</div>
+                                    <div>Vie</div>
+                                    <div>Sáb</div>
+                                    <div>Dom</div>
+                                </div>
+                                <div class="days"></div>
+                                <div class="goto-today">
+                                    <div class="goto">
+                                        <input type="text" placeholder="mm/aaaa" class="date-input">
+                                        <button class="goto-btn">Ir</button>
+                                    </div>
+                                    <button class="today-btn">Hoy</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="today-date">
+                                <div class="event-day">mié</div>
+                                <div class="event-date">12 de diciembre de 2022</div>
+                            </div>
+                            <div class="events"></div>
+                            <div class="add-event-wrapper">
+                                <div class="add-event-header">
+                                    <div class="title-new-event">Agregar Evento</div>
+                                    <i class="fas fa-times close"></i>
+                                </div>
+                                <div class="add-event-body">
+                                    <div class="add-event-input">
+                                        <input type="text" placeholder="Nombre del Evento" class="event-name">
+                                    </div>
+                                    <div class="add-event-input">
+                                        <input type="text" placeholder="Hora de Inicio del Evento"
+                                        class="event-time-from">
+                                    </div>
+                                    <div class="add-event-input">
+                                        <input type="text" placeholder="Hora de Fin del Evento" class="event-time-to">
+                                    </div>
+                                </div>
+                                <div class="add-event-footer">
+                                    <button class="add-event-btn">Agregar Evento</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-event">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content is-visible" id="gestion_Actividad">
+                <p class="title is-1 is-txt4v">Gestión de Actividades</p>
+                <button class="button">Añadir actividad</button>
+                <div class="columns is-multiline mt-4 actividades">
+
+                    <!-- Actividad 2 -->
+                    <div class="column is-12 is-6-desktop">
+                        <div class="box">
+
+                            <div class="columns">
+                                <div class="column is-4">
+                                    
+                                    <figure class="img-actividad">
+                                        <img
+                                            src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_171727_resized_20240430_082311496.jpg">
+                                    </figure>
+                                </div>
+                                <div class="column is-8">
+                                    <p class="title is-4 is-txt4v">Curso de Programación Básica</p>
+                                    <p><b class="is-txt4v">Organización: </b><a href="">@Cuatrovientos</a></p>
+
+                                    <p><b class="is-txt4v">Descripción: </b>Introducción a la programación con Python,
+                                        enfocado en enseñar conceptos básicos a estudiantes sin experiencia previa.</p>
+                                    <p class="is-txt4v my-1"><b>Estado: </b><span
+                                            class="tag is-danger">Rechazado</span></p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-02-10</span></p>
+                                    <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">6h</span></p>
+                                    <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
+                                        <span class="tag is-educativo">Educativo</span>
+                                        <span class="tag is-digital">Digital</span>
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>ODS Realizados</b></p>
+                                    <div class="is-flex">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods4.png" alt="ODS4">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods9.png" alt="ODS9">
+                                    </div>
+                                    <div class="has-text-right mt-1">
+                                        <button class="button">Módificar Actividad</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Actividad 3 -->
+                    <div class="column is-12 is-6-desktop">
+                        <div class="box">
+                            <div class="columns">
+                                <div class="column is-4">
+                                    <figure class="img-actividad">
+                                        <img src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_173725_resized_20240430_082310936.jpg"
+                                            alt="Actividad 3">
+                                    </figure>
+                                </div>
+                                <div class="column is-8">
+                                    <p class="title is-4 is-txt4v">Jornada de Reforestación</p>
+                                    <p><b class="is-txt4v">Organización: </b><a href="">@Cuatrovientos</a></p>
+
+                                    <p><b class="is-txt4v">Descripción: </b>Actividad comunitaria para plantar árboles
+                                        nativos en un área degradada, promoviendo la biodiversidad y la sostenibilidad.
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>Estado: </b><span class="tag is-success">Aprobado</span>
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-04-20</span></p>
+                                    <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">5h</span></p>
+                                    <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
+                                        <span class="tag is-ambiental">Ambiental</span>
+                                        <span class="tag is-social">Social</span>
+                                    </p>
+                                    <p class="is-txt4v my-1"><b>ODS Realizados</b></p>
+                                    <div class="is-flex">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods13.png" alt="ODS13">
+                                        <img class="image is-48x48 mx-2" src="/img/ODS/ods15.png" alt="ODS15">
+                                    </div>
+                                    <div class="has-text-right mt-1">
+                                        <button class="button">Módificar Actividad</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./../js/organizador/org_tabs.js"></script>
+    <script src="./../js/organizador/org_cal_perfil.js"></script>
+    <script src="./../js/organizador/Organizador-calendario.js"></script>
+    
+</body>
+
+</html>

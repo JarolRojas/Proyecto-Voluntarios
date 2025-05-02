@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -223,9 +224,21 @@
                                     <div class="add-event-input">
                                         <input type="text" placeholder="Hora de Inicio del Evento"
                                             class="event-time-from">
+                                            <div class="field" style="margin-right: 10px; margin-bottom: 10px; display: flex; flex-direction: column; align-items: center;">
+                                                <label class="label is-txt4v" style="margin-bottom: 5px;"></label>
+                                                <div class="control" style="display: flex; gap: 5px;">
+                                                    <input class="event-time-from" type="time" name="horaInicio_${day}" style="width: 100px;" required>
+                                                </div>
+                                            </div>
                                     </div>
                                     <div class="add-event-input">
                                         <input type="text" placeholder="Hora de Fin del Evento" class="event-time-to">
+                                        <div class="field" style="margin-right: 10px; margin-bottom: 10px; display: flex; flex-direction: column; align-items: center;">
+                                            <label class="label is-txt4v" style="margin-bottom: 5px;"></label>
+                                            <div class="control" style="display: flex; gap: 5px;">
+                                                <input class="event-time-to" type="time" name="horaFin_${day}" style="width: 100px;" required>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="add-event-footer">

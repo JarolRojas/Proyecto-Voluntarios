@@ -21612,3 +21612,7 @@ has-background-danger.is-hoverable:active {
 .rating i {
   color: rgb(230, 230, 45);
 }
+
+.is-none{
+  display: none;
+}

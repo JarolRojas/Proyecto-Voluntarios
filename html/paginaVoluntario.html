@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/css/bulma.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha384-..." crossorigin="anonymous">
+        integrity="sha384-8z94tVrb4tiU9YbbdtpqD9m0imQk5nZfIhND4mZPMI1Cmrp7h48HTCkCJjc+sl5P" crossorigin="anonymous">
+
 </head>
 
 <body id="dash_organizador">
@@ -16,7 +17,7 @@
         <aside class="dashboard-sidebar menu">
             <div class="logo">
                 <img src="/img/Irina/Logos/logo-voluntarios_completo.png" alt="Logo Voluntariado" class="logo-image">
-                <h1 class="title is-4 is-txt4v">Voluntariado</h1>
+                <h2 class="title is-4 is-txt4v">Voluntariado</h2>
             </div>
             <ul class="menu-list">
                 <li><span class="menu-group is-txt4v">Perfil</span></li>
@@ -24,17 +25,21 @@
                 <li><a href="#calendario" data-section="calendario"><i class="fa-solid fa-calendar"></i> Calendario</a>
                 </li>
                 <li><a href="#misActividades" data-section="misActividades"><i class="fa-solid fa-clipboard-list"></i>
-                     Mis Actividades</a></li>
-                     
-                <hr class="divider my-3">
+                        Mis Actividades</a>
+                    <hr class="divider my-3">
+                </li>
+
+
 
 
                 <li><span class="menu-group is-txt4v">Gestión</span></li>
 
                 <li><a href="#actividad" data-section="actividad"><i class="fa-solid fa-clipboard-list"></i>
-                        Actividades</a></li>
+                        Actividades</a>
+                    <hr class="divider my-3">
+                </li>
 
-                <hr class="divider my-3">
+
 
                 <li><span class="menu-group is-txt4v">Opciones</span></li>
                 <li><a href="/index.html"><i class="fa-solid fa-door-open"></i> Cerrar Sesión</a></li>
@@ -92,7 +97,7 @@
                         <div class="box">
                             <h3 class="title is-3 is-txt4v">Últimas Actividades Asistidas</h3>
                             <div class="activity-list">
-                                <article class="message is-light">
+                                <div class="message is-light">
                                     <div class="message-body has-left-border">
                                         <span class="icon-text">
                                             <span class="icon"><i
@@ -101,8 +106,8 @@
                                         </span>
                                         <p class="is-size-7 has-text-grey">28 de marzo, 10:00 AM</p>
                                     </div>
-                                </article>
-                                <article class="message is-light">
+                                </div>
+                                <div class="message is-light">
                                     <div class="message-body has-left-border">
                                         <span class="icon-text">
                                             <span class="icon"><i class="fa-solid fa-leaf is-txt4v"></i></span>
@@ -110,8 +115,8 @@
                                         </span>
                                         <p class="is-size-7 has-text-grey">25 de marzo, 3:00 PM</p>
                                     </div>
-                                </article>
-                                <article class="message is-light">
+                                </div>
+                                <div class="message is-light">
                                     <div class="message-body has-left-border">
                                         <span class="icon-text">
                                             <span class="icon"><i class="fa-solid fa-book is-txt4v"></i></span>
@@ -119,7 +124,7 @@
                                         </span>
                                         <p class="is-size-7 has-text-grey">20 de marzo, 4:30 PM</p>
                                     </div>
-                                </article>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -135,29 +140,29 @@
 
                         <div class="box">
                             <h3 class="title is-3 is-txt4v">Notificaciones</h3>
-                            <article class="message is-light notification-item">
+                            <div class="message is-light notification-item">
                                 <button class="delete remove-notification"></button>
                                 <div class="message-body has-left-border">
                                     <p><b>Nueva actividad:</b> La organización Amavir ha solicitado una nueva
                                         actividad.</p>
                                     <span class="is-size-7 has-text-grey">Hace 2 horas</span>
                                 </div>
-                            </article>
-                            <article class="message is-light notification-item">
+                            </div>
+                            <div class="message is-light notification-item">
                                 <button class="delete remove-notification"></button>
                                 <div class="message-body has-left-border">
                                     <p><b>Recordatorio:</b> Actualiza tu perfil para acceder a nuevas
                                         funciones.</p>
                                     <span class="is-size-7 has-text-grey">Hace 1 día</span>
                                 </div>
-                            </article>
-                            <article class="message is-light notification-item">
+                            </div>
+                            <div class="message is-light notification-item">
                                 <button class="delete remove-notification"></button>
                                 <div class="message-body has-left-border">
                                     <p><b>Mensaje:</b> Tienes un mensaje de Silvia Sanz.</p>
                                     <span class="is-size-7 has-text-grey">Hace 30 minutos</span>
                                 </div>
-                            </article>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -226,101 +231,101 @@
                     </div>
                 </div>
             </div>
-   
 
 
-<!-- MIS ACTIVIDADES -->
-<div class="section-content" id="misActividades">
-    <h1 class="title is-1 is-txt4v">Mis actividades</h1>
-    <div class="box">
-        <div class="columns is-multiline is-centered">
-            <div class="column is-3">
-                <div class="field">
-                    <label class="label">Nombre</label>
-                    <div class="control">
-                        <input type="text" id="filter-nombreAct" class="input" placeholder="Nombre">
-                    </div>
-                </div>
-            </div>
-            <div class="column is-3">
-                <div class="field">
-                    <label class="label">Fecha</label>
-                    <div class="control">
-                        <input type="date" id="filter-fechaAct" class="input" placeholder="Fecha">
-                    </div>
-                </div>
-            </div>
-            <div class="column is-2">
-                <div class="field">
-                    <label class="label">Tipo Actividad</label>
-                    <div class="control">
-                        <div class="select">
-                            <select id="filter-tipoAct">
-                                <option value="">Tipo de Actividad</option>
-                                <option value="Cultural">Cultural</option>
-                                <option value="Deportivo">Deportivo</option>
-                                <option value="Social">Social</option>
-                                <option value="Educativo">Educativo</option>
-                                <option value="Ambiental">Ambiental</option>
-                                <option value="Digital">Digital</option>
-                                <option value="Tecnológico">Tecnológico</option>
-                            </select>
+
+            <!-- MIS ACTIVIDADES -->
+            <div class="section-content" id="misActividades">
+                <h1 class="title is-1 is-txt4v">Mis actividades</h1>
+                <div class="box">
+                    <div class="columns is-multiline is-centered">
+                        <div class="column is-3">
+                            <div class="field">
+                                <label class="label">Nombre</label>
+                                <div class="control">
+                                    <input type="text" id="filter-nombreMisAct" class="input" placeholder="Nombre">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="field">
+                                <label class="label">Fecha</label>
+                                <div class="control">
+                                    <input type="date" id="filter-fechaMisAct" class="input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-2">
+                            <div class="field">
+                                <label class="label">Tipo Actividad</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-tipoMisAct">
+                                            <option value="">Tipo de Actividad</option>
+                                            <option value="Cultural">Cultural</option>
+                                            <option value="Deportivo">Deportivo</option>
+                                            <option value="Social">Social</option>
+                                            <option value="Educativo">Educativo</option>
+                                            <option value="Ambiental">Ambiental</option>
+                                            <option value="Digital">Digital</option>
+                                            <option value="Tecnológico">Tecnológico</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-1">
+                            <div class="field">
+                                <label class="label">Estado</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-estadoMisAct">
+                                            <option value="">Estado</option>
+                                            <option value="Pendiente">Pendiente</option>
+                                            <option value="En Curso">En Curso</option>
+                                            <option value="Finalizado">Finalizado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3">
+                            <div class="field">
+                                <label class="label">ODS Realizados</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="filter-odsMisAct">
+                                            <option value="">ODS Realizados</option>
+                                            <option value="1">Fin de la Pobreza</option>
+                                            <option value="2">Hambre Cero</option>
+                                            <option value="3">Salud y Bienestar</option>
+                                            <option value="4">Educación de Calidad</option>
+                                            <option value="5">Igualdad de Género</option>
+                                            <option value="6">Agua Limpia y Saneamiento</option>
+                                            <option value="7">Energía Asequible y No Contaminante</option>
+                                            <option value="8">Trabajo Decente y Crecimiento Económico</option>
+                                            <option value="9">Industria, Innovación e Infraestructura</option>
+                                            <option value="10">Reducción de las Desigualdades</option>
+                                            <option value="11">Ciudades y Comunidades Sostenibles</option>
+                                            <option value="12">Producción y Consumo Responsables</option>
+                                            <option value="13">Acción por el Clima</option>
+                                            <option value="14">Vida Submarina</option>
+                                            <option value="15">Vida de Ecosistemas Terrestres</option>
+                                            <option value="16">Paz, Justicia e Instituciones Sólidas</option>
+                                            <option value="17">Alianzas para Lograr los Objetivos</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="column is-1">
-                <div class="field">
-                    <label class="label">Estado</label>
-                    <div class="control">
-                        <div class="select">
-                            <select id="filter-estadoAct">
-                                <option value="">Estado</option>
-                                <option value="Pendiente">Pendiente</option>
-                                <option value="En Curso">En Curso</option>
-                                <option value="Finalizado">Finalizado</option>
-                            </select>
-                        </div>
-                    </div>
+                <div class="columns is-multiline mt-4 actividades">
+                    <!-- AñadirActividad -->
+
+
                 </div>
             </div>
-            <div class="column is-3">
-                <div class="field">
-                    <label class="label">ODS Realizados</label>
-                    <div class="control">
-                        <div class="select">
-                            <select id="filter-odsAct">
-                                <option value="">ODS Realizados</option>
-                                <option value="1">Fin de la Pobreza</option>
-                                <option value="2">Hambre Cero</option>
-                                <option value="3">Salud y Bienestar</option>
-                                <option value="4">Educación de Calidad</option>
-                                <option value="5">Igualdad de Género</option>
-                                <option value="6">Agua Limpia y Saneamiento</option>
-                                <option value="7">Energía Asequible y No Contaminante</option>
-                                <option value="8">Trabajo Decente y Crecimiento Económico</option>
-                                <option value="9">Industria, Innovación e Infraestructura</option>
-                                <option value="10">Reducción de las Desigualdades</option>
-                                <option value="11">Ciudades y Comunidades Sostenibles</option>
-                                <option value="12">Producción y Consumo Responsables</option>
-                                <option value="13">Acción por el Clima</option>
-                                <option value="14">Vida Submarina</option>
-                                <option value="15">Vida de Ecosistemas Terrestres</option>
-                                <option value="16">Paz, Justicia e Instituciones Sólidas</option>
-                                <option value="17">Alianzas para Lograr los Objetivos</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="columns is-multiline mt-4 actividades">
-        <!-- AñadirActividad -->
-        
-        
-    </div>
-</div>
 
 
 
@@ -341,7 +346,7 @@
                             <div class="field">
                                 <label class="label">Fecha</label>
                                 <div class="control">
-                                    <input type="date" id="filter-fechaAct" class="input" placeholder="Fecha">
+                                    <input type="date" id="filter-fechaAct" class="input">
                                 </div>
                             </div>
                         </div>
@@ -453,7 +458,7 @@
                                 <div class="column is-4">
                                     <figure class="img-actividad">
                                         <img
-                                            src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_171727_resized_20240430_082311496.jpg">
+                                            src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_171727_resized_20240430_082311496.jpg" alt="imagen sobre competencias digitales">
                                     </figure>
                                 </div>
                                 <div class="column is-8">
@@ -558,7 +563,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </main>
     </div>
     <script src="./../js/organizador/org_filtrado_actividad.js"></script>
@@ -572,7 +577,7 @@
     <script src="./../js/tabs.js"></script>
 
     <!-- Scripts paginaVoluntario -->
-     <script src="./../js/paginaVoluntario/gestionMisActividades.js"></script>
+    <script src="./../js/paginaVoluntario/gestionMisActividades.js"></script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@
             </div>
             <ul class="menu-list">
                 <li><span class="menu-group is-txt4v">Perfil</span></li>
-                <li><a href="#perfil" data-section="perfil"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                <li><a href="#perfil" data-section="perfil" class="is-active"><i class="fa-solid fa-user"></i> Perfil</a></li>
                 <li><a href="#calendario" data-section="calendario"><i class="fa-solid fa-calendar"></i> Calendario</a>
                 </li>
 
@@ -29,7 +29,7 @@
 
 
                 <li><span class="menu-group is-txt4v">Gestión</span></li>
-                <li><a href="#gestion" data-section="gestion" class="is-active"><i class="fa-solid fa-user-group"></i>
+                <li><a href="#gestion" data-section="gestion"><i class="fa-solid fa-user-group"></i>
                         Gestión de Voluntarios</a></li>
                 <li><a href="#organizaciones" data-section="organizaciones"><i class="fa-solid fa-building"></i>
                         Organizaciones</a></li>
@@ -56,7 +56,7 @@
 
         <main class="dashboard-main ml-3">
             <button class="hamburger-button" aria-label="Abrir menú" onclick="toggleSidebar()">☰</button>
-            <div class="section-content" id="perfil">
+            <div class="section-content is-visible" id="perfil">
                 <div class="columns">
                     <div class="column is-8">
                         <div class="box">
@@ -866,23 +866,23 @@
                                     <div class="select">
                                         <select id="filter-odsAct">
                                             <option value="">ODS Realizados</option>
-                                            <option value="1">Fin de la Pobreza</option>
-                                            <option value="2">Hambre Cero</option>
-                                            <option value="3">Salud y Bienestar</option>
-                                            <option value="4">Educación de Calidad</option>
-                                            <option value="5">Igualdad de Género</option>
-                                            <option value="6">Agua Limpia y Saneamiento</option>
-                                            <option value="7">Energía Asequible y No Contaminante</option>
-                                            <option value="8">Trabajo Decente y Crecimiento Económico</option>
-                                            <option value="9">Industria, Innovación e Infraestructura</option>
-                                            <option value="10">Reducción de las Desigualdades</option>
-                                            <option value="11">Ciudades y Comunidades Sostenibles</option>
-                                            <option value="12">Producción y Consumo Responsables</option>
-                                            <option value="13">Acción por el Clima</option>
-                                            <option value="14">Vida Submarina</option>
-                                            <option value="15">Vida de Ecosistemas Terrestres</option>
-                                            <option value="16">Paz, Justicia e Instituciones Sólidas</option>
-                                            <option value="17">Alianzas para Lograr los Objetivos</option>
+                                            <option value="ODS1">Fin de la Pobreza</option>
+                                            <option value="ODS2">Hambre Cero</option>
+                                            <option value="ODS3">Salud y Bienestar</option>
+                                            <option value="ODS4">Educación de Calidad</option>
+                                            <option value="ODS5">Igualdad de Género</option>
+                                            <option value="ODS6">Agua Limpia y Saneamiento</option>
+                                            <option value="ODS7">Energía Asequible y No Contaminante</option>
+                                            <option value="ODS8">Trabajo Decente y Crecimiento Económico</option>
+                                            <option value="ODS9">Industria, Innovación e Infraestructura</option>
+                                            <option value="ODS10">Reducción de las Desigualdades</option>
+                                            <option value="ODS11">Ciudades y Comunidades Sostenibles</option>
+                                            <option value="ODS12">Producción y Consumo Responsables</option>
+                                            <option value="ODS13">Acción por el Clima</option>
+                                            <option value="ODS14">Vida Submarina</option>
+                                            <option value="ODS15">Vida de Ecosistemas Terrestres</option>
+                                            <option value="ODS16">Paz, Justicia e Instituciones Sólidas</option>
+                                            <option value="ODS17">Alianzas para Lograr los Objetivos</option>
                                         </select>
                                     </div>
                                 </div>
@@ -891,14 +891,17 @@
                     </div>
                 </div>
                 <div class="has-text-right">
-                    <button class="button">Seleccionar Todos</button>
-                    <button class="button">Eliminar Actividad</button>
-                    <button class="button">Crear Nueva Actividad</button>
+                    <button class="button" onclick="seleccionarTodasActividades()">Seleccionar Todas</button>
+                    <button class="button" onclick="eliminarActividades()">Eliminar Actividad</button>
+                    <button class="button" onclick="openModal('modalAddActivity')">Añadir Actividad</button>
                 </div>
                 <div class="columns is-multiline mt-4 actividades">
                     <!-- Actividad 1 -->
-                    <div class="column is-12 is-6-desktop">
-                        <div class="box">
+                    <div class="column is-12 is-6-desktop actividades">
+                        <div class="box actividad-box">
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="actividad-checkbox">
+                            </div>
                             <div class="columns">
                                 <div class="column is-4">
                                     <figure class="img-actividad">
@@ -913,7 +916,7 @@
                                         objetos decorativos utilizando materiales reciclados.</p>
                                     <p class="is-txt4v my-1"><b>Estado: </b><span class="tag is-success">En Curso</span>
                                     </p>
-                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-04-15</span></p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag fecha">15/04/2025</span></p>
                                     <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">4h</span></p>
                                     <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
                                         <span class="tag is-ambiental">Ambiental</span>
@@ -925,15 +928,18 @@
                                         <img class="image is-48x48 mx-2" src="/img/ODS/ods15.png" alt="ODS15">
                                     </div>
                                     <div class="has-text-right mt-1">
-                                        <button class="button">Módificar Actividad</button>
+                                        <button class="button">Modificar Actividad</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Actividad 2 -->
-                    <div class="column is-12 is-6-desktop">
-                        <div class="box">
+                    <div class="column is-12 is-6-desktop actividades">
+                        <div class="box actividad-box">
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="actividad-checkbox">
+                            </div>
                             <div class="columns">
                                 <div class="column is-4">
                                     <figure class="img-actividad">
@@ -949,7 +955,7 @@
                                         enfocado en enseñar conceptos básicos a estudiantes sin experiencia previa.</p>
                                     <p class="is-txt4v my-1"><b>Estado: </b><span
                                             class="tag is-danger">Finalizado</span></p>
-                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-02-10</span></p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag fecha">10/02/2025</span></p>
                                     <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">6h</span></p>
                                     <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
                                         <span class="tag is-educativo">Educativo</span>
@@ -961,15 +967,18 @@
                                         <img class="image is-48x48 mx-2" src="/img/ODS/ods9.png" alt="ODS9">
                                     </div>
                                     <div class="has-text-right mt-1">
-                                        <button class="button">Módificar Actividad</button>
+                                        <button class="button">Modificar Actividad</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Actividad 3 -->
-                    <div class="column is-12 is-6-desktop">
-                        <div class="box">
+                    <div class="column is-12 is-6-desktop actividades">
+                        <div class="box actividad-box">
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="actividad-checkbox">
+                            </div>
                             <div class="columns">
                                 <div class="column is-4">
                                     <figure class="img-actividad">
@@ -986,7 +995,7 @@
                                     </p>
                                     <p class="is-txt4v my-1"><b>Estado: </b><span class="tag is-success">En Curso</span>
                                     </p>
-                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-04-20</span></p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag fecha">20/04/2025</span></p>
                                     <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">5h</span></p>
                                     <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
                                         <span class="tag is-ambiental">Ambiental</span>
@@ -998,15 +1007,18 @@
                                         <img class="image is-48x48 mx-2" src="/img/ODS/ods15.png" alt="ODS15">
                                     </div>
                                     <div class="has-text-right mt-1">
-                                        <button class="button">Módificar Actividad</button>
+                                        <button class="button">Modificar Actividad</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Actividad 4 -->
-                    <div class="column is-12 is-6-desktop">
-                        <div class="box">
+                    <div class="column is-12 is-6-desktop actividades">
+                        <div class="box actividad-box">
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="actividad-checkbox">
+                            </div>
                             <div class="columns">
                                 <div class="column is-4">
                                     <figure class="img-actividad">
@@ -1023,7 +1035,7 @@
                                         sociales.</p>
                                     <p class="is-txt4v my-1"><b>Estado: </b><span
                                             class="tag is-danger">Finalizado</span></p>
-                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag">2025-03-05</span></p>
+                                    <p class="is-txt4v my-1"><b>Fecha: </b><span class="tag fecha">05/03/2025</span></p>
                                     <p class="is-txt4v my-1"><b>Horas: </b><span class="tag">3h</span></p>
                                     <p class="is-txt4v my-1"><b>Tipo de Actividad: </b>
                                         <span class="tag is-educativo">Educativo</span>
@@ -1036,15 +1048,147 @@
                                         <img class="image is-48x48 mx-2" src="/img/ODS/ods10.png" alt="ODS10">
                                     </div>
                                     <div class="has-text-right mt-1">
-                                        <button class="button">Módificar Actividad</button>
+                                        <button class="button">Modificar Actividad</button>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="columns is-multiline">
+                            <div class="modal" id="modalAddActivity">
+                                <div class="modal-background" onclick="closeModal('modalAddActivity')"></div>
+                                <div class="modal-card">
+                                    <header class="modal-card-head">
+                                        <p class="modal-card-title">Añadir Nueva Actividad</p>
+                                        <button class="delete" aria-label="close" onclick="closeModal('modalAddActivity')"></button>
+                                    </header>
+                                    <section class="modal-card-body">
+                                        <form id="addActivityForm" enctype="multipart/form-data">
+                                            <!-- Nombre de la Actividad -->
+                                            <div class="field">
+                                                <label class="label">Nombre de la Actividad</label>
+                                                <div class="control">
+                                                    <input class="input" type="text" name="nombreActividad" placeholder="Introduce el nombre de la actividad" required>
+                                                </div>
+                                            </div>
+                                            <!-- Organización -->
+                                            <div class="field">
+                                                <label class="label">Organización</label>
+                                                <div class="control">
+                                                    <div class="select is-fullwidth">
+                                                        <select name="organizacionActividad" required>
+                                                            <option value="" disabled selected>Selecciona una organización</option>
+                                                            <option value="Amavir">@Amavir</option>
+                                                            <option value="Unzutxiki">@Unzutxiki</option>
+                                                            <option value="Cuatrovientos">@Cuatrovientos</option>
+                                                            <option value="ANA">@ANA</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Fecha de la Actividad -->
+                                            <div class="field">
+                                                <label class="label">Fecha</label>
+                                                <div class="control">
+                                                    <input class="input" type="date" name="fechaActividad" required>
+                                                </div>
+                                            </div>
+                                            <!-- Horas de la Actividad -->
+                                            <div class="field">
+                                                <label class="label">Horas</label>
+                                                <div class="control">
+                                                    <input class="input" type="number" name="horasActividad" placeholder="Introduce la duración en horas" required>
+                                                </div>
+                                            </div>
+                                            <!-- Tipo de Actividad -->
+                                            <div class="field">
+                                                <label class="label">Tipo de Actividad</label>
+                                                <div class="control">
+                                                    <div class="select is-multiple is-fullwidth">
+                                                        <select name="tipoActividad[]" multiple required>
+                                                            <option value="Cultural">Cultural</option>
+                                                            <option value="Deportivo">Deportivo</option>
+                                                            <option value="Social">Social</option>
+                                                            <option value="Educativo">Educativo</option>
+                                                            <option value="Ambiental">Ambiental</option>
+                                                            <option value="Digital">Digital</option>
+                                                            <option value="Tecnológico">Tecnológico</option>
+                                                        </select>
+                                                    </div>
+                                                    <p class="help">Mantén presionada la tecla Ctrl (Cmd en Mac) para seleccionar múltiples opciones.</p>
+                                                </div>
+                                            </div>
+                                            <!-- Estado de la Actividad -->
+                                            <div class="field">
+                                                <label class="label">Estado</label>
+                                                <div class="control">
+                                                    <div class="select is-fullwidth">
+                                                        <select name="estadoActividad" required>
+                                                            <option value="" disabled selected>Selecciona el estado</option>
+                                                            <option value="Pendiente">Pendiente</option>
+                                                            <option value="En Curso">En Curso</option>
+                                                            <option value="Finalizado">Finalizado</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- ODS Relacionados -->
+                                            <div class="field">
+                                                <label class="label">ODS Relacionados</label>
+                                                <div class="control">
+                                                    <div class="select is-multiple is-fullwidth">
+                                                        <select name="odsActividad[]" multiple required>
+                                                            <option value="ODS1">Fin de la Pobreza</option>
+                                                            <option value="ODS2">Hambre Cero</option>
+                                                            <option value="ODS3">Salud y Bienestar</option>
+                                                            <option value="ODS4">Educación de Calidad</option>
+                                                            <option value="ODS5">Igualdad de Género</option>
+                                                            <option value="ODS6">Agua Limpia y Saneamiento</option>
+                                                            <option value="ODS7">Energía Asequible y No Contaminante</option>
+                                                            <option value="ODS8">Trabajo Decente y Crecimiento Económico</option>
+                                                            <option value="ODS9">Industria, Innovación e Infraestructura</option>
+                                                            <option value="ODS10">Reducción de las Desigualdades</option>
+                                                            <option value="ODS11">Ciudades y Comunidades Sostenibles</option>
+                                                            <option value="ODS12">Producción y Consumo Responsables</option>
+                                                            <option value="ODS13">Acción por el Clima</option>
+                                                            <option value="ODS14">Vida Submarina</option>
+                                                            <option value="ODS15">Vida de Ecosistemas Terrestres</option>
+                                                            <option value="ODS16">Paz, Justicia e Instituciones Sólidas</option>
+                                                            <option value="ODS17">Alianzas para Lograr los Objetivos</option>
+                                                        </select>
+                                                    </div>
+                                                    <p class="help">Mantén presionada la tecla Ctrl (Cmd en Mac) para seleccionar múltiples opciones.</p>
+                                                </div>
+                                            </div>
+                                            <!-- Imagen de la Actividad -->
+                                            <div class="field">
+                                                <label class="label">Imagen de la Actividad</label>
+                                                <div class="control">
+                                                    <input class="input" type="file" name="imagenActividad" accept="image/*" required>
+                                                </div>
+                                            </div>
+                                            <!-- Descripción -->
+                                            <div class="field">
+                                                <label class="label">Descripción</label>
+                                                <div class="control">
+                                                    <textarea class="textarea" name="descripcionActividad" placeholder="Escribe una breve descripción de la actividad"></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </section>
+                                    <footer class="modal-card-foot">
+                                        <button class="button is-success" onclick="saveNewActivity()">Guardar</button>
+                                        <button class="button" onclick="closeModal('modalAddActivity')">Cancelar</button>
+                                    </footer>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="section-content is-visible" id="aprobacion">
+            <div class="section-content" id="aprobacion">
                 <h1 class="title is-1 is-txt4v">Aprobaciones</h1>
                 <div class="tabs is-toggle">
                     <ul>
@@ -1293,6 +1437,7 @@
     <script src="./../js/organizador/org_modificarOrganizaciones.js"></script>
     <script src="./../js/formularios/validacion_form.js"></script>
     <script src="./../js/organizador/org_agregado_organizaciones.js"></script>
+    <script src="./../js/organizador/org_modal_act.js"></script>
 
 
     <script src="./../js/organizador/select.js"></script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/css/bulma.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha384-..." crossorigin="anonymous">
+        integrity="sha384-8z94tVrb4tiU9YbbdtpqD9m0imQk5nZfIhND4mZPMI1Cmrp7h48HTCkCJjc+sl5P" crossorigin="anonymous">
+
 </head>
 
 <body id="dash_organizador">
@@ -16,16 +17,18 @@
         <aside class="dashboard-sidebar menu">
             <div class="logo">
                 <img src="/img/Irina/Logos/logo-voluntarios_completo.png" alt="Logo Voluntariado" class="logo-image">
-                <h1 class="title is-4 is-txt4v">Voluntariado</h1>
+                <p class="title is-4 is-txt4v">Voluntariado</p>
             </div>
             <ul class="menu-list">
                 <li><span class="menu-group is-txt4v">Perfil</span></li>
-                <li><a href="#perfil" data-section="perfil" class="is-active"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                <li><a href="#perfil" data-section="perfil" class="is-active"><i class="fa-solid fa-user"></i>
+                        Perfil</a></li>
                 <li><a href="#calendario" data-section="calendario"><i class="fa-solid fa-calendar"></i> Calendario</a>
+                    <hr class="divider my-3">
                 </li>
 
 
-                <hr class="divider my-3">
+
 
 
                 <li><span class="menu-group is-txt4v">Gestión</span></li>
@@ -35,18 +38,21 @@
                         Organizaciones</a></li>
 
                 <li><a href="#actividad" data-section="actividad"><i class="fa-solid fa-clipboard-list"></i>
-                        Actividades</a></li>
+                        Actividades</a>
+                    <hr class="divider my-3">
+                </li>
 
-                <hr class="divider my-3">
+
 
 
                 <li><span class="menu-group is-txt4v">Aprobación</span></li>
                 <li><a href="#aprobacion" data-section="aprobacion"><i class="fa-solid fa-file-invoice"></i>
                         Aprobación</a>
+                    <hr class="divider my-3">
                 </li>
 
 
-                <hr class="divider my-3">
+
 
 
                 <li><span class="menu-group is-txt4v">Opciones</span></li>
@@ -105,7 +111,7 @@
                         <div class="box">
                             <h3 class="title is-3 is-txt4v">Últimas Actividades Asistidas</h3>
                             <div class="activity-list">
-                                <article class="message is-light">
+                                <div class="message is-light">
                                     <div class="message-body has-left-border">
                                         <span class="icon-text">
                                             <span class="icon"><i
@@ -114,8 +120,8 @@
                                         </span>
                                         <p class="is-size-7 has-text-grey">28 de marzo, 10:00 AM</p>
                                     </div>
-                                </article>
-                                <article class="message is-light">
+                                </div>
+                                <div class="message is-light">
                                     <div class="message-body has-left-border">
                                         <span class="icon-text">
                                             <span class="icon"><i class="fa-solid fa-leaf is-txt4v"></i></span>
@@ -123,8 +129,8 @@
                                         </span>
                                         <p class="is-size-7 has-text-grey">25 de marzo, 3:00 PM</p>
                                     </div>
-                                </article>
-                                <article class="message is-light">
+                                </div>
+                                <div class="message is-light">
                                     <div class="message-body has-left-border">
                                         <span class="icon-text">
                                             <span class="icon"><i class="fa-solid fa-book is-txt4v"></i></span>
@@ -132,7 +138,7 @@
                                         </span>
                                         <p class="is-size-7 has-text-grey">20 de marzo, 4:30 PM</p>
                                     </div>
-                                </article>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -148,29 +154,29 @@
 
                         <div class="box">
                             <h3 class="title is-3 is-txt4v">Notificaciones</h3>
-                            <article class="message is-light notification-item">
+                            <div class="message is-light notification-item">
                                 <button class="delete remove-notification"></button>
                                 <div class="message-body has-left-border">
                                     <p><b>Nueva actividad:</b> La organización Amavir ha solicitado una nueva
                                         actividad.</p>
                                     <span class="is-size-7 has-text-grey">Hace 2 horas</span>
                                 </div>
-                            </article>
-                            <article class="message is-light notification-item">
+                            </div>
+                            <div class="message is-light notification-item">
                                 <button class="delete remove-notification"></button>
                                 <div class="message-body has-left-border">
                                     <p><b>Recordatorio:</b> Actualiza tu perfil para acceder a nuevas
                                         funciones.</p>
                                     <span class="is-size-7 has-text-grey">Hace 1 día</span>
                                 </div>
-                            </article>
-                            <article class="message is-light notification-item">
+                            </div>
+                            <div class="message is-light notification-item">
                                 <button class="delete remove-notification"></button>
                                 <div class="message-body has-left-border">
                                     <p><b>Mensaje:</b> Tienes un mensaje de Silvia Sanz.</p>
                                     <span class="is-size-7 has-text-grey">Hace 30 minutos</span>
                                 </div>
-                            </article>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -225,7 +231,7 @@
                                             class="event-time-from">
                                         <div class="field multiinput">
                                             <label class="label is-txt4v mb-6"></label>
-                                            <div class="control cdginput" >
+                                            <div class="control cdginput">
                                                 <input class="event-time-from w100" type="time" name="horaInicio_${day}"
                                                     required>
                                             </div>
@@ -538,7 +544,7 @@
                     </div>
                 </div>
                 <div class="has-text-right">
-                    <button class="button is-primary" id="add-organization">Añadir Organización</button>
+                    <button class="button is-primary mb-3" id="add-organization">Añadir Organización</button>
                 </div>
 
                 <div class="container">
@@ -552,7 +558,7 @@
                                     <button class="delete" aria-label="close"
                                         onclick="closeModal('modalAmavir')"></button>
                                 </header>
-                                <section class="modal-card-body" id="modalContent">
+                                <div class="modal-card-body" id="modalContent">
                                     <!-- Modo visualización -->
                                     <div id="viewMode">
                                         <div class="field">
@@ -681,7 +687,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                </section>
+                                </div>
                                 <footer class="modal-card-foot">
                                     <div class="buttons">
                                         <button class="button is-success" id="modifyButton"
@@ -704,7 +710,7 @@
                                     <button class="delete" aria-label="close"
                                         onclick="closeModal('modalAddOrganization')"></button>
                                 </header>
-                                <section class="modal-card-body">
+                                <div class="modal-card-body">
                                     <form id="addOrganizationForm">
                                         <div class="field">
                                             <label class="label is-txt4v">Logo de la Organización</label>
@@ -791,7 +797,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                </section>
+                                </div>
                                 <footer class="modal-card-foot">
                                     <button class="button is-success" onclick="saveNewOrganization()">Guardar</button>
                                     <button class="button"
@@ -821,7 +827,7 @@
                             <div class="field">
                                 <label class="label">Fecha</label>
                                 <div class="control">
-                                    <input type="date" id="filter-fechaAct" class="input" placeholder="Fecha">
+                                    <input type="date" id="filter-fechaAct" class="input">
                                 </div>
                             </div>
                         </div>
@@ -944,7 +950,7 @@
                                 <div class="column is-4">
                                     <figure class="img-actividad">
                                         <img
-                                            src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_171727_resized_20240430_082311496.jpg">
+                                            src="/img/Irina/AMAVIR23-24CompetenciasDigitales/IMG_20240429_171727_resized_20240430_082311496.jpg" alt="actividad">
                                     </figure>
                                 </div>
                                 <div class="column is-8">
@@ -1062,15 +1068,17 @@
                                 <div class="modal-card">
                                     <header class="modal-card-head">
                                         <p class="modal-card-title">Añadir Nueva Actividad</p>
-                                        <button class="delete" aria-label="close" onclick="closeModal('modalAddActivity')"></button>
+                                        <button class="delete" aria-label="close"
+                                            onclick="closeModal('modalAddActivity')"></button>
                                     </header>
-                                    <section class="modal-card-body">
+                                    <div class="modal-card-body">
                                         <form id="addActivityForm" enctype="multipart/form-data">
                                             <!-- Nombre de la Actividad -->
                                             <div class="field">
                                                 <label class="label">Nombre de la Actividad</label>
                                                 <div class="control">
-                                                    <input class="input" type="text" name="nombreActividad" placeholder="Introduce el nombre de la actividad" required>
+                                                    <input class="input" type="text" name="nombreActividad"
+                                                        placeholder="Introduce el nombre de la actividad" required>
                                                 </div>
                                             </div>
                                             <!-- Organización -->
@@ -1079,7 +1087,8 @@
                                                 <div class="control">
                                                     <div class="select is-fullwidth">
                                                         <select name="organizacionActividad" required>
-                                                            <option value="" disabled selected>Selecciona una organización</option>
+                                                            <option value="" disabled selected>Selecciona una
+                                                                organización</option>
                                                             <option value="Amavir">@Amavir</option>
                                                             <option value="Unzutxiki">@Unzutxiki</option>
                                                             <option value="Cuatrovientos">@Cuatrovientos</option>
@@ -1099,7 +1108,8 @@
                                             <div class="field">
                                                 <label class="label">Horas</label>
                                                 <div class="control">
-                                                    <input class="input" type="number" name="horasActividad" placeholder="Introduce la duración en horas" required>
+                                                    <input class="input" type="number" name="horasActividad"
+                                                        placeholder="Introduce la duración en horas" required>
                                                 </div>
                                             </div>
                                             <!-- Tipo de Actividad -->
@@ -1117,7 +1127,8 @@
                                                             <option value="Tecnológico">Tecnológico</option>
                                                         </select>
                                                     </div>
-                                                    <p class="help">Mantén presionada la tecla Ctrl (Cmd en Mac) para seleccionar múltiples opciones.</p>
+                                                    <p class="help">Mantén presionada la tecla Ctrl (Cmd en Mac) para
+                                                        seleccionar múltiples opciones.</p>
                                                 </div>
                                             </div>
                                             <!-- Estado de la Actividad -->
@@ -1126,7 +1137,8 @@
                                                 <div class="control">
                                                     <div class="select is-fullwidth">
                                                         <select name="estadoActividad" required>
-                                                            <option value="" disabled selected>Selecciona el estado</option>
+                                                            <option value="" disabled selected>Selecciona el estado
+                                                            </option>
                                                             <option value="Pendiente">Pendiente</option>
                                                             <option value="En Curso">En Curso</option>
                                                             <option value="Finalizado">Finalizado</option>
@@ -1146,41 +1158,54 @@
                                                             <option value="ODS4">Educación de Calidad</option>
                                                             <option value="ODS5">Igualdad de Género</option>
                                                             <option value="ODS6">Agua Limpia y Saneamiento</option>
-                                                            <option value="ODS7">Energía Asequible y No Contaminante</option>
-                                                            <option value="ODS8">Trabajo Decente y Crecimiento Económico</option>
-                                                            <option value="ODS9">Industria, Innovación e Infraestructura</option>
-                                                            <option value="ODS10">Reducción de las Desigualdades</option>
-                                                            <option value="ODS11">Ciudades y Comunidades Sostenibles</option>
-                                                            <option value="ODS12">Producción y Consumo Responsables</option>
+                                                            <option value="ODS7">Energía Asequible y No Contaminante
+                                                            </option>
+                                                            <option value="ODS8">Trabajo Decente y Crecimiento Económico
+                                                            </option>
+                                                            <option value="ODS9">Industria, Innovación e Infraestructura
+                                                            </option>
+                                                            <option value="ODS10">Reducción de las Desigualdades
+                                                            </option>
+                                                            <option value="ODS11">Ciudades y Comunidades Sostenibles
+                                                            </option>
+                                                            <option value="ODS12">Producción y Consumo Responsables
+                                                            </option>
                                                             <option value="ODS13">Acción por el Clima</option>
                                                             <option value="ODS14">Vida Submarina</option>
-                                                            <option value="ODS15">Vida de Ecosistemas Terrestres</option>
-                                                            <option value="ODS16">Paz, Justicia e Instituciones Sólidas</option>
-                                                            <option value="ODS17">Alianzas para Lograr los Objetivos</option>
+                                                            <option value="ODS15">Vida de Ecosistemas Terrestres
+                                                            </option>
+                                                            <option value="ODS16">Paz, Justicia e Instituciones Sólidas
+                                                            </option>
+                                                            <option value="ODS17">Alianzas para Lograr los Objetivos
+                                                            </option>
                                                         </select>
                                                     </div>
-                                                    <p class="help">Mantén presionada la tecla Ctrl (Cmd en Mac) para seleccionar múltiples opciones.</p>
+                                                    <p class="help">Mantén presionada la tecla Ctrl (Cmd en Mac) para
+                                                        seleccionar múltiples opciones.</p>
                                                 </div>
                                             </div>
                                             <!-- Imagen de la Actividad -->
                                             <div class="field">
                                                 <label class="label">Imagen de la Actividad</label>
                                                 <div class="control">
-                                                    <input class="input" type="file" name="imagenActividad" accept="image/*" required>
+                                                    <input class="input" type="file" name="imagenActividad"
+                                                        accept="image/*" required>
                                                 </div>
                                             </div>
                                             <!-- Descripción -->
                                             <div class="field">
                                                 <label class="label">Descripción</label>
                                                 <div class="control">
-                                                    <textarea class="textarea" name="descripcionActividad" placeholder="Escribe una breve descripción de la actividad"></textarea>
+                                                    <textarea class="textarea" name="descripcionActividad"
+                                                        placeholder="Escribe una breve descripción de la actividad"></textarea>
                                                 </div>
                                             </div>
                                         </form>
-                                    </section>
+                                    </div>
                                     <footer class="modal-card-foot">
                                         <button class="button is-success" onclick="saveNewActivity()">Guardar</button>
-                                        <button class="button" onclick="closeModal('modalAddActivity')">Cancelar</button>
+                                        <button class="button"
+                                            onclick="closeModal('modalAddActivity')">Cancelar</button>
                                     </footer>
                                 </div>
                             </div>
@@ -1357,11 +1382,11 @@
                 <p class="modal-card-title" id="modal-nombre">Nombre Apellido</p>
                 <button class="delete" aria-label="close" id="cerrar-modal"></button>
             </header>
-            <section class="modal-card-body">
+            <div class="modal-card-body">
                 <div class="columns">
                     <div class="column is-4 has-text-centered">
                         <figure class="image is-img-perfil is-inline-block">
-                            <img id="modal-img" class="is-rounded" src="" alt="Foto perfil">
+                            <img id="modal-img" class="is-rounded" src="/img/icons/avatar.png" alt="Foto perfil">
                         </figure>
                     </div>
                     <div class="column is-8">
@@ -1392,7 +1417,7 @@
                     <li><i class="fas fa-theater-masks has-text-warning"></i> Colaboración en ferias culturales
                     </li>
                 </ul>
-            </section>
+            </div>
             <footer class="modal-card-foot is-justify-content-flex-end">
                 <button class="button is-info mx-1" id="editar-voluntario">Editar</button>
                 <button class="button is-danger mx-1" id="eliminar-voluntario">Eliminar</button>
@@ -1407,7 +1432,7 @@
                 <p class="modal-card-title">Enviar Mensaje</p>
                 <button class="delete" aria-label="close" id="cerrar-modal-mensaje"></button>
             </header>
-            <section class="modal-card-body">
+            <div class="modal-card-body">
                 <h3 class="subtitle">Voluntarios Seleccionados</h3>
                 <ul id="voluntarios-seleccionados" class="mb-3">
                     <!-- Lista de voluntarios seleccionados -->
@@ -1419,7 +1444,7 @@
                             placeholder="Escribe tu mensaje aquí..."></textarea>
                     </div>
                 </div>
-            </section>
+            </div>
             <footer class="modal-card-foot">
                 <button class="button is-success" id="enviar-mensaje">Enviar</button>
                 <button class="button" id="cancelar-mensaje">Cancelar</button>

@@ -1581,3 +1581,20 @@ html {
   /* Resaltar con sombra */
 }
 
+
+.w100 {
+  width: 100px;
+}
+
+.cdginput {
+  display: flex;
+  gap: 5px;
+}
+
+.multiinput {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

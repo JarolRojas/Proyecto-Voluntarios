@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -224,19 +223,21 @@
                                     <div class="add-event-input">
                                         <input type="text" placeholder="Hora de Inicio del Evento"
                                             class="event-time-from">
-                                            <div class="field" style="margin-right: 10px; margin-bottom: 10px; display: flex; flex-direction: column; align-items: center;">
-                                                <label class="label is-txt4v" style="margin-bottom: 5px;"></label>
-                                                <div class="control" style="display: flex; gap: 5px;">
-                                                    <input class="event-time-from" type="time" name="horaInicio_${day}" style="width: 100px;" required>
-                                                </div>
+                                        <div class="field multiinput">
+                                            <label class="label is-txt4v mb-6"></label>
+                                            <div class="control cdginput" >
+                                                <input class="event-time-from w100" type="time" name="horaInicio_${day}"
+                                                    required>
                                             </div>
+                                        </div>
                                     </div>
                                     <div class="add-event-input">
                                         <input type="text" placeholder="Hora de Fin del Evento" class="event-time-to">
-                                        <div class="field" style="margin-right: 10px; margin-bottom: 10px; display: flex; flex-direction: column; align-items: center;">
-                                            <label class="label is-txt4v" style="margin-bottom: 5px;"></label>
-                                            <div class="control" style="display: flex; gap: 5px;">
-                                                <input class="event-time-to" type="time" name="horaFin_${day}" style="width: 100px;" required>
+                                        <div class="field multiinput">
+                                            <label class="label is-txt4v mb-6"></label>
+                                            <div class="control cdginput">
+                                                <input class="event-time-to w100" type="time" name="horaFin_${day}"
+                                                    required>
                                             </div>
                                         </div>
                                     </div>
@@ -529,15 +530,15 @@
                                     <input type="text" id="filter-nombreOrg" class="input" placeholder="Nombre">
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
-                        
+
+
 
                     </div>
                 </div>
                 <div class="has-text-right">
-                    <button class="button is-primary mb-3" id="add-organization">Añadir Organización</button>
+                    <button class="button is-primary" id="add-organization">Añadir Organización</button>
                 </div>
 
                 <div class="container">
@@ -545,7 +546,7 @@
                         <!-- MODAL DE AMAVIR -->
                         <div class="modal" id="modalAmavir">
                             <div class="modal-background"></div>
-                            <div class="modal-card column is-10-tablet is-8-desktop is-6-widescreen">
+                            <div class="modal-card">
                                 <header class="modal-card-head">
                                     <p class="modal-card-title">Perfil de la Organización</p>
                                     <button class="delete" aria-label="close"
@@ -685,9 +686,9 @@
                                     <div class="buttons">
                                         <button class="button is-success" id="modifyButton"
                                             onclick="toggleEditMode()">Modificar</button>
-                                        <button class="button is-success" id="saveButton" style="display: none;"
+                                        <button class="button is-success is-none" id="saveButton"
                                             onclick="saveChanges()">Guardar</button>
-                                        <button class="button" id="cancelButton" style="display: none;"
+                                        <button class="button is-none" id="cancelButton"
                                             onclick="toggleEditMode()">Cancelar</button>
                                         <button class="button" onclick="closeModal('modalAmavir')">Cerrar</button>
                                     </div>

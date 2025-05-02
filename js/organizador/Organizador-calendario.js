@@ -1,3 +1,4 @@
+// Selección de elementos del DOM
 const calendar = document.querySelector(".calendar"),
     date = document.querySelector(".date"),
     daysContainer = document.querySelector(".days"),
@@ -17,49 +18,45 @@ const calendar = document.querySelector(".calendar"),
     addEventTo = document.querySelector(".event-time-to "),
     addEventSubmit = document.querySelector(".add-event-btn ");
 
+
+// Variables para manejar la fecha actual
 let today = new Date();
 let activeDay;
 let month = today.getMonth();
 let year = today.getFullYear();
 
+// Arrays para los nombres de meses y días
 const months = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
 ];
-
 const days = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
 
+// Arreglo para almacenar eventos
 const eventsArr = [];
-getEvents();
+getEvents(); // Cargar eventos desde el almacenamiento local
 console.log(eventsArr);
 
+// Inicializar el calendario
 function initCalendar() {
-    const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
-    const prevLastDay = new Date(year, month, 0);
-    const prevDays = prevLastDay.getDate();
-    const lastDate = lastDay.getDate();
-    const day = (firstDay.getDay() + 6) % 7;
-    const nextDays = (8 - (lastDay.getDay() + 1)) % 7;
+    const firstDay = new Date(year, month, 1); // Primer día del mes
+    const lastDay = new Date(year, month + 1, 0); // Último día del mes
+    const prevLastDay = new Date(year, month, 0); // Último día del mes anterior
+    const prevDays = prevLastDay.getDate(); // Días del mes anterior
+    const lastDate = lastDay.getDate(); // Último día del mes actual
+    const day = (firstDay.getDay() + 6) % 7; // Ajustar para que el lunes sea el primer día
+    const nextDays = (8 - (lastDay.getDay() + 1)) % 7; // Días del próximo mes
 
-    date.innerHTML = months[month] + " " + year;
+    date.innerHTML = months[month] + " " + year; // Mostrar el mes y año actual
 
     let days = "";
 
+    // Agregar días del mes anterior
     for (let x = day; x > 0; x--) {
         days += `<div class="day prev-date">${prevDays - x + 1}</div>`;
     }
 
+    // Agregar días del mes actual
     for (let i = 1; i <= lastDate; i++) {
         let event = false;
         eventsArr.forEach((eventObj) => {
@@ -68,7 +65,7 @@ function initCalendar() {
                 eventObj.month === month + 1 &&
                 eventObj.year === year
             ) {
-                event = true;
+                event = true; // Verificar si hay eventos en este día
             }
         });
         if (
@@ -93,13 +90,15 @@ function initCalendar() {
         }
     }
 
+    // Agregar días del próximo mes
     for (let j = 1; j <= nextDays; j++) {
         days += `<div class="day next-date">${j}</div>`;
     }
-    daysContainer.innerHTML = days;
-    addListner();
+    daysContainer.innerHTML = days; // Renderizar los días en el contenedor
+    addListner(); // Agregar eventos a los días
 }
 
+// Cambiar al mes anterior
 function prevMonth() {
     month--;
     if (month < 0) {
@@ -109,6 +108,7 @@ function prevMonth() {
     initCalendar();
 }
 
+// Cambiar al mes siguiente
 function nextMonth() {
     month++;
     if (month > 11) {
@@ -118,17 +118,20 @@ function nextMonth() {
     initCalendar();
 }
 
+// Eventos para los botones de navegación
 prev.addEventListener("click", prevMonth);
 next.addEventListener("click", nextMonth);
 
+// Inicializar el calendario al cargar la página
 initCalendar();
 
+// Agregar eventos a los días
 function addListner() {
     const days = document.querySelectorAll(".day");
     days.forEach((day) => {
         day.addEventListener("click", (e) => {
-            getActiveDay(e.target.innerHTML);
-            updateEvents(Number(e.target.innerHTML));
+            getActiveDay(e.target.innerHTML); // Obtener el día activo
+            updateEvents(Number(e.target.innerHTML)); // Actualizar eventos
             activeDay = Number(e.target.innerHTML);
             days.forEach((day) => {
                 day.classList.remove("active");
@@ -166,6 +169,7 @@ function addListner() {
     });
 }
 
+// Botón para volver al día actual
 todayBtn.addEventListener("click", () => {
     today = new Date();
     month = today.getMonth();
@@ -173,6 +177,7 @@ todayBtn.addEventListener("click", () => {
     initCalendar();
 });
 
+// Validar y formatear la entrada de fecha
 dateInput.addEventListener("input", (e) => {
     dateInput.value = dateInput.value.replace(/[^0-9/]/g, "");
     if (dateInput.value.length === 2) {
@@ -188,10 +193,10 @@ dateInput.addEventListener("input", (e) => {
     }
 });
 
+// Ir a una fecha específica
 gotoBtn.addEventListener("click", gotoDate);
 
 function gotoDate() {
-    console.log("aquí");
     const dateArr = dateInput.value.split("/");
     if (dateArr.length === 2) {
         if (dateArr[0] > 0 && dateArr[0] < 13 && dateArr[1].length === 4) {
@@ -204,13 +209,15 @@ function gotoDate() {
     alert("Fecha Inválida");
 }
 
+// Obtener el día activo y mostrarlo
 function getActiveDay(date) {
     const day = new Date(year, month, date);
-    const dayName = days[(day.getDay() + 6) % 7]; // Adjust to make Monday the first day
+    const dayName = days[(day.getDay() + 6) % 7]; // Ajustar para que el lunes sea el primer día
     eventDay.innerHTML = dayName;
     eventDate.innerHTML = date + " " + months[month] + " " + year;
 }
 
+// Actualizar los eventos del día activo
 function updateEvents(date) {
     let events = "";
     eventsArr.forEach((event) => {
@@ -238,28 +245,32 @@ function updateEvents(date) {
         </div>`;
     }
     eventsContainer.innerHTML = events;
-    saveEvents();
+    saveEvents(); // Guardar eventos en el almacenamiento local
 }
 
+// Mostrar/ocultar el formulario para agregar eventos
 addEventBtn.addEventListener("click", () => {
     addEventWrapper.classList.toggle("active");
 });
 
+// Cerrar el formulario de agregar eventos
 addEventCloseBtn.addEventListener("click", () => {
     addEventWrapper.classList.remove("active");
 });
 
+// Cerrar el formulario al hacer clic fuera de él
 document.addEventListener("click", (e) => {
     if (e.target !== addEventBtn && !addEventWrapper.contains(e.target)) {
         addEventWrapper.classList.remove("active");
     }
 });
 
+// Limitar la longitud del título del evento
 addEventTitle.addEventListener("input", (e) => {
     addEventTitle.value = addEventTitle.value.slice(0, 60);
 });
 
-
+// Validar y formatear la hora de inicio del evento
 addEventFrom.addEventListener("input", (e) => {
     addEventFrom.value = addEventFrom.value.replace(/[^0-9:]/g, "");
     if (addEventFrom.value.length === 2) {
@@ -270,6 +281,7 @@ addEventFrom.addEventListener("input", (e) => {
     }
 });
 
+// Validar y formatear la hora de fin del evento
 addEventTo.addEventListener("input", (e) => {
     addEventTo.value = addEventTo.value.replace(/[^0-9:]/g, "");
     if (addEventTo.value.length === 2) {
@@ -280,6 +292,7 @@ addEventTo.addEventListener("input", (e) => {
     }
 });
 
+// Agregar un nuevo evento
 addEventSubmit.addEventListener("click", () => {
     const eventTitle = addEventTitle.value;
     const eventTimeFrom = addEventFrom.value;
@@ -365,42 +378,45 @@ addEventSubmit.addEventListener("click", () => {
     }
 });
 
+// Eliminar un evento
 eventsContainer.addEventListener("click", (e) => {
     const eventEl = e.target.closest(".event"); // Buscar el contenedor del evento
     if (eventEl) {
-      if (confirm("¿Estás seguro de que quieres eliminar este evento?")) {
-        const eventTitle = eventEl.querySelector(".event-title").innerHTML; // Obtener el título del evento
-        eventsArr.forEach((event) => {
-          if (
-            event.day === activeDay &&
-            event.month === month + 1 &&
-            event.year === year
-          ) {
-            event.events.forEach((item, index) => {
-              if (item.title === eventTitle) {
-                event.events.splice(index, 1);
-              }
+        if (confirm("¿Estás seguro de que quieres eliminar este evento?")) {
+            const eventTitle = eventEl.querySelector(".event-title").innerHTML; // Obtener el título del evento
+            eventsArr.forEach((event) => {
+                if (
+                    event.day === activeDay &&
+                    event.month === month + 1 &&
+                    event.year === year
+                ) {
+                    event.events.forEach((item, index) => {
+                        if (item.title === eventTitle) {
+                            event.events.splice(index, 1);
+                        }
+                    });
+                    // Si no quedan eventos en el día, eliminar el día del arreglo
+                    if (event.events.length === 0) {
+                        eventsArr.splice(eventsArr.indexOf(event), 1);
+                        // Quitar la clase "event" del día activo
+                        const activeDayEl = document.querySelector(".day.active");
+                        if (activeDayEl.classList.contains("event")) {
+                            activeDayEl.classList.remove("event");
+                        }
+                    }
+                }
             });
-            // Si no quedan eventos en el día, eliminar el día del arreglo
-            if (event.events.length === 0) {
-              eventsArr.splice(eventsArr.indexOf(event), 1);
-              // Quitar la clase "event" del día activo
-              const activeDayEl = document.querySelector(".day.active");
-              if (activeDayEl.classList.contains("event")) {
-                activeDayEl.classList.remove("event");
-              }
-            }
-          }
-        });
-        updateEvents(activeDay); // Actualizar los eventos en la interfaz
-      }
+            updateEvents(activeDay); // Actualizar los eventos en la interfaz
+        }
     }
-  });
+});
 
+// Guardar eventos en el almacenamiento local
 function saveEvents() {
     localStorage.setItem("events", JSON.stringify(eventsArr));
 }
 
+// Obtener eventos del almacenamiento local
 function getEvents() {
     if (localStorage.getItem("events") === null) {
         return;
@@ -408,6 +424,7 @@ function getEvents() {
     eventsArr.push(...JSON.parse(localStorage.getItem("events")));
 }
 
+// Convertir la hora al formato AM/PM
 function convertTime(time) {
     let timeArr = time.split(":");
     let timeHour = timeArr[0];

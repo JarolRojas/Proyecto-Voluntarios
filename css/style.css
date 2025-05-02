@@ -1194,6 +1194,31 @@ html {
   background: linear-gradient(90deg, #b38add, transparent);
 }
 
+.events .event {
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en columnas */
+  gap: 5px; /* Espaciado entre elementos */
+  overflow: hidden; /* Evita que el contenido desborde */
+}
+
+.events .event .title {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.events .event .title .event-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 20px;
+}
+.events .event i {
+  color: var(--primary-clr);
+  font-size: 0.5rem;
+}
+.events .event:hover i {
+  color: #fff;
+}
+
 .events .event .title-add-event {
   display: flex;
   align-items: center;
@@ -1225,6 +1250,14 @@ html {
 
 .events .event:hover .event-time {
   color: #fff;
+}
+
+.events .event:hover .event-title {
+  color: #fff !important; /* Asegúrate de que el color no cambie al pasar el ratón */
+}
+
+.events .event .event-title {
+  color: #fff !important; /* Cambia #000 por el color que prefieras */
 }
 
 /* add tick in event after */
